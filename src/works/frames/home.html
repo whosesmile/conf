@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>会畅通讯 - 会议系统</title>
+		<!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+		<!--[if lt IE 9]><script src="/assets/js/lib/html5.js"></script><![endif]-->
+		<!--[if lt IE 7]><script src="/assets/js/lib/belatedpng.js"></script><![endif]-->
+		<link type="image/x-icon" rel="shortcut icon" href="/assets/favicon.ico" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/base.css" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/apps/home.css" />
+	</head>
+	<body>
+		<div class="settime tabview">
+			<ul class="tabs clearfix">
+				<li class="tab today active" data-tab="today">今天</li>
+				<li class="tab week" data-tab="week">本周</li>
+				<li class="tab month" data-tab="month">本月</li>
+				<li class="tab total" data-tab="total">全部</li>
+			</ul>
+		</div>
+
+		<div class="summary">
+			<span class="date"><i class="icon icon-date"></i>2013-09-12</span>
+			<div class="search">
+				<form method="get">
+					<input type="text" class="input-text" placeholder="请输入会议主题..." />
+					<button class="submit-search" type="button">搜索</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="module meeting-module">
+			<div class="module-head">
+				<h3 class="title"><i class="icon icon-down"></i>公开会议</h3>
+			</div>
+			<div class="module-body">
+				<p class="no-data">
+					<i class="icon icon-nothing"></i>
+					您当前没有公开会议
+				</p>
+			</div>
+		</div>
+
+		<div class="module waiting-module">
+			<div class="module-head">
+				<h3 class="title"><i class="icon icon-down"></i>即将开始</h3>
+			</div>
+			<div class="module-body">
+				<p class="no-data">
+					<i class="icon icon-nothing"></i>
+					您当前没有即将开始的会议
+				</p>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/assets/js/lib/jquery.js"></script>
+		<script type="text/javascript" src="/assets/js/lib/base.js"></script>
+	</body>
+</html>

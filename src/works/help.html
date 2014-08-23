@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>用户中心 - 会议系统</title>
+		<!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+		<!--[if lt IE 9]><script src="/assets/js/lib/html5.js"></script><![endif]-->
+		<!--[if lt IE 7]><script src="/assets/js/lib/belatedpng.js"></script><![endif]-->
+		<link type="image/x-icon" rel="shortcut icon" href="/assets/favicon.ico" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/base.css" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/apps/user.css" />
+	</head>
+	<body>
+		
+		<!--#include file="/assets/inc/header.html"-->
+
+		<nav id="navigator">
+			<div class="wrapper">
+				<div class="dynamic">
+					<span class="welcome"><a><i class="icon icon-support"></i>帮助中心</a></span>
+				</div>
+				<div class="region">
+					<a class="timezone"><i class="icon icon-zone"></i>北京时间</a>
+					<span class="language">
+						<select>
+							<option>中文</option>
+						</select>
+					</span>
+				</div>
+			</div>
+		</nav>
+
+		<div id="content">
+			<div class="wrapper">
+				<aside id="lside">
+					<dl class="menu-group user-menus">
+						<dt>用户管理平台</dt>
+						<dd><a href="">会议管理界面</a></dd>
+						<dd class="cascade open">
+							<a>会议管理</a>
+							<ul>
+								<li><a href="">即时会议</a></li>
+								<li><a href="">预约会议</a></li>
+								<li class="active"><a href="">邀请参会者</a></li>
+								<li><a href="" class="noborder">快速入会</a></li>
+							</ul>
+						</dd>
+						<dd class="cascade"><a href="">个人信息管理</a></dd>
+						<dd><a href="">通信录</a></dd>
+						<dd><a href="" class="noborder">公告信息</a></dd>
+					</dl>
+					<dl class="menu-group meet-menus">
+						<dt><a href="">会议客户端</a></dt>
+						<dd class="cascade"><a href="">加入会议</a></dd>
+						<dd><a href="">了解会议窗口</a></dd>
+						<dd class="cascade"><a href="">管理会议</a></dd>
+						<dd class="cascade"><a href="">管理音频</a></dd>
+						<dd class="cascade"><a href="">管理视频</a></dd>
+						<dd class="cascade"><a href="">管理数据</a></dd>
+						<dd class="cascade"><a href="">会议工具</a></dd>
+						<dd class="cascade"><a href="">主持人退出会议和结束会议</a></dd>
+					</dl>
+				</aside>
+				<div id="mainbox">
+					<iframe frameborder="0" width="100%" height="600" scrolling="no" src="/works/frames/orders.html" name="mainframe" ></iframe>
+				</div>
+			</div>
+		</div>
+
+		<!--#include file="/assets/inc/footer.html"-->
+		
+		<script type="text/javascript" src="/assets/js/lib/jquery.js"></script>
+		<script type="text/javascript" src="/assets/js/lib/base.js"></script>
+	</body>
+</html>

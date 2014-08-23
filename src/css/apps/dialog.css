@@ -1,0 +1,1557 @@
+.common-dialog .title .icon {
+	float: left;
+	width: 26px;
+	height: 36px;
+	background: transparent url(/assets/images/sprite/icons-png8.png) -154px -214px no-repeat;
+}
+
+.common-dialog .title .icon-party {
+	background-position: -154px -142px;
+}
+
+.common-dialog .title .icon-notice {
+	background-position: -118px -144px;
+}
+
+.common-dialog .title .icon-numjoin {
+	background-position: -118px -178px;
+}
+
+.common-dialog .title .icon-join {
+	background-position: -154px -178px;
+}
+
+.common-dialog .title .icon-import {
+	background-position: -118px -214px;
+}
+
+.common-dialog .title .icon-add {
+	background-position: -118px -250px;
+}
+
+.common-dialog .title .icon-order {
+	background-position: -190px -72px;
+}
+
+.common-dialog .title .icon-invite {
+	background-position: -154px -251px;
+}
+
+.common-dialog .title .icon-modifypwd {
+	background-position: -226px -70px;
+}
+
+.face-success {
+	padding: 135px 0 40px;
+	background: transparent url(/assets/images/bg/success.png) center 55px no-repeat;
+	text-align: center;
+	font-size: 20px;
+	color: #509B00;
+}
+
+.face-failure {
+	padding: 210px 0 30px;
+	background: transparent url(/assets/images/bg/failure.png) center 125px no-repeat;
+	text-align: center;
+	font-size: 20px;
+	color: #EE8300;
+}
+
+/** 登陆弹窗 **/
+.login-dialog {
+	overflow: hidden;
+}
+
+.login-dialog .login-form {
+	position: relative;
+	padding: 40px 50px 2px;
+	width: 394px;
+	overflow: hidden;
+}
+
+.login-dialog .login-form .error {
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+
+.login-dialog .brand {
+	position: relative;
+	height: 80px;
+	background: #071D2B url(/assets/images/bg/header.png) 0 0 no-repeat;
+}
+
+.login-dialog .logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.login-dialog .name {
+	position: absolute;
+	left: 150px;
+	top: 0;
+}
+
+.login-dialog .close {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	width: 15px;
+	height: 15px;
+	background: transparent url(/assets/images/buttons/close.png) center center no-repeat;
+}
+
+.login-dialog .close:hover {
+	background: transparent url(/assets/images/buttons/close-hover.png) center center no-repeat;
+}
+
+.login-dialog .wrapper section {
+	padding: 0;
+}
+
+.login-dialog .form-item {
+	margin-bottom: 20px;
+}
+
+.login-dialog .login-form .input-text {
+	padding: 11px 5px 11px 35px;
+	width: 358px;
+	font-size: 14px;
+	background: transparent url(/assets/images/sprite/vertical-icons.png) 0 0 no-repeat;
+}
+
+.login-dialog .password-widget {
+	margin-bottom: 30px;
+}
+
+.login-dialog .email-widget .input-text {
+	background-position: 12px 12px;
+}
+
+.login-dialog .password-widget .input-text {
+	background-position: 12px -28px;
+}
+
+.login-dialog .remember-widget .forget {
+	vertical-align: middle;
+	margin-left: 30px;
+}
+
+.login-dialog .submit-widget .input-submit {
+	width: 400px;
+	height: 49px;
+	font-size: 20px;
+}
+
+
+/** 通知弹窗 **/
+.notice-dialog .wrapper section {
+	padding: 0;
+}
+
+.notice-dialog .article {
+	padding: 20px;
+	height: 320px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.notice-dialog .article .title {
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.notice-dialog .article .time {
+	color: #999999;
+	display: block;
+	text-align: center;
+	padding: 5px 0 10px;
+}
+
+.notice-dialog .article .content {
+	padding-top: 10px;
+	line-height: 24px;
+	border-top: 1px solid #CCCCCC;
+}
+
+.notice-dialog footer .remember {
+	position: absolute;
+	left: 20px;
+	top: 15px;
+}
+
+
+/** 参会弹窗 **/
+.party-dialog .wrapper section {
+	padding: 0;
+	height: 425px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	_overflow-y: scroll;
+}
+
+.party-dialog .name {
+	width: 135px;
+}
+
+.party-dialog .join,
+.party-dialog .over {
+	width: 160px;
+}
+
+.party-dialog .party-panel {
+	padding: 10px;
+	_width: 657px;
+}
+
+.party-dialog section .actions {
+	padding-bottom: 10px;
+}
+
+/* 会议号加入弹窗 */
+.joinbynumber-dialog .wrapper section {
+	padding: 0 30px;
+}
+
+.joinbynumber-dialog  .join-form {
+	position: relative;
+	padding: 35px 0;
+}
+
+.joinbynumber-dialog  .join-form .error {
+	position: absolute;
+	top: 10px;
+	left: 95px;
+}
+
+.joinbynumber-dialog .number-widget {
+	margin-top: 10px;
+}
+
+.joinbynumber-dialog .form-item .input-text {
+	width: 250px;
+}
+
+.joinbynumber-dialog .form-item .title {
+	float: left;
+	width: 90px;
+	height: 28px;
+	padding-right: 5px;
+	line-height: 28px;
+	text-align: right;
+}
+
+.joinbynumber-dialog .form-item .widget {
+	margin-left: 95px;
+}
+
+/* 即时会议弹窗 */
+.intime-dialog .wrapper section {
+	padding: 0 30px;
+}
+
+.intime-dialog  .join-form {
+	position: relative;
+	padding: 20px 0;
+}
+
+.intime-dialog  .join-form .error {
+	position: absolute;
+	top: 10px;
+	left: 95px;
+}
+
+.intime-dialog .form-item .input-text {
+	width: 250px;
+}
+
+.intime-dialog .form-item .title {
+	float: left;
+	width: 90px;
+	height: 28px;
+	padding-right: 5px;
+	line-height: 28px;
+	text-align: right;
+}
+
+.intime-dialog .form-item .widget {
+	margin-left: 95px;
+}
+
+/*批量导入弹窗*/
+.import-dialog .wrapper section {
+	height: 435px;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.import-dialog .import-success {
+	padding: 0 105px 20px;
+}
+
+.import-dialog .import-success .box {
+	border: 1px solid #CCCCCC;
+}
+
+.import-dialog .import-success .box .head {
+	background: #F8F8F8;
+	height: 34px;
+	line-height: 34px;
+	padding: 0 30px;
+	border-bottom: none;
+}
+
+.import-dialog .import-success .box .body {
+	margin-top: 0;
+	border-width: 1px 0 0 0;
+	background: #FFFFFF;
+	padding: 0;
+}
+
+.import-dialog .import-success .box .items li {
+	float: left;
+	width: 185px;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 45px;
+	background: transparent url(/assets/images/bg/square.png) 33px center no-repeat;
+}
+
+.import-dialog .import-success .box .items li:nth-child(even) {
+	float: right;
+}
+
+/* 导入弹窗 */
+.import-dialog .wrapper .import-panel {
+	padding: 10px 10px 0;
+}
+
+.import-dialog .tabview .tabs .tab.company {
+	border-radius: 3px 0 0 3px;
+}
+
+.import-dialog .tabview .tabs .tab.namelist {
+	border-right-width: 1px;
+	border-radius: 0 3px 3px 0;
+}
+
+.import-dialog .views {
+	margin-top: 8px;
+}
+
+.import-dialog .tabs .tab {
+	width: 133px;
+}
+
+.import-dialog .filter {
+	padding: 6px 8px;
+	border: 1px solid #CCCCCC;
+	background: #DEDEDE;
+	border-bottom: none;
+}
+
+.import-dialog .filter .search,
+.import-dialog .filter .groups {
+	float: left;
+}
+
+.import-dialog .search .input-text {
+	float: left;
+	border-radius: 0;
+	border-right: none;
+	width: 230px;
+}
+
+.import-dialog .search .submit-search {
+	float: left;
+	width: 35px;
+	height: 28px;
+	overflow: hidden;
+	border: 1px solid #CCCCCC;
+	background: transparent url(/assets/images/sprite/icons.png) -36px -77px no-repeat;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+
+.import-dialog .filter .groups {
+	padding: 0 0 0 15px;
+}
+
+.import-dialog .filter .groups select {
+	margin-right: 10px;
+	padding: 3px;
+	width: 95px;
+}
+
+.import-dialog .panel {
+	height: 264px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	_width: 674px;
+	_overflow-y: scroll;
+}
+
+.import-dialog .panel .common-table tr {
+	border-top: none;
+}
+
+.import-dialog .common-table td {
+	padding-right: 11px;
+	*border-top: 0;
+	*padding-right: 10px;
+}
+
+.import-dialog .common-table .check {
+	width: 15px;
+	text-align: center;
+}
+
+.import-dialog .common-table .name,
+.import-dialog .common-table .english {
+	width: 80px;
+}
+
+.import-dialog .common-table .email {
+	width: 150px;
+}
+
+.import-dialog .common-table .landline {
+	width: 95px;
+}
+
+.import-dialog .common-table .email {
+	width: 180px;
+}
+
+.import-dialog .pagebar {
+	margin-top: 8px;
+}
+
+.import-dialog .upload-contact {
+	width: 580px;
+	padding: 15px 0 15px 35px;
+	border: 1px solid #CCCCCC;
+	background: #F8F8F8;
+	margin: 30px auto 0;
+}
+
+.import-dialog .upload-contact .title {
+	float: left;
+	width: 80px;
+	height: 28px;
+	padding-right: 5px;
+	line-height: 28px;
+	text-align: right;
+}
+
+.import-dialog .upload-contact .widget {
+	margin-left: 85px;
+}
+
+.import-dialog .upload-contact .input-text {
+	height: 18px;
+	line-height: 18px;
+	vertical-align: middle;
+	width: 250px;
+	margin-right: 10px;
+}
+
+.import-dialog .upload-contact .download {
+	line-height: 30px;
+	margin-left: 20px;
+}
+
+.prompt-dialog .prompt {
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.prompt-dialog .prompt img {
+	vertical-align: middle;
+	margin-right: 18px;
+}
+
+/* 添加用户 */
+.adduser-dialog .wrapper section {
+	padding: 10px 0 0 40px;
+}
+
+.adduser-dialog .notes {
+	color: #EF8201;
+	margin-bottom: 15px;
+}
+
+.adduser-dialog .form-item {
+	margin-bottom: 12px;
+	line-height: 28px;
+	*min-height: 28px;
+	_height: 28px;
+}
+
+.adduser-dialog .form-item .title {
+	float: left;
+	width: 60px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.adduser-dialog .form-item .widget {
+	margin-left: 65px;
+	position: relative;
+}
+
+.adduser-dialog .form-item .input-text {
+	width: 170px;
+	margin-right: 20px;
+	*float: left;
+}
+
+.adduser-dialog .form-item .input-area {
+	width: 340px;
+	height: 65px;
+}
+
+.adduser-dialog .form-item .tips {
+	color: #B0B0B0;
+}
+
+.adduser-dialog .form-item .error {
+	display: none;
+}
+
+.adduser-dialog .error-item .error {
+	display: inline;
+}
+
+.adduser-dialog .form-item .required {
+	position: absolute;
+	top: 9px;
+	*top: 6px;
+	left: 190px;
+	width: 7px;
+	height: 7px;
+	background: transparent url(/assets/images/sprite/icons.png) -14px -194px no-repeat;
+}
+
+/* 邀请弹窗 */
+.invite-dialog .wrapper section {
+	padding: 0px;
+	height: 430px;
+	background: transparent url(/assets/images/bg/noperson.png) center center no-repeat;
+}
+
+.invite-dialog .invite-panel {
+	padding: 10px;
+}
+
+.invite-dialog .actions {
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.invite-dialog .actions .input-gray {
+	min-width: 60px;
+	margin-right: 10px;
+	float: left;
+}
+
+.invite-dialog .actions .already {
+	float: right;
+	line-height: 30px;
+	color: #519A03;
+}
+
+.invite-dialog .common-table .name {
+	width: 145px;
+}
+
+.invite-dialog .common-table .email {
+	width: 220px;
+}
+
+.invite-dialog .common-table .phone {
+	width: 120px;
+}
+
+.invite-dialog .userlist {
+	height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	_width: 673px;
+	_overflow-y: scroll;
+}
+
+.invite-dialog .userlist .common-table tr {
+	border-top: none;
+}
+
+.invite-dialog .pagebar {
+	margin-top: 10px;
+}
+
+.invite-dialog .choose {
+	padding: 10px 0 10px 45px;
+	background: #F8F8F8;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.invite-dialog .choose form {
+	margin-top: 10px;
+}
+
+.invite-dialog input.name {
+	width: 125px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.invite-dialog input.email {
+	width: 250px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.invite-dialog .icon-add {
+	width: 18px;
+	height: 18px;
+	background: transparent url(/assets/images/sprite/icons.png) -118px -261px no-repeat;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.invite-dialog .icon-remove {
+	width: 18px;
+	height: 18px;
+	background: transparent url(/assets/images/sprite/icons.png) -190px -119px no-repeat;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.invite-dialog .user-list {
+	height: 340px;
+	overflow: auto;
+	background: #FFFFFF;
+}
+
+.invite-dialog .user-list ul {
+	padding: 20px 20px;
+}
+
+.invite-dialog .user-list li {
+	line-height: 30px;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.invite-dialog .user-list li span.numb {
+	width: 25px;
+	float: left;
+}
+
+.invite-dialog .user-list li span.name {
+	width: 137px;
+	overflow: hidden;
+	float: left;
+}
+
+.invite-dialog .user-list li span.email {
+	width: 262px;
+	overflow: hidden;
+	margin-left: 10px;
+	float: left;
+}
+
+/* 创建会议 第一步 */
+.meeting-dialog .wrapper header {
+	height: 68px;
+}
+
+.meeting-dialog .wrapper header .title {
+	line-height: 68px;
+}
+
+.meeting-dialog .wrapper header .title .step {
+	position: absolute;
+	top: 15px;
+	right: 60px;
+	width: 320px;
+	height: 47px;
+	background: transparent url(/assets/images/bg/step-progress.png) 0 0 no-repeat;
+	_background-image: url(/assets/images/bg/step-progress-ie6.png);
+}
+
+.meeting-dialog .wrapper header .title .step .numbers {
+	position: absolute;
+	top: 2px;
+	left: 20px;
+	line-height: 21px;
+	*top: 3px;
+}
+
+.meeting-dialog .wrapper header .title .step .numbers li {
+	background: transparent url(/assets/images/bg/step-gray.png) 0 0 no-repeat;
+	width: 21px;
+	height: 21px;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 12px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin-right: 65px;
+}
+
+.meeting-dialog .wrapper header .title .step .numbers li.active {
+	background-image: url(/assets/images/bg/step-pass.png);
+}
+
+.meeting-dialog .wrapper header .title .step .desc {
+	position: absolute;
+	left: 0;
+	top: 28px;
+	line-height: normal;
+}
+
+.meeting-dialog .wrapper header .title .step .desc li {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 60px;
+	text-align: center;
+	font-size: 12px;
+	margin-right: 26px;
+}
+
+.meeting-dialog .title .icon {
+	background-position: -78px -220px;
+	width: 24px;
+	height: 25px;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.meeting-dialog .wrapper section {
+	padding: 15px 20px;
+}
+
+.meeting-dialog .meeting-panel {
+	height: 365px;
+}
+
+.meeting-dialog .meeting-panel h4.title {
+	color: #519B00;
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 15px;
+}
+
+.meeting-dialog .meeting-panel h4.title .time {
+	color: #B0B0B0;
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 20px;
+}
+
+.meeting-dialog .form-item {
+	margin-bottom: 10px;
+	min-height: 22px;
+	line-height: 22px;
+}
+
+.meeting-dialog .form-item .input-text {
+	width: 360px;
+	margin-right: 20px;
+	*float: left;
+}
+
+.meeting-dialog .form-item .title {
+	float: left;
+	width: 120px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.meeting-dialog .form-item .widget {
+	margin-left: 125px;
+	position: relative;
+}
+
+.meeting-dialog .form-item .widget .type-group {
+	padding-top: 5px;
+}
+
+.meeting-dialog .form-item .widget .last-time {
+	margin-left: 20px;
+}
+
+.meeting-dialog .voice-widget .widget label {
+	margin-right: 40px;
+}
+
+.meeting-dialog .public-widget .widget label {
+	margin-right: 15px;
+}
+
+.meeting-dialog .assign-widget .widget .assign-some {
+	margin-left: 17px;
+}
+
+.meeting-dialog .describe-widget .widget textarea {
+	width: 360px;
+	height: 70px;
+}
+
+.meeting-dialog .describe-widget .count {
+	color: #B0B0B0;
+	margin-left: 20px;
+}
+
+.meeting-dialog .form-item .tips {
+	color: #B0B0B0;
+	line-height: 28px;
+}
+
+.meeting-dialog .form-item .error {
+	display: none;
+}
+
+.meeting-dialog .error-item .error {
+	display: inline;
+}
+
+.meeting-dialog .form-item .required {
+	position: absolute;
+	top: 9px;
+	*top: 6px;
+	left: 380px;
+	width: 7px;
+	height: 7px;
+	background: transparent url(/assets/images/sprite/icons.png) -14px -194px no-repeat;
+}
+
+.meeting-dialog .time-widget .required {
+	left: 295px;
+}
+
+.meeting-dialog .last-widget .required {
+	left: 160px;
+}
+
+.meeting-dialog .indent-items {
+	padding-left: 60px;
+}
+
+.meeting-dialog .time-widget .year {
+	width: 85px;
+	padding: 5px 28px 5px 8px;
+	margin-right: 8px;
+	background: transparent url(/assets/images/bg/year.png) 100px center no-repeat;
+	float: none;
+}
+
+.meeting-dialog .time-widget .hours,
+.meeting-dialog .time-widget .minute {
+	padding: 3px;
+	width: 70px;
+	margin-right: 8px;
+}
+
+.meeting-dialog .wrapper footer {
+	padding-left: 306px;
+	text-align: left;
+}
+
+.meeting-dialog footer .prev-button {
+	position: absolute;
+	left: 180px;
+}
+
+.meeting-dialog .ontime,
+.meeting-dialog .timemode {
+	float: left;
+}
+
+.meeting-dialog .groups .tabs .tab {
+	float: none;
+	width: auto;
+	height: auto;
+	line-height: normal;
+	font-size: 12px;
+	border: none;
+	border-right-width: 0;
+	text-align: center;
+	background: none;
+	cursor: default;
+}
+
+.meeting-dialog .groups .days {
+	width: 35px;
+	height: 14px;
+	padding: 3px 5px;
+	margin-right: 0;
+	float: none;
+}
+
+.meeting-dialog .groups .tabs .active {
+	color: #333333;
+}
+
+.meeting-dialog .groups .tabs .input-text {
+	width: 35px;
+	height: 14px;
+	margin-right: 5px;
+	float: none;
+}
+
+.meeting-dialog .ontime li {
+	padding: 5px 0;
+}
+
+.meeting-dialog .groups label input,
+.meeting-dialog .groups label span {
+	margin-right: 5px;
+}
+
+.meeting-dialog .groups label input {
+	margin-top: -1px;
+}
+
+.meeting-dialog .ontime {
+	padding-right: 10px;
+}
+
+.meeting-dialog .timemode {
+	padding: 5px 0 5px 15px;
+	border-left: 1px solid #CCCCCC;
+}
+
+.meeting-dialog .timemode .view {
+	height: 65px;
+}
+
+.meeting-dialog .timemode .byweek {
+	margin-top: 5px;
+}
+
+.meeting-dialog .timemode .byweek select {
+	width: 65px;
+}
+
+.meeting-dialog .timemode p {
+	margin-bottom: 10px;
+}
+
+.meeting-dialog .repeat-item .times {
+	width: 35px;
+	height: 14px;
+	margin-right: 5px;
+	float: none;
+}
+
+.meeting-dialog .repeat-item .equal-width {
+	display: inline-block;
+	width: 60px;
+	*display: inline;
+	*zoom: 1;
+}
+
+.meeting-dialog .repeat-item .date {
+	width: 85px;
+	height: 14px;
+	padding: 5px 28px 5px 8px;
+	margin-right: 8px;
+	background: transparent url(/assets/images/bg/year.png) 100px center no-repeat;
+}
+
+.meeting-dialog .legend {
+	padding-left: 25px;
+	background: transparent url(/assets/images/bg/diwen.png) 0 center no-repeat;
+}
+
+.meeting-dialog .regular .legend {
+	margin-bottom: 10px;
+}
+
+.meeting-dialog .legend .config {
+	padding-right: 24px;
+	background: transparent url(/assets/images/sprite/dir.png) right 2px no-repeat;
+}
+
+.meeting-dialog .open .legend .config {
+	background-position: right -45px;
+}
+
+.meeting-dialog .regular .config-details {
+	display: none;
+}
+
+.meeting-dialog .open .config-details {
+	display: block;
+}
+
+.meeting-dialog .groups {
+	padding-left: 25px;
+}
+
+.meeting-dialog .loading-step3 {
+	height: 290px;
+	padding-top: 120px;
+}
+
+.meeting-dialog .short-text {
+	width: 110px!important;
+	margin-right: 5px!important;
+}
+
+.meeting-dialog .short-select {
+	min-width: 70px;
+	padding: 3px;
+}
+
+.meeting-dialog .success-panel {
+	height: 200px;
+	border: 1px solid #CCCCCC;
+	background: #F8F8F8;
+	border-radius: 5px;
+}
+
+.meeting-dialog .success-panel .face-success {
+	width: 300px;
+	padding: 125px 0 40px;
+	background-position: center 45px;
+	float: left;
+}
+
+.meeting-dialog .success-panel .details {
+	margin-left: 335px;
+	line-height: 24px;
+	margin-top: 15px;
+}
+
+.meeting-dialog .success-panel .details span {
+	margin-left: 5px;
+}
+
+.meeting-dialog .remark {
+	margin-top: 30px;
+}
+
+.meeting-dialog .remark .notes {
+	padding-left: 35px;
+	float: left;
+}
+
+.meeting-dialog .remark .invites {
+	float: left;
+	padding-left: 90px;
+}
+
+.meeting-dialog .remark .notes h4 {
+	font-weight: normal;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+.meeting-dialog .remark .notes .gray {
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+.meeting-dialog .remark .notes p {
+	margin-top: 10px;
+}
+
+.meeting-dialog .remark .notes .input-gray {
+	width: 160px;
+	padding: 0;
+}
+
+.meeting-dialog .remark .invites .input-button {
+	width: 190px;
+	height: 48px;
+	font-size: 22px;
+}
+
+.meeting-dialog .remark .invites p {
+	line-height: 20px;
+	margin-top: 15px;
+}
+
+.meeting-dialog .remark .invites p .icon {
+	width: 18px;
+	height: 18px;
+	margin: 0 5px;
+	background: transparent url(/assets/images/sprite/icons.png) -154px -263px no-repeat;
+}
+
+.order-dialog .wrapper section {
+	padding: 10px;
+	height: 410px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.order-dialog .export {
+	margin-bottom: 10px;
+}
+
+.order-dialog .order-item {
+	margin-bottom: 30px;
+}
+
+.order-dialog .order-item .title {
+	font-size: 14px;
+	padding-left: 15px;
+	background: transparent url(/assets/images/bg/order.png) 0 center no-repeat;
+}
+
+.order-dialog .order-item .info {
+	margin: 5px 0 10px;
+	padding-left: 15px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.order-dialog .order-item .info span {
+	margin-right: 30px;
+	float: left;
+}
+
+.order-dialog .order-item .info .total {
+	float: right;
+}
+
+.order-dialog .order-item .common-table .start {
+	width: 130px;
+	padding: 10px 5px;
+}
+
+.order-dialog .order-item .common-table .lasted,
+.order-dialog .order-item .common-table .type {
+	width: 60px;
+}
+
+.order-dialog .order-item .common-table .number {
+	width: 120px;
+}
+
+.order-dialog .order-item .common-table .cost {
+	width: 80px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.order-dialog .order-item .info .total {
+	margin-right: 0;
+	color: #509B02;
+}
+
+.order-dialog .order-item .order-type1 .common-table .start {
+	width: 200px;
+}
+
+.order-dialog .order-item .order-type1 .common-table .lasted {
+	width: 180px;
+}
+
+.order-dialog .order-item .order-type2 .common-table .cost, 
+.order-dialog .order-item .order-type2 .common-table .used {
+	width: 200px;
+}
+
+.participate-dialog .wrapper section {
+	padding: 10px 0px;
+	height: 155px;
+}
+
+.participate-dialog .wrapper .download {
+	padding: 0 40px;
+}
+
+.participate-dialog .download .down {
+	text-align: center;
+}
+
+.participate-dialog .download .down .input-button {
+	width: 135px;
+	height: 38px;
+	font-size: 18px;
+}
+
+.participate-dialog .download .clue {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.participate-dialog .download .clue .icon-clue {
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	background: transparent url(/assets/images/sprite/icons.png) -10px -261px no-repeat;
+}
+
+.participate-dialog .download .desc {
+	padding: 5px 10px;
+	height: 75px;
+	line-height: 20px;
+}
+
+.participate-dialog .install .desc {
+	padding: 0 0 0 40px;
+}
+
+.participate-dialog .install .desc span {
+	display: block;
+	padding: 15px 25px;
+}
+
+.participate-dialog .install .clue {
+	text-align: center;
+	padding-top: 35px;
+}
+
+.participate-dialog .step {
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.participate-dialog .step li {
+	padding-left: 25px;
+	margin-bottom: 3px;
+	background: transparent url(/assets/images/sprite/vertical-icons.png) 0 -150px no-repeat;
+}
+
+.participate-dialog .step li.first {
+	background-position: 0 -150px;
+	*zoom: 1;
+}
+
+.participate-dialog .step li.second {
+	background-position: 0 -187px;
+}
+
+.participate-dialog .step li i {
+	color: #EF8201;
+}
+
+.participate-dialog .process .desc {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.participate-dialog .process .clue {
+	text-align: center;
+	padding-top: 75px;
+}
+
+.participate-dialog .process .clue .icon-clue {
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	background: transparent url(/assets/images/sprite/icons.png) -10px -261px no-repeat;
+}
+
+/* 选择用户 */
+.choose-dialog .wrapper section {
+	padding: 10px;
+	height: 415px;
+}
+
+.choose-dialog .wrapper .import-panel {
+	padding: 10px 10px 0;
+}
+
+.choose-dialog .tabview .tabs .tab.contact {
+	border-radius: 3px 0 0 3px;
+}
+
+.choose-dialog .tabview .tabs .tab.account {
+	border-right-width: 1px;
+	border-radius: 0 3px 3px 0;
+}
+
+.choose-dialog .views {
+	margin-top: 8px;
+}
+
+.choose-dialog .tabs .tab {
+	width: 100px;
+}
+
+.choose-dialog .filter {
+	padding: 6px 8px;
+	border: 1px solid #CCCCCC;
+	background: #DEDEDE;
+	border-bottom: none;
+}
+
+.choose-dialog .filter .search,
+.choose-dialog .filter .groups {
+	float: left;
+}
+
+.choose-dialog .search .input-text {
+	float: left;
+	border-radius: 0;
+	border-right: none;
+	width: 230px;
+}
+
+.choose-dialog .search .submit-search {
+	float: left;
+	width: 35px;
+	height: 28px;
+	overflow: hidden;
+	border: 1px solid #CCCCCC;
+	background: transparent url(/assets/images/sprite/icons.png) -36px -77px no-repeat;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+
+.choose-dialog .filter .groups {
+	padding: 0 0 0 15px;
+}
+
+.choose-dialog .filter .groups select {
+	margin-right: 10px;
+	padding: 3px;
+	width: 95px;
+}
+
+.choose-dialog .panel .common-table tr {
+	border-top: none;
+}
+
+.choose-dialog .panel {
+	height: 264px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.choose-dialog .common-table td {
+	padding-right: 11px;
+	*border-top: 0;
+	*padding-right: 10px;
+}
+
+.choose-dialog .common-table .check {
+	width: 15px;
+	text-align: center;
+}
+
+.choose-dialog .common-table .name,
+.choose-dialog .common-table .english {
+	width: 80px;
+}
+
+.choose-dialog .common-table .email {
+	width: 150px;
+}
+
+.choose-dialog .common-table .landline {
+	width: 95px;
+}
+
+.choose-dialog .common-table .email {
+	width: 180px;
+}
+
+.choose-dialog .pagebar {
+	margin-top: 8px;
+}
+
+.choose-dialog .render .empty {
+	padding-top: 170px;
+	text-align: center;
+	color: #CCCCCC;
+	background: transparent url(/assets/images/bg/silence.jpg) center 95px no-repeat;
+}
+
+.invite-dialog .invite-success {
+	padding: 0 30px 20px;
+	background: #FFFFFF;
+}
+
+.invite-dialog .invite-success {
+	padding: 0 30px 20px;
+	background: #FFFFFF;
+}
+
+.invite-dialog .invite-success .face-success {
+	padding: 105px 0 20px;
+	background-position: center 20px;
+}
+
+.invite-dialog .invite-concat .face-success {
+	padding: 135px 0 20px;
+	background-position: center 50px;
+}
+
+.invite-dialog .invite-success .box {
+	border: 1px solid #CCCCCC;
+}
+
+.invite-dialog .invite-success .box .head {
+	background: #F8F8F8;
+	padding: 5px 25px;
+	border-bottom: none;
+}
+
+.invite-dialog .invite-success .box .head .addto {
+	margin-left: 30px;
+}
+
+.invite-dialog .invite-success .box .head .icon-add {
+	background: transparent url(/assets/images/sprite/icons.png) -118px -261px no-repeat;
+}
+
+.invite-dialog .invite-success .box .body {
+	margin-top: 0;
+	border-width: 1px 0 0 0;
+	background: #FFFFFF;
+	padding: 5px 25px;
+	height: 155px;
+	overflow: auto;
+}
+
+.invite-dialog .invite-success .box .items li {
+	float: left;
+	width: 220px;
+	height: 26px;
+	line-height: 26px;
+}
+
+.invite-dialog .invite-success .box .items li span {
+	margin-left: 8px;
+}
+
+.invite-dialog .invite-success .box .items li:nth-child(even) {
+	float: right;
+}
+
+.invite-dialog .invite-success .list-names {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.invite-dialog .invite-failure {
+	text-align: center;
+	background: #FFFFFF;
+}
+
+.details-dialog .wrapper section {
+	padding: 15px 20px 0;
+	height: 415px;
+	overflow: auto;
+}
+
+.details-dialog .details h3 {
+	font-size: 14px;
+	font-weight: normal;
+	padding-left: 20px;
+	background: transparent url(/assets/images/bg/line.png) 0 center no-repeat;
+}
+
+.details-dialog .details h3 span {
+	padding: 0 10px;
+	background: #FFFFFF;
+}
+
+.details-dialog .basic-info {
+	float: left;
+	width: 310px;
+}
+
+.details-dialog .args-info {
+	float: right;
+	width: 310px;
+}
+
+.details-dialog .details .panel {
+	padding: 5px 20px;
+	line-height: 28px;
+}
+
+.details-dialog .details .panel .key {
+	float: left;
+}
+
+.details-dialog .addresses {
+	margin-top: 10px;
+	padding: 10px;
+	border-top: 1px solid #CCCCCC;
+}
+
+.details-dialog .addresses .input-text {
+	width: 495px;
+}
+
+.details-dialog .compere {
+	margin-bottom: 8px;
+}
+
+.details-dialog .block-layout .key {
+	float: left;
+}
+
+.details-dialog .block-layout .val {
+	display: block;
+	margin-left: 60px;
+}
+
+.modifypwd-dialog .wrapper section {
+	padding: 10px 30px;
+}
+
+.modifypwd-dialog .form-item {
+	margin-bottom: 12px;
+	line-height: 28px;
+	*min-height: 28px;
+}
+
+.modifypwd-dialog .confirm-item {
+	margin-bottom: 0;
+}
+
+.modifypwd-dialog .form-item .title {
+	float: left;
+	width: 85px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.modifypwd-dialog .form-item .widget {
+	margin-left: 65px;
+	position: relative;
+}
+
+.modifypwd-dialog .form-item .input-text {
+	width: 160px;
+	margin-right: 20px;
+}
+
+.modifypwd-dialog .form-item .required {
+	position: absolute;
+	top: 9px;
+	*top: 6px;
+	left: 205px;
+	width: 7px;
+	height: 7px;
+	background: transparent url(/assets/images/sprite/icons.png) -14px -194px no-repeat;
+}
+
+.modifypwd-dialog .form-item .tips {
+	color: #B0B0B0;
+	line-height: 28px;
+}
+
+.modifypwd-dialog .face-success {
+	padding: 80px 0 0;
+	background-position: center 0;
+}

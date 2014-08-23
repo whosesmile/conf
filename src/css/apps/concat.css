@@ -1,0 +1,54 @@
+html, body {
+	background: #EEEEEE;
+}
+
+body {
+	padding: 20px;
+}
+
+.common-table .check {
+	width: 20px;
+	text-align: center;
+}
+
+.common-table .actions {
+	width: 140px;
+}
+
+.common-table .actions .modify {
+	margin: 0 20px 0 10px;
+}
+
+.pagebar {
+	margin-top: 10px;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+	background: transparent url(/assets/images/sprite/icons.png) -118px -260px no-repeat;
+}
+
+.icon-add {
+	background-position: -118px -260px;
+}
+
+.icon-bat {
+	background-position: -190px -189px;
+}
+
+.icon-exp {
+	background-position: -190px -223px;
+}
+
+.icon-del {
+	background-position: -190px -151px;
+}
+
+.icon-modify {
+	background-position: -190px -262px;
+}
+
+.icon-remove {
+	background-position: -190px -118px;
+}

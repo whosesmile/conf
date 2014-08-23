@@ -1,0 +1,66 @@
+html, body {
+	background: #EEEEEE;
+}
+
+body {
+	padding: 20px;
+}
+
+.form-item {
+	margin-bottom: 15px;
+	line-height: 24px;
+	_height: 30px;
+}
+
+.form-item .title {
+	float: left;
+	width: 150px;
+	text-align: right;
+}
+
+.form-item .widget {
+	position: relative;
+	margin-left: 155px;
+	_float: left;
+	_margin-left: 5px;
+	_display:inline;
+	_zoom:1;
+}
+
+.form-item .widget .for-label {
+	margin-right: 20px;
+}
+
+.submit-item {
+	padding-top: 20px;
+	_padding-left: 155px;
+}
+
+.form-item .tips {
+	color: #B0B0B0;
+}
+
+.form-item .error {
+	display: none;
+}
+
+.error-item .error {
+	display: inline;
+	line-height: 28px;
+}
+
+.personal-form .input-text {
+	width: 250px;
+	margin-right: 20px;
+	*float: left;
+}
+
+.form-item .required {
+	position: absolute;
+	top: 9px;
+	*top: 6px;
+	left: 268px;
+	width: 7px;
+	height: 7px;
+	background: transparent url(/assets/images/sprite/icons-png8.png) -14px -194px no-repeat;
+}

@@ -1,0 +1,121 @@
+html, body {
+	background: #EEEEEE;
+}
+
+body {
+	padding: 20px;
+}
+
+.box .body {
+	padding: 0;
+	border: none;
+	background: transparent;
+	margin-top: 0;
+}
+
+.pagebar {
+	margin-top: 10px;
+}
+
+.infomation .common-table th {
+	font-weight: bold;
+}
+
+.infomation .common-table .compere {
+	width: 90px;
+}
+
+.infomation .common-table .utils {
+	width: 120px;
+}
+
+.infomation .common-table .status {
+	width: 90px;
+}
+
+.infomation .common-table .start,
+.infomation .common-table .end {
+	width: 150px;
+}
+
+.infomation .common-table .details {
+	width: 90px;
+}
+
+.summary {
+	padding: 5px 0;
+}
+
+.summary .date {
+	margin-left: 0;
+}
+
+.summary .search {
+	position: relative;
+}
+
+.summary .search form,
+.summary .search .advantage {
+	float: right;
+}
+
+.summary .search .advantage {
+	line-height: 30px;
+	margin: 0 10px 0 20px;
+	padding-right: 15px;
+	background: transparent url(/assets/images/bg/side.png) right center no-repeat;
+}
+
+.advantage-search {
+	width: 375px;
+	position: absolute;
+	top: 90px;
+	right: 20px;
+	z-index: 100;
+	color: #FFFFFF;
+}
+
+.advantage-search .bg-header {
+	height: 21px;
+	background: transparent url(/assets/images/bg/bg-header.png) 0 top no-repeat;
+}
+
+.advantage-search .search-fieldset {
+	background: transparent url(/assets/images/bg/bg-content.png) 0 0 repeat-y;
+	zoom: 1;
+}
+
+.advantage-search .bg-footer {
+	height: 10px;
+	background: transparent url(/assets/images/bg/bg-footer.png) 0 bottom no-repeat;
+}
+
+.advantage-search .form-item {
+	padding-bottom: 10px;
+}
+
+.advantage-search .form-item .title {
+	float: left;
+	width: 80px;
+	padding-right: 5px;
+	text-align: right;
+	line-height: 30px;
+}
+
+.advantage-search .form-item .widget {
+	margin-left: 85px;
+}
+
+.advantage-search .form-item .input-text {
+	width: 255px;
+}
+
+.advantage-search .form-item .time-text {
+	width: 89px;
+	padding-right: 25px;
+	background: #FFFFFF url(/assets/images/bg/year.png) 98px center no-repeat;
+}
+
+.advantage-search .form-item .widget select {
+	width: 80px;
+}

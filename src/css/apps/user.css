@@ -1,0 +1,64 @@
+#navigator .icon-support {
+	background-position: -47px -255px;
+}
+
+#lside {
+	width: 229px;
+	border-right: 1px solid #CCCCCC;
+	background: #EEEEEE;
+}
+
+#mainbox {
+	margin-left: 230px;
+}
+
+.menu-group dt {
+	line-height: 32px;
+	font-size: 14px;
+	border-bottom: 1px solid #939393;
+	padding: 0 20px 0 40px;
+	background: #C7DCED url(/assets/images/bg/group.png) 20px center no-repeat;
+}
+
+.menu-group dd a {
+	display: block;
+	color: #333333;
+	line-height: 30px;
+	padding: 0 10px;
+	border-bottom: 1px solid #CCCCCC;
+	text-decoration: none;
+}
+.menu-group dd a:hover  {
+	color: #509D03;
+}
+.menu-group dd {
+	padding: 0 10px;
+}
+
+.meet-menus dt {
+	border-top: 1px solid #939393;
+}
+
+.menu-group .cascade a {
+	background: transparent url(/assets/images/bg/side.png) 191px 11px no-repeat;
+}
+
+.menu-group .open a {
+	background: transparent url(/assets/images/bg/down.png) 190px 13px no-repeat;
+}
+
+.menu-group .cascade ul {
+	display: none;
+}
+
+.menu-group .open ul {
+	display: block;
+}
+.menu-group .cascade ul li a {
+	padding-left: 35px;
+	background: transparent url(/assets/images/sprite/cascade.png) 20px 10px no-repeat;
+}
+.menu-group .cascade ul li.active a {
+	background-position: 20px -20px;
+	color: #509D03;
+}

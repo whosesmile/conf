@@ -1,0 +1,57 @@
+#content .wrapper {
+	background: #FFFFFF;
+	min-height: auto;
+	min-height: initial;
+}
+
+#content .reject {
+	width: 520px;
+	height: 320px;
+	margin: 40px auto 0;
+	padding: 55px 30px 0;
+	background: transparent url(/assets/images/bg/reject.png) 0 0 no-repeat;
+}
+
+#content .reject h3 {
+	width: 130px;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 80px;
+	margin: 0 auto;
+	font-size: 20px;
+	color: #EE8300;
+	font-weight: normal;
+	background: transparent url(/assets/images/bg/prompt-large.png) 0 center no-repeat;
+}
+
+#content .reject .infomation {
+	line-height: 32px;
+	padding-top: 20px;
+}
+
+#content .reject .infomation .item {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+#content .reject .infomation .title {
+	width: 125px;
+	float: left;
+	text-align: right;
+}
+
+#content .reject .infomation .content {
+	margin-left: 135px;
+	font-size: 15px;
+}
+
+#content .regret {
+	text-align: center;
+	margin-top: 25px;
+	padding: 25px 0 50px;
+	background: transparent url(/assets/images/bg/regret.png) center top no-repeat;
+}
+
+#content .regret p {
+	padding-bottom: 10px;
+	zoom: 1;
+}

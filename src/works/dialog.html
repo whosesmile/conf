@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>会畅通讯 - 会议系统</title>
+		<!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+		<!--[if lt IE 9]><script src="/assets/js/lib/html5.js"></script><![endif]-->
+		<!--[if lt IE 7]><script src="/assets/js/lib/belatedpng.js"></script><![endif]-->
+		<link type="image/x-icon" rel="shortcut icon" href="/assets/favicon.ico" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/base.css" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/apps/dialog.css" />
+
+		<!-- 这个 style 正式场合去掉 没用的 -->
+		<style type="text/css">
+			#content button {
+				margin-left: 15px;
+			}
+
+			.group .divider {
+				color: #999999;
+				margin: 0 20px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!--#include file="/assets/inc/header.html"-->
+
+		<nav id="navigator">
+			<div class="wrapper">
+				<div class="dynamic">
+					所有弹窗都在这
+				</div>
+			</div>
+		</nav>
+
+		<div id="content">
+			<div class="wrapper" style="padding: 20px;">
+				<p class="gray" style="font-size:14px;padding-bottom:20px;">
+					注：对于没有关闭按钮的弹窗 可以按 <mark style="color:#FF0000;">ESC键</mark> 进行关闭
+				<p>
+
+				<div class="group">
+					<button data-name="loading" class="input-button">LOADING</button>
+					<button data-name="login" class="input-button">登陆弹窗</button>
+					<button data-name="notice" class="input-button">通知弹窗</button>
+					<button data-name="party" class="input-button">参会详情</button>
+					<button data-name="joinbynumber" class="input-button">会议号加入</button>
+					<button data-name="intime" class="input-button">即时会议</button>
+					<button data-name="import" data-domain="success" class="input-button">添加联系人成功</button>
+					<button data-name="import" class="input-button">批量添加联系人</button>
+					<button data-name="prompt" class="input-button">通用提醒</button>
+				</div>
+
+				<hr class="horizon-line" />
+
+				<div class="group">
+					<button data-name="adduser" class="input-button">添加用户</button>
+					<button data-name="participate" class="input-button">加入会议</button>
+					<button data-name="participate" data-domain="install" class="input-button">加入会议2</button>
+					<button data-name="participate" data-domain="process" class="input-button">加入会议3</button>
+					<button data-name="invite" class="input-button">邀请人列表</button>
+					<button data-name="invite" data-domain="blank" class="input-button">邀请人列表2</button>
+					<button data-name="invite" data-domain="adduser" class="input-button">邀请人列表3</button>
+					<button data-name="invite" data-domain="success" class="input-button">邀请与会者</button>
+					<button data-name="invite" data-domain="concat" class="input-button">从通信录选择</button>
+					<button data-name="invite" data-domain="failure" class="input-button">邀请与会者</button>
+				</div>
+
+				<hr class="horizon-line" />
+
+				<div class="group">
+					<button data-name="meeting" data-domain="firststep" class="input-button">预约会议1</button>
+					<button data-name="meeting" data-domain="secondstep" class="input-button">预约会议2</button>
+					<button data-name="meeting" data-domain="secondstep2" class="input-button">预约会议2</button>
+					<button data-name="meeting" data-domain="thirdstep" class="input-button">预约会议3</button>
+					<button data-name="meeting" data-domain="thirdstep2" class="input-button">预约会议3</button>
+					<button data-name="meeting" data-domain="fourthstep" class="input-button">预约会议4</button>
+					<button data-name="order" class="input-button">账单详情</button>
+					<button data-name="order" data-domain="type1" class="input-button">账单详情</button>
+					<button data-name="order" data-domain="type2" class="input-button">账单详情</button>
+					<button data-name="details" class="input-button">会议详情</button>
+				</div>
+
+				<hr class="horizon-line" />
+
+				<div class="group">
+					<button data-name="modifypwd" class="input-button">修改密码</button>
+					<button data-name="modifypwd" data-domain="success" class="input-button">修改密码2</button>
+					<button data-name="choose" class="input-button">从通讯录选择</button>
+					<button data-name="choose" data-domain="empty" class="input-button">从通讯录选择2</button>
+				</div>
+
+				<hr class="horizon-line" />
+
+				<div class="group">
+					<h4>按钮样式示范：</h4>
+					<p>
+						<span>input-button</span>
+						<a class="input-button">蓝色按钮</a>
+						<span class="divider">|</span>
+						<span>input-green</span>
+						<a class="input-green">绿色按钮</a>
+						<span class="divider">|</span>
+						<span>input-gray</span>
+						<a class="input-gray">白色按钮</a>
+						<span class="divider">|</span>
+						<span>input-disable</span>
+						<a class="input-disable">禁用按钮</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/assets/js/lib/jquery.js"></script>
+		<script type="text/javascript" src="/assets/js/lib/base.js"></script>
+		<script type="text/javascript" src="/assets/js/lib/mustache.js"></script>
+		<script type="text/javascript" src="/assets/js/modules/dialog.js"></script>
+	</body>
+</html>

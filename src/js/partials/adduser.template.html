@@ -1,0 +1,52 @@
+{{#adduser}}
+	<p class="notes">
+		邮箱：系统自动发送会议信息到该邮箱<br />
+		联系电话：外呼电话会议时默认以联系电话为主进行呼叫
+	</p>
+
+	<form method="post" class="login-form">
+		<div class="form-item username-widget">
+			<label class="title">用户名：</label>
+			<div class="widget">
+				<input type="text" class="input-text" placeholder="用户名" />
+				<span class="required fix-png"></span>
+				<span class="tips">只允许输入或字母或下划线</span>
+			</div>
+		</div>
+		<div class="form-item english-widget">
+			<label class="title">英文名：</label>
+			<div class="widget">
+				<input type="text" class="input-text" placeholder="英文名" />
+				<span class="tips">只允许中文或数字或字母或"_"或"&amp;"或"-"或空格</span>
+			</div>
+		</div>
+		<div class="form-item email-widget error-item">
+			<label class="title">邮箱：</label>
+			<div class="widget">
+				<span class="required fix-png"></span>
+				<input type="text" class="input-text" placeholder="邮箱" />
+				<span class="tips">例如: lovemoon@yeah.net</span>
+				<span class="error"><i class="icon"></i>请正确填写邮箱！</span>
+			</div>
+		</div>
+		<div class="form-item landline-widget">
+			<label class="title">联系电话：</label>
+			<div class="widget">
+				<input type="text" class="input-text" placeholder="联系电话" />
+				<span class="tips">电话号码(+86 010-88888888)</span>
+			</div>
+		</div>
+		<div class="form-item mobile-widget">
+			<label class="title">手机号码：</label>
+			<div class="widget">
+				<input type="text" class="input-text" placeholder="手机号码" />
+			</div>
+		</div>
+		<div class="form-item remark-widget">
+			<label class="title">备注：</label>
+			<div class="widget">
+				<textarea class="input-area"></textarea>
+			</div>
+		</div>
+	</form>
+{{/adduser}}

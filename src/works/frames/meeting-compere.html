@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>会畅通讯 - 会议系统</title>
+		<!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+		<!--[if lt IE 9]><script src="/assets/js/lib/html5.js"></script><![endif]-->
+		<!--[if lt IE 7]><script src="/assets/js/lib/belatedpng.js"></script><![endif]-->
+		<link type="image/x-icon" rel="shortcut icon" href="/assets/favicon.ico" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/base.css" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/apps/meeting.css" />
+	</head>
+	<body>
+		<div class="settime tabview">
+			<ul class="tabs clearfix">
+				<li class="tab today active" data-tab="today">今天</li>
+				<li class="tab week" data-tab="week">本周</li>
+				<li class="tab month" data-tab="month">本月</li>
+				<li class="tab total last-child" data-tab="total">全部</li>
+			</ul>
+		</div>
+
+		<div class="summary">
+			<span class="date">
+				<input type="checkbox" id="showJoin" />
+				<label for="showJoin">显示已参加的</label>
+			</span>
+			<div class="search">
+				<form method="get">
+					<input type="text" class="input-text" placeholder="请输入会议主题..." />
+					<button class="submit-search" type="button">搜索</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="module running-module">
+			<div class="module-head">
+				<h3 class="title"><i class="icon icon-down"></i>正在进行</h3>
+			</div>
+			<div class="module-body">
+				<ul class="meetings clearfix">
+					<li class="item">
+						<div class="general clearfix">
+							<div class="information">
+								<span class="duration">
+									<i class="icon icon-duration fix-png"></i>
+									2013-09-13 10:50
+								</span>
+								<span class="compere">
+									<i class="icon icon-compere fix-png"></i>
+									Rita
+								</span>
+								<a class="invite">
+									<i class="icon icon-invite fix-png"></i>
+									<span>邀请</span>
+								</a>
+								<a class="settings" data-name="settings">
+									<i class="icon icon-settings fix-png"></i>
+									<span>设置</span>
+								</a>
+								<span class="attendance">
+									<i class="icon icon-attendance fix-png"></i>
+									8
+								</span>
+								<span class="actions">
+									<a class="input-green">进入会议</a>
+								</span>
+							</div>
+							<div class="title">
+								<div class="calendar">
+									<span class="date">今天</span>
+									<span class="time">09:30</span>
+								</div>
+								<div class="name"><a href="">新员工入职培训</a></div>
+							</div>
+						</div>
+						<div class="dynamic">
+							<div class="describe">
+								佛曰：由爱故生忧…由爱故生怖，若离于爱者，无忧亦无怖。
+								摩柯枷叶问：如何能为离于爱者？
+								佛曰：无我相，无人相，无众生相，无寿者相，而法相宛然，即为离千爱者。
+
+								佛曰：命由己造，相由心生。世间万物皆是化相，心不变万物皆不变，心不动万物皆不动。
+								佛曰：爱别离，怨掸会，撒手西归，全无是类，不过是满眼空花，一片虚幻。
+								佛曰：坐亦禅，行亦禅，一花一世界，一叶一菩提，春来花自青，秋至叶飘零，无穷般若心自在，语默动静体自然。
+
+								命由己造，相由心生。心生相易，己造命难。
+								纵使再难，胜过心死？纵使再难，胜过心衰？
+							</div>
+							<div class="settings-panel clearfix">
+								<div class="lside">
+									<a class="input-gray">添加至Outlook日历提醒</a>
+									<a class="input-gray">添加至Gmail日历提醒</a>
+								</div>
+								<div class="rside">
+									<a class="input-gray">修改</a>
+									<a class="input-gray">修改全部</a>
+									<a class="input-gray">取消</a>
+									<a class="input-gray">取消全部</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item underway">
+						<div class="general clearfix">
+							<div class="information">
+								<span class="duration">
+									<i class="icon icon-duration fix-png"></i>
+									2013-09-13 10:50
+								</span>
+								<span class="compere">
+									<i class="icon icon-compere fix-png"></i>
+									Rita
+								</span>
+								<a class="invite">
+									<i class="icon icon-invite fix-png"></i>
+									<span>邀请</span>
+								</a>
+								<a class="settings" data-name="settings">
+									<i class="icon icon-settings fix-png"></i>
+									<span>设置</span>
+								</a>
+								<span class="attendance">
+									<i class="icon icon-attendance fix-png"></i>
+									8
+								</span>
+								<span class="actions">
+									<a class="input-green">进入会议</a>
+								</span>
+							</div>
+							<div class="title">
+								<div class="calendar">
+									<span class="date">今天</span>
+									<span class="time">09:30</span>
+								</div>
+								<div class="name"><a href="">新员工入职培训</a></div>
+							</div>
+						</div>
+						<div class="dynamic">
+							<div class="describe">
+								佛曰：由爱故生忧…由爱故生怖，若离于爱者，无忧亦无怖。
+								摩柯枷叶问：如何能为离于爱者？
+								佛曰：无我相，无人相，无众生相，无寿者相，而法相宛然，即为离千爱者。
+
+								佛曰：命由己造，相由心生。世间万物皆是化相，心不变万物皆不变，心不动万物皆不动。
+								佛曰：爱别离，怨掸会，撒手西归，全无是类，不过是满眼空花，一片虚幻。
+								佛曰：坐亦禅，行亦禅，一花一世界，一叶一菩提，春来花自青，秋至叶飘零，无穷般若心自在，语默动静体自然。
+
+								命由己造，相由心生。心生相易，己造命难。
+								纵使再难，胜过心死？纵使再难，胜过心衰？
+							</div>
+							<div class="settings-panel clearfix">
+								<div class="lside">
+									<a class="input-gray">添加至Outlook日历提醒</a>
+									<a class="input-gray">添加至Gmail日历提醒</a>
+								</div>
+								<div class="rside">
+									<a class="input-gray">修改</a>
+									<a class="input-gray">修改全部</a>
+									<a class="input-gray">取消</a>
+									<a class="input-gray">取消全部</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="module waiting-module">
+			<div class="module-head">
+				<h3 class="title"><i class="icon icon-down"></i>即将开始</h3>
+			</div>
+			<div class="module-body">
+				<ul class="meetings clearfix">
+					<li class="item">
+						<div class="general clearfix">
+							<div class="information">
+								<span class="duration">
+									<i class="icon icon-duration fix-png"></i>
+									2013-09-13 10:50
+								</span>
+								<span class="compere">
+									<i class="icon icon-compere fix-png"></i>
+									Rita
+								</span>
+								<a class="invite">
+									<i class="icon icon-invite fix-png"></i>
+									<span>邀请</span>
+								</a>
+								<a class="settings" data-name="settings">
+									<i class="icon icon-settings fix-png"></i>
+									<span>设置</span>
+								</a>
+								<span class="attendance">
+									<i class="icon icon-attendance fix-png"></i>
+									8
+								</span>
+								<span class="actions">
+									<a class="input-button">开始会议</a>
+								</span>
+							</div>
+							<div class="title">
+								<div class="calendar">
+									<span class="date">今天</span>
+									<span class="time">09:30</span>
+								</div>
+								<div class="name"><a href="">新员工入职培训</a></div>
+							</div>
+						</div>
+						<div class="dynamic">
+							<div class="describe">
+								佛曰：由爱故生忧…由爱故生怖，若离于爱者，无忧亦无怖。
+								摩柯枷叶问：如何能为离于爱者？
+								佛曰：无我相，无人相，无众生相，无寿者相，而法相宛然，即为离千爱者。
+
+								佛曰：命由己造，相由心生。世间万物皆是化相，心不变万物皆不变，心不动万物皆不动。
+								佛曰：爱别离，怨掸会，撒手西归，全无是类，不过是满眼空花，一片虚幻。
+								佛曰：坐亦禅，行亦禅，一花一世界，一叶一菩提，春来花自青，秋至叶飘零，无穷般若心自在，语默动静体自然。
+
+								命由己造，相由心生。心生相易，己造命难。
+								纵使再难，胜过心死？纵使再难，胜过心衰？
+							</div>
+							<div class="settings-panel clearfix">
+								<div class="lside">
+									<button class="input-gray">添加至Outlook日历提醒</button>
+									<button class="input-gray">添加至Gmail日历提醒</button>
+								</div>
+								<div class="rside">
+									<button class="input-gray">修改</button>
+									<button class="input-gray">修改全部</button>
+									<button class="input-gray">取消</button>
+									<button class="input-gray">取消全部</button>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/assets/js/lib/jquery.js"></script>
+		<script type="text/javascript" src="/assets/js/lib/base.js"></script>
+	</body>
+</html>

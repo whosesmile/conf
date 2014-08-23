@@ -1,0 +1,78 @@
+html, body {
+	background: #EEEEEE;
+}
+
+body {
+	padding: 20px;
+}
+
+.box .body {
+	padding: 0;
+	border: none;
+	background: transparent;
+	margin-top: 0;
+}
+
+.pagebar {
+	margin-top: 10px;
+}
+
+.infomation .common-table th {
+	font-weight: bold;
+}
+
+.common-table .actions {
+	width: 250px;
+}
+
+.common-table .actions .action {
+	margin-right: 5px;
+}
+
+.common-table .count {
+	width: 85px;
+}
+
+.common-table td.desc {
+	color: #999999;
+}
+
+.summary {
+	padding: 5px 0;
+}
+
+.summary .date {
+	margin-left: 0;
+}
+
+.summary .search {
+	position: relative;
+}
+
+.summary .search form,
+.summary .search .advantage {
+	float: right;
+}
+
+.summary .search .advantage {
+	line-height: 30px;
+	margin: 0 10px 0 20px;
+	padding-right: 15px;
+	background: transparent url(/assets/images/bg/side.png) right center no-repeat;
+}
+
+.icon-depart {
+	width: 18px;
+	background: transparent url(/assets/images/sprite/icons.png) -155px -46px no-repeat;
+}
+
+.icon-under {
+	width: 18px;
+	background: transparent url(/assets/images/sprite/icons.png) -191px -46px no-repeat;
+}
+
+.icon-blank {
+	display: inline-block;
+	width: 20px;
+	zoom: 1;
+}

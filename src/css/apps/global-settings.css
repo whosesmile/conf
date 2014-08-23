@@ -1,0 +1,110 @@
+html, body {
+	background: #EEEEEE;
+}
+
+body {
+	padding: 20px;
+}
+
+.box .body {
+	margin-top: 15px;
+	padding: 30px 20px;
+}
+
+.fieldset {
+	width: 550px;
+}
+
+.fieldset .legend {
+	font-weight: bold;
+	padding-left: 30px;
+	margin-bottom: 10px;
+	background: transparent url(/assets/images/bg/line.png) 0 center repeat-x;
+}
+
+.fieldset .legend span {
+	padding: 0 10px;
+	background: #FFFFFF;
+}
+
+.form-item {
+	position: relative;
+	line-height: 30px;
+	margin-bottom: 10px;
+	zoom: 1;
+}
+
+.form-item .title {
+	float: left;
+	width: 125px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.form-item .widget {
+	margin-left: 130px;
+}
+
+.form-item .widget label {
+	margin-right: 30px;
+}
+
+.form-item .widget label input {
+	margin-top: -4px;
+}
+
+.form-item .input-text {
+	width: 280px;
+	margin-right: 25px;
+}
+
+.form-item .widget p {
+	margin-bottom: 8px;
+}
+
+.form-item .widget img {
+	display: inline-block;
+}
+
+.form-item .widget .gray {
+	margin-left: 15px;
+}
+
+.form-item .required {
+	position: absolute;
+	top: 9px;
+	*top: 6px;
+	left: 430px;
+	width: 7px;
+	height: 7px;
+	background: transparent url(/assets/images/sprite/icons.png) -14px -194px no-repeat;
+}
+
+.form-item .tips {
+	color: #B0B0B0;
+	line-height: 30px;
+}
+
+.disableset {
+	color: #999999;
+	margin-top: 20px;
+}
+
+.disableset ul {
+	padding-left: 42px;
+}
+
+.disableset ul li {
+	float: left;
+	line-height: 30px;
+	margin-right: 60px;
+}
+
+.success-item {
+	margin-left: 25px;
+}
+
+.submit-item {
+	margin-top: 40px;
+	padding-left: 65px;
+}

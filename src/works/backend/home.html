@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>会畅通讯 - 会议系统</title>
+		<!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+		<!--[if lt IE 9]><script src="/assets/js/lib/html5.js"></script><![endif]-->
+		<!--[if lt IE 7]><script src="/assets/js/lib/belatedpng.js"></script><![endif]-->
+		<link type="image/x-icon" rel="shortcut icon" href="/assets/favicon.ico" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/base.css" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/apps/backend.css" />
+	</head>
+	<body>
+
+		<!--#include file="/assets/inc/header-backend.html"-->
+
+		<div class="fullline"></div>
+
+		<div id="content">
+			<div class="wrapper">
+				<aside id="lside">
+					<ul class="menubar">
+						<li class="cascade">
+							<span><i class="icon icon-meeting"></i>用户管理</span>
+							<ul class="submenu">
+								<li class=""><span>企业管理员管理</span></li>
+								<li data-name="users-manage"><span>企业用户管理</span></li>
+								<li data-name="organization" class="last-child"><span>机构管理</span></li>
+							</ul>
+						</li>
+						<li class="cascade">
+							<span><i class="icon icon-default"></i>系统配置</span>
+							<ul class="submenu">
+								<li data-name="email-server"><span>邮件服务器设置</span></li>
+								<li><span>邮件模板设置</span></li>
+								<li data-name="global-settings" class="last-child"><span>全局会议功能设置</span></li>
+							</ul>
+						</li>
+						<li data-name="company-manage"><span><i class="icon icon-company"></i>企业信息管理</span></li>
+						<li><span><i class="icon icon-notice"></i>公告管理</span></li>
+						<li class="cascade open">
+							<span><i class="icon icon-finder"></i>信息查询</span>
+							<ul class="submenu">
+								<li class="active" data-name="meeting-info"><span>会议信息</span></li>
+								<li><span>企业管理员日志</span></li>
+								<li class="last-child"><span>用户操作日志</span></li>
+							</ul>
+						</li>
+						<li><span><i class="icon icon-order"></i>账单管理</span></li>
+						<li><span><i class="icon icon-habit"></i>偏好设置</span></li>
+						<li><span><i class="icon icon-personal"></i>个人信息管理</span></li>
+					</ul>
+				</aside>
+				<div id="mainbox">
+					<iframe frameborder="0" width="100%" height="600" scrolling="no" src="/works/frames/meeting-info.html" name="mainframe" ></iframe>
+				</div>
+			</div>
+		</div>
+
+		<!--#include file="/assets/inc/footer.html"-->
+		
+		<script type="text/javascript" src="/assets/js/lib/jquery.js"></script>
+		<script type="text/javascript" src="/assets/js/lib/base.js"></script>
+	</body>
+</html>
