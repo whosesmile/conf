@@ -11,8 +11,8 @@ module.exports = function (grunt) {
 
     config: {
       folder: 'temp',
-      port: 8888,
-      livereload: 35790
+      port: 8080,
+      livereload: 35741
     },
 
     banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         src: 'Gruntfile.js'
       },
       dev: {
-        src: 'src'
+        src: ['src/**/*.html', 'src/**/*.css', 'src/**/*.js']
       }
     },
 
@@ -81,9 +81,9 @@ module.exports = function (grunt) {
         options: {
           base: ['<%= config.folder %>'],
           port: '<%= config.port %>',
-          open: 'http://127.0.0.1:<%= config.port %>',
+          open: 'http://127.0.0.1:<%= config.port %>/works/login.html',
           // keepalive: true,
-          livereload: '<%= config.livereload%>',
+          // livereload: '<%= config.livereload%>',
           hostname: '*',
           middleware: function (connect, options, middlewares) {
             var ssInclude = require("connect-include");
@@ -93,21 +93,6 @@ module.exports = function (grunt) {
               return next();
             });
 
-            // Same as in grunt-contrib-connect
-            var directory = options.directory || options.base[options.base.length - 1];
-            if (!Array.isArray(options.base)) {
-              options.base = [options.base];
-            }
-
-            // Here we insert connect-include, use the same pattern to add other middleware
-            middlewares.push(ssInclude(directory));
-
-            // // Same as in grunt-contrib-connect
-            // options.base.forEach(function (base) {
-            //   middlewares.push(connect.static(base));
-            // });
-
-            middlewares.push(connect.directory(directory));
             return middlewares;
           }
         }
