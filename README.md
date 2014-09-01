@@ -5,6 +5,7 @@ https://github.com/whosesmile/conf.git
 
 2.查看效果：
   方式1：配置本机nginx
+
     server {
       listen       80;
       server_name  localhost;
@@ -20,9 +21,11 @@ https://github.com/whosesmile/conf.git
         alias /Users/smilelegend/myworks/confcloud/src/;
       }
     }
+    
   方式2：
   1.安装nodejs
   2.进入工程跟目录，依次运行
+
     npm install grunt-cli -g
     npm install
     grunt
