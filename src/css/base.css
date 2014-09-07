@@ -128,3 +128,142 @@ label[for] { vertical-align: middle; }
 .normal-player { width: 800px; height: 600px; overflow: hidden; background: #130E10 url(/assets/images/bg/player_holder.jpg) 0 0 repeat; }
 /* default style */
 html, body { background: #FFFFFF; }
+
+#navigator .wrapper { position: relative; height: 47px; line-height: 47px; background: #3897D1 url(/assets/images/bg/nav.png) 0 0 repeat-x; }
+#navigator .icon { width: 30px; height: 30px; background: transparent url(/assets/images/sprite/icons.png) 0 0 no-repeat; }
+#navigator .classify { margin-left: 245px; _padding-top: 8px; }
+#navigator .classify li { float: left; }
+#navigator .classify li a { font-size: 14px; color: #FFFFFF; display: block; margin: 0 25px; }
+#navigator .classify li .icon { margin-right: 5px; }
+#navigator .classify li .icon-intime { background-position: 0 0; }
+#navigator .classify li .icon-appoint { background-position: -30px 0; }
+#navigator .classify li .icon-join { background-position: -60px 0; }
+#navigator .dynamic { position: absolute; left: 20px; top: 0; font-size: 14px; color: #FFFFFF; _top: 6px; }
+#navigator .dynamic .login, #navigator .dynamic .welcome a { color: #FFFFFF; }
+#navigator .dynamic .logout { margin-left: 10px; }
+#navigator .dynamic .icon-login { width: 20px; background-position: -8px -30px; }
+#navigator .region { position: absolute; right: 20px; top: 0; color: #FFFFFF; _top: 8px; }
+#navigator .region .timezone { color: #FFFFFF; }
+#navigator .region .timezone .icon-zone { background-position: -28px -30px; }
+#navigator .region .language { margin-left: 35px; }
+#navigator .region .language select { width: 75px; border-radius: 0; padding: 2px 3px; }
+#content .wrapper { min-height: 600px; background: #EEEEEE; position: relative; zoom: 1; }
+/*
+
+#lside { position: absolute; top: 0; left: 0; bottom: 0; width: 200px; background: #4E5862 url(/assets/images/bg/lside.png) 0 0 repeat; }
+#lside .menubar { margin-top: 15px; border-top: 1px solid #383B40; border-bottom: 1px solid #606972; }
+#lside .menubar li { border-top: 1px solid #606972; border-bottom: 1px solid #383B40; line-height: 38px; font-size: 14px; _height: 38px; }
+#lside .menubar span { display: block; color: #FFFFFF; cursor: pointer; text-decoration: none; _padding: 7px 0; _zoom: 1; }
+#lside .menubar span:hover { color: #D9FEB0; }
+#lside .menubar li.active { background: #292A2E url(/assets/images/bg/menu-active.png) 0 0 no-repeat; }
+#lside .menubar li.active span { color: #D9FEB0; }
+#lside .menubar li.cascade span { background: transparent url(/assets/images/bg/side.png) 172px 15px no-repeat; }
+#lside .menubar li.open span { background: transparent url(/assets/images/bg/down.png) 171px 17px no-repeat; }
+#lside .menubar li.cascade, #lside .menubar .submenu li span { background: none; }
+#lside .menubar .icon { width: 18px; height: 18px; margin: 0 12px 0 20px; background: transparent url(/assets/images/sprite/menu_icons.png) 0 0 no-repeat; _background-image: url(/assets/images/sprite/menu_icons-png8.png); _margin-top: 5px; }
+#lside .submenu { border-top: 1px solid #383B40; display: none; }
+#lside .submenu li:last-child, #lside .submenu li.last-child { border-bottom: none; }
+#lside .open .submenu { display: block; }
+#lside .submenu .icon { margin-left: 48px; }
+#lside .menubar .icon-help { background-position: 0 -200px; }
+#lside .menubar .icon-product { background-position: 0 -317px; }
+#lside .menubar .icon-meeting { background-position: 0 0; }
+#lside .menubar .icon-compere { background-position: 0 -20px; }
+#lside .menubar .icon-join { background-position: 0 -40px; }
+#lside .menubar .icon-concat { background-position: 0 -60px; }
+#lside .menubar .icon-notice { background-position: 0 -80px; }
+#lside .menubar .icon-order { background-position: 0 -100px; }
+#lside .menubar .icon-report { background-position: 0 -120px; }
+#lside .menubar .icon-default { background-position: 0 -140px; }
+#lside .menubar .icon-habit { background-position: 0 -160px; }
+#lside .menubar .icon-personal { background-position: 0 -180px; }
+#lside .menubar .icon-support { background-position: 0 -300px; }
+#lside .menubar .icon-public { background-position: 0 -280px; }
+#lside .menubar .icon-company { background-position: 0 -258px; }
+#lside .menubar .icon-finder { background-position: 0 -240px; }
+#lside .menubar span:hover .icon-public, #lside .menubar .active .icon-public { background-position: -18px -280px; }
+#lside .menubar span:hover .icon-compere, #lside .menubar .active .icon-compere { background-position: -18px -20px; }
+#lside .menubar span:hover .icon-join, #lside .menubar .active .icon-join { background-position: -18px -40px; }
+#lside .menubar span:hover .icon-meeting, #lside .menubar .active .icon-meeting { background-position: -18px 0; }
+#lside .menubar span:hover .icon-concat, #lside .menubar .active .icon-concat { background-position: -18px -60px; }
+#lside .menubar span:hover .icon-notice, #lside .menubar .active .icon-notice { background-position: -18px -80px; }
+#lside .menubar span:hover .icon-order, #lside .menubar .active .icon-order { background-position: -18px -100px; }
+#lside .menubar span:hover .icon-report, #lside .menubar .active .icon-report { background-position: -18px -120px; }
+#lside .menubar span:hover .icon-default, #lside .menubar .active .icon-default { background-position: -18px -140px; }
+#lside .menubar span:hover .icon-habit, #lside .menubar .active .icon-habit { background-position: -18px -160px; }
+#lside .menubar span:hover .icon-personal, #lside .menubar .active .icon-personal { background-position: -18px -180px; }
+#lside .menubar span:hover .icon-support, #lside .menubar .active .icon-support { background-position: -18px -300px; }
+#lside .menubar span:hover .icon-help, #lside .menubar .active .icon-help { background-position: -18px -200px; }
+#lside .menubar span:hover .icon-product, #lside .menubar .active .icon-product { background-position: -18px -317px; }
+#lside .menubar span:hover .icon-company, #lside .menubar .active .icon-company { background-position: -18px -258px; }
+#lside .menubar span:hover .icon-finder, #lside .menubar .active .icon-finder { background-position: -18px -240px; }
+*/
+
+#footer .wrapper { border-top: 1px solid #828991; line-height: 38px; background: #404348; }
+#footer .copy { text-align: center; color: #999999; font-weight: bold; }
+.error-item .input-text { border-color: #C56360; background: #FAE2E2; color: #C51500; }
+.error-item .error { color: #C91600; line-height: 20px; }
+.success-item .tips, .error-item .tips { display: none; }
+.error-item .error i { width: 20px; height: 20px; margin-right: 2px; background: transparent url(/assets/images/sprite/icons.png) -10px -154px no-repeat; _background-image: url(/assets/images/sprite/icons-png8.png); }
+.success-item .success { color: #529B03; }
+.success-item .success i { width: 20px; height: 20px; margin-right: 2px; background: transparent url(/assets/images/sprite/icons.png) -10px -225px no-repeat; _margin-top: 2px; }
+#mainbox { margin-left: 200px; zoom: 1; }
+.module { border: 1px solid #CCCCCC; margin-bottom: 15px; }
+.module .module-head { height: 18px; line-height: 18px; padding: 9px 10px; background: #FFFFFF url(/assets/images/bg/module-head.png) 0 0 repeat-x; overflow: hidden; _cursor: pointer; }
+.module .module-head .title { font-weight: normal; cursor: pointer; }
+.module .module-head .title .icon-down { width: 18px; height: 18px; background: transparent url(/assets/images/sprite/icons.png) -13px -81px no-repeat; _background-image: url(/assets/images/sprite/icons-png8.png); }
+.module .module-body { border-top: 1px solid #CCCCCC; background: #FFFFFF; }
+.module .module-body .icon-nothing { width: 33px; height: 33px; background: transparent url(/assets/images/sprite/icons.png) -145px -76px no-repeat; }
+.module .module-body .no-data { font-size: 20px; color: #6F6F6F; padding: 45px 0; }
+.module-close .module-body { display: none; }
+.module-close .module-head .title .icon-down { background-position: -13px -117px; }
+.box .head { line-height: 24px; padding-bottom: 3px; border-bottom: 1px solid #CCCCCC; }
+.box .head .title { border-left: 4px solid #3BB3FF; font-size: 15px; padding: 0 10px; }
+.box .head .desc { color: #999999; }
+.box .body { margin-top: 20px; border: 1px solid #CCCCCC; background: #FFFFFF; padding: 30px 0; }
+/* 顶栏 */
+.settime li.active + li { border-left-color: #313236; }
+.summary { height: 40px; line-height: 40px; overflow: hidden; _padding-top: 10px; _height: 30px; }
+.summary .date { float: left; margin-left: 5px; color: #666666; }
+.summary .date .icon-date { display: inline-block; width: 20px; height: 20px; vertical-align: middle; background: transparent url(/assets/images/sprite/icons.png) -47px -117px no-repeat; }
+.summary .actions { float: left; margin-left: 5px; }
+.summary .actions li { float: left; margin-right: 25px; }
+.summary .search { float: right; padding-top: 5px; _margin-top: -10px; }
+.summary .search .input-text { float: left; border-radius: 0; border-right: none; width: 235px; height: 16px; }
+.summary .search .submit-search { float: left; width: 35px; height: 28px; overflow: hidden; border: 1px solid #CCCCCC; background: transparent url(/assets/images/sprite/icons.png) -36px -77px no-repeat; cursor: pointer; text-indent: -9999px; }
+.running-module .module-head .title { color: #539A00; }
+/* 会议列表 */
+ul.meetings .item { border-bottom: 1px solid #CCCCCC; }
+ul.meetings .item:last-child { border-bottom: 0; }
+ul.meetings .item .general { padding: 0 15px; line-height: 53px; }
+ul.meetings .information { float: right; height: 53px; }
+ul.meetings .information .duration, ul.meetings .information .compere, ul.meetings .information .invite, ul.meetings .information .settings, ul.meetings .information .attendance { vertical-align: middle; float: left; padding: 10px; border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF; _padding-top: 28px; }
+ul.meetings .calendar, ul.meetings .name a { display: block; padding: 10px 0; }
+ul.meetings .information .duration { width: 160px; }
+ul.meetings .information .compere { width: 80px; }
+ul.meetings .information .invite { width: 70px; }
+ul.meetings .information .settings { width: 50px; }
+ul.meetings .information .attendance { width: 60px; }
+ul.meetings .information .actions { float: right; padding: 10px 0; *float: left; _padding-top: 20px; }
+ul.meetings .information .icon { width: 18px; height: 18px; background: transparent url(/assets/images/sprite/icons.png) 0 0 no-repeat; }
+ul.meetings .information .icon-duration { background-position: -81px -82px; }
+ul.meetings .information .icon-compere { background-position: -118px -46px; }
+ul.meetings .underway .information .icon-compere { background-position: -118px -83px; }
+ul.meetings .information .icon-invite { background-position: -154px -263px; }
+ul.meetings .information .icon-settings { background-position: -118px -118px; }
+ul.meetings .information .icon-attendance { background-position: -83px -118px; }
+ul.meetings .title { margin-right: 530px; }
+ul.meetings .title .calendar { float: left; position: relative; width: 77px; height: 53px; margin-right: 10px; background: transparent url(/assets/images/bg/calendar.png) 0 10px no-repeat; }
+ul.meetings .title span { display: block; line-height: normal; text-align: center; }
+ul.meetings .title .date { line-height: 20px; color: #FFFFFF; }
+ul.meetings .title .time { line-height: 32px; }
+ul.meetings .title .name { float: left; font-size: 16px; text-shadow: 0 1px 1px #D4E1F2; }
+ul.meetings .title .name a { color: #1581C2; }
+ul.meetings .dynamic .describe, ul.meetings .dynamic .settings-panel { display: none; }
+ul.meetings .dynamic .describe { border-top: 1px dotted #CCCCCC; color: #999999; line-height: 1.5; padding: 8px 15px 8px 102px; }
+ul.meetings .information .active { background: transparent url(/assets/images/bg/meeting-active.png) 0 0 repeat-x; border-left: 1px solid #CCCCCC; border-right: 1px solid #CCCCCC; border-bottom: 1px solid #FFFFFF; }
+ul.meetings .dynamic .settings-panel { padding: 8px 15px; border-top: 1px solid #CCCCCC; }
+ul.meetings .dynamic .settings-panel .lside { float: left; }
+ul.meetings .dynamic .settings-panel .lside button { margin-right: 5px; }
+ul.meetings .dynamic .settings-panel .rside { float: right; }
+ul.meetings .dynamic .settings-panel .rside button { margin-left: 5px; }
