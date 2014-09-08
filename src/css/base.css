@@ -128,7 +128,6 @@ label[for] { vertical-align: middle; }
 .normal-player { width: 800px; height: 600px; overflow: hidden; background: #130E10 url(/assets/images/bg/player_holder.jpg) 0 0 repeat; }
 /* default style */
 html, body { background: #FFFFFF; }
-
 #navigator .wrapper { position: relative; height: 47px; line-height: 47px; background: #3897D1 url(/assets/images/bg/nav.png) 0 0 repeat-x; }
 #navigator .icon { width: 30px; height: 30px; background: transparent url(/assets/images/sprite/icons.png) 0 0 no-repeat; }
 #navigator .classify { margin-left: 245px; _padding-top: 8px; }
@@ -148,8 +147,6 @@ html, body { background: #FFFFFF; }
 #navigator .region .language { margin-left: 35px; }
 #navigator .region .language select { width: 75px; border-radius: 0; padding: 2px 3px; }
 #content .wrapper { min-height: 600px; background: #EEEEEE; position: relative; zoom: 1; }
-/*
-
 #lside { position: absolute; top: 0; left: 0; bottom: 0; width: 200px; background: #4E5862 url(/assets/images/bg/lside.png) 0 0 repeat; }
 #lside .menubar { margin-top: 15px; border-top: 1px solid #383B40; border-bottom: 1px solid #606972; }
 #lside .menubar li { border-top: 1px solid #606972; border-bottom: 1px solid #383B40; line-height: 38px; font-size: 14px; _height: 38px; }
@@ -197,8 +194,6 @@ html, body { background: #FFFFFF; }
 #lside .menubar span:hover .icon-product, #lside .menubar .active .icon-product { background-position: -18px -317px; }
 #lside .menubar span:hover .icon-company, #lside .menubar .active .icon-company { background-position: -18px -258px; }
 #lside .menubar span:hover .icon-finder, #lside .menubar .active .icon-finder { background-position: -18px -240px; }
-*/
-
 #footer .wrapper { border-top: 1px solid #828991; line-height: 38px; background: #404348; }
 #footer .copy { text-align: center; color: #999999; font-weight: bold; }
 .error-item .input-text { border-color: #C56360; background: #FAE2E2; color: #C51500; }
@@ -229,7 +224,7 @@ html, body { background: #FFFFFF; }
 .summary .actions { float: left; margin-left: 5px; }
 .summary .actions li { float: left; margin-right: 25px; }
 .summary .search { float: right; padding-top: 5px; _margin-top: -10px; }
-.summary .search .input-text { float: left; border-radius: 0; border-right: none; width: 235px; height: 16px; }
+.summary .search .input-text { float: left; border-radius: 0; border-right: none; width: 210px; height: 16px; }
 .summary .search .submit-search { float: left; width: 35px; height: 28px; overflow: hidden; border: 1px solid #CCCCCC; background: transparent url(/assets/images/sprite/icons.png) -36px -77px no-repeat; cursor: pointer; text-indent: -9999px; }
 .running-module .module-head .title { color: #539A00; }
 /* 会议列表 */
