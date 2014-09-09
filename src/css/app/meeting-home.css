@@ -1,12 +1,13 @@
 html, body { background: #fff; }
 body { padding: 20px; }
-.btn { display: inline-block; padding: 4px 15px; margin: 0; font-size: 12px; font-weight: normal; line-height: 20px; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; background-image: none; border: 1px solid transparent; border-radius: 2px; outline: 0; }
+.btn { display: inline-block; padding: 4px 15px; margin: 0; font-size: 12px; font-weight: normal; line-height: 20px; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; background-image: none; border: 1px solid transparent; border-radius: 2px; outline: 0; overflow: visible; }
 .btn-default { background-color: #F9F9F9; }
 .btn-primary { background-color: #2C86EE; color: #fff; }
 .btn-primary:hover { background-color: #2B94D6; }
 .btn-success { background-color: #00A200; color: #fff; }
 .btn-success:hover { background-color: #5da127; }
 .btn[disabled] { opacity: 0.5; filter: alpha(opacity=50); cursor: not-allowed; }
+.text-overflow { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; zoom: 1; }
 .banner { height: 108px; background-color: #E4E8EE; }
 .banner > .wrapper { padding: 20px 0 20px 20px; }
 .banner .user > .icon { float: left; width: 60px; height: 60px; background: transparent url(/assets/images/login/icons-cloud.png) -501px -5px no-repeat; }
@@ -16,14 +17,23 @@ body { padding: 20px; }
 .banner .user .number .icon { float: left; width: 28px; height: 18px; background: transparent url(/assets/images/login/icons-cloud.png) -323px -79px no-repeat; position: absolute; right: -33px; top: -5px; }
 .banner .list-actions { padding-top: 15px; }
 .list-actions { float: right; }
-.list-actions li { float: left; margin-right: 20px; line-height: 30px; }
-.list-actions li > a { color: #333; }
+.list-actions li { float: left; margin-right: 20px; line-height: 30px; position: relative; }
+.list-actions li > a { color: #333; position: relative; z-index: 20; }
+.list-actions li.active > a, .list-actions li > a:hover { color: #4993e8; }
 .list-actions .icon { display: inline-block; vertical-align: middle; background: transparent url(/assets/images/login/icons-cloud.png) -501px -5px no-repeat; width: 20px; height: 20px; margin-right: 3px; }
 .list-actions .icon.invite { background-position: -470px -76px; }
 .list-actions .icon.notice { background-position: -435px -76px; }
 .list-actions .icon.copy { background-position: -542px -76px; }
 .list-actions .icon.settings { background-position: -399px -76px; }
-.list-actions li.disabled { opacity: 0.5; filter: alpha(opacity=50); }
+.list-actions a:hover .icon.invite { background-position: -470px -106px; }
+.list-actions a:hover .icon.notice { background-position: -435px -106px; }
+.list-actions a:hover .icon.copy { background-position: -542px -106px; }
+.list-actions li.active > a .icon.settings, .list-actions a:hover .icon.settings { background-position: -399px -106px; }
+.list-actions li.disabled, .list-actions li.disabled a:hover { opacity: 0.5; filter: alpha(opacity=50); color: #333; }
+.list-actions li.active .options { display: block; }
+.list-actions li .options { display: none; position: absolute; top: 38px; right: -100px; z-index: 10; text-align: right; background: #606060; background: rgba(0, 0, 0, 0.6); padding: 15px 13px; *width: 340px; }
+.list-actions li .options .corner { position: absolute; width: 0; height: 0; overflow: hidden; font-size: 0; line-height: 0; top: -30px; *top: -28px; right: 102px; border-top: 15px solid transparent; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 15px solid #606060; border-bottom: 15px solid rgba(0, 0, 0, 0.6); }
+.list-actions li .options .btn { margin: 0 2px; }
 .summary { padding: 10px 0; }
 .summary .filter { float: left; }
 .summary .filter .time-case .input-text { width: 70px; padding-right: 30px; background: #FFFFFF url(/assets/images/bg/year.png) 85px center no-repeat; }
@@ -41,4 +51,4 @@ body { padding: 20px; }
 .item-meeting.active .summary h4 a { color: #00A200; }
 .item-meeting.active .summary { background: transparent url(/assets/images/login/active.png) 12px 12px no-repeat; }
 .item-meeting.active .calendar .time { background: transparent url(/assets/images/login/running.png) 57px center no-repeat; }
-.item-meeting.regular .calendar .time {background: transparent url(/assets/images/login/regular.png) center center no-repeat; }
+.item-meeting.regular .calendar .time { background: transparent url(/assets/images/login/regular.png) center center no-repeat; }

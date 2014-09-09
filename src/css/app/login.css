@@ -15,17 +15,13 @@ i.icon.camera { background-position: -612px -78px; width: 25px; height: 20px; }
 #meeting .btn { width: 80px; margin-left: 5px; font-size: 18px; width: 80px; height: 48px; border-radius: 8px; }
 #meeting .form-control { font-size: 20px; width: 400px; border-radius: 8px; padding: 10px 15px; }
 #footer { color: #fff; text-align: center; width: 100%; position: absolute; bottom: 0; opacity: 0.5; filter: alpha(opacity=50); }
-#footer .nav { margin-bottom: 5px; }
-#footer .nav li { display: inline-block; *display: inline; }
-#footer .nav li a { color: #fff; text-decoration: none; margin: 0 10px; }
-#footer .copyright { margin-bottom: 20px; }
 #banner { height: 195px; width: 100%; color: #fff; position: absolute; top: 52%; border: 1px solid rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.2); border-left: none; border-right: 0; margin-bottom: 10px; }
 .login { width: 460px; margin: 0 auto; position: relative; z-index: 10; }
-.login label.for { font-size: 14px; display: none;}
+.login label.for { font-size: 14px; display: none; }
 .login .title { font-size: 16px; margin: 40px 0 10px; }
 .login .form-control { margin-right: 5px; font-size: 14px; }
 .login .btn-primary { box-shadow: 0 0 2px #1167b5 inset; font-size: 14px; height: 36px; }
-.login .holder { width: 178px; margin-right: 5px; display: inline-block; *display: inline;}
+.login .holder { width: 178px; margin-right: 5px; display: inline-block; *display: inline; }
 .login .forget a { color: #fff; text-decoration: underline; }
 /* hack ie */
 .no-rgba #banner { border-color: #eee; }
@@ -36,5 +32,5 @@ i.icon.camera { background-position: -612px -78px; width: 25px; height: 20px; }
 .no-rgba #banner .hack-bg .bottom { bottom: 0; width: 100%; border-bottom: 1px solid #fff; pacity: 0.4; filter: alpha(opacity=40); }
 .no-placeholder .login { width: 545px; }
 .no-placeholder label.for { display: inline-block; *display: inline; }
-.no-placeholder .login .holder {padding-left:42px;}
-.no-placeholder .login .holder.forget {padding-left: 46px;}
+.no-placeholder .login .holder { padding-left: 42px; }
+.no-placeholder .login .holder.forget { padding-left: 46px; }

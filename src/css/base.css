@@ -194,8 +194,11 @@ html, body { background: #FFFFFF; }
 #lside .menubar span:hover .icon-product, #lside .menubar .active .icon-product { background-position: -18px -317px; }
 #lside .menubar span:hover .icon-company, #lside .menubar .active .icon-company { background-position: -18px -258px; }
 #lside .menubar span:hover .icon-finder, #lside .menubar .active .icon-finder { background-position: -18px -240px; }
-#footer .wrapper { border-top: 1px solid #828991; line-height: 38px; background: #404348; }
-#footer .copy { text-align: center; color: #999999; font-weight: bold; }
+#footer {text-align: center; width: 100%; margin-top: 20px; color: #aaa;}
+#footer .nav { margin-bottom: 5px; }
+#footer .nav li { display: inline-block; *display: inline; }
+#footer .nav li a { color: #aaa; text-decoration: none; margin: 0 10px; }
+#footer .copyright { margin-bottom: 20px; }
 .error-item .input-text { border-color: #C56360; background: #FAE2E2; color: #C51500; }
 .error-item .error { color: #C91600; line-height: 20px; }
 .success-item .tips, .error-item .tips { display: none; }

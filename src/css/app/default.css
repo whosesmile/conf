@@ -1,9 +1,9 @@
-html, body { background-color: #DCE0E7; min-width: 1050px;}
+html, body { background-color: #DCE0E7; min-width: 1050px; }
 #content .wrapper { background: transparent; }
 #header { height: 60px; background-color: #8B2C92; overflow: hidden; }
 #logo { padding: 10px 0 0 20px; float: left; }
 #logo img { display: block; }
-#header .name { float: left; font-size: 18px; line-height: 60px; color: #fff; margin-left: 20px; }
+#header .name { float: left; font-size: 18px; line-height: 60px; color: #fff; margin-left: 20px; letter-spacing: 2px; }
 #header nav { float: right; }
 #header nav a { float: left; color: #fff; width: 111px; height: 55px; line-height: 55px; margin-top: 2px; background-color: #eee; margin-right: 3px; text-decoration: none; }
 #header nav a .icon { display: inline-block; background: transparent url(/assets/images/login/icons-cloud.png) 0 0 no-repeat; vertical-align: middle; width: 25px; height: 25px; margin: 0 8px 0 10px; }
@@ -14,9 +14,9 @@ html, body { background-color: #DCE0E7; min-width: 1050px;}
 #header nav a.red .icon { background-position: -6px -73px; }
 #header nav a.green .icon { background-position: -41px -76px; }
 #header nav a.blue .icon { width: 20px; background-position: -76px -76px; }
-#header nav a.cyan .icon { width: 39px; height: 19px; background-position: -581px -44px; }
+#header nav a.cyan .icon { width: 39px; height: 19px; background-position: -581px -44px; vertical-align: top; margin-top: 18px; }
 #header nav a.cyan.english .icon { width: 39px; height: 19px; background-position: -581px -9px; }
-#lside { width: 220px; float: left; background: transparent;}
+#lside { width: 220px; float: left; background: transparent; }
 #lside .personal { position: relative; height: 93px; background-color: #8B2C92; font-size: 0; }
 #lside .personal .user { float: left; width: 121px; height: 85px; border: 2px solid #00A200; background-color: #00A200; color: #fff; text-align: center; font-size: 12px; text-decoration: none; }
 #lside .personal .user:hover { border-color: #fff; }
