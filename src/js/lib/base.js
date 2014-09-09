@@ -1,7 +1,7 @@
 /*!
 ---
 前半部分为Mootools的Core工程 以及Cookie
-目的是用来弥补jQuery在基于对象编程方面的不足 并包含jQuery没有内置的Cookie接口
+目的是用来弥补$在基于对象编程方面的不足 并包含$没有内置的Cookie接口
 后半部分则为一些扩展 方便网站项目的管理和支持
 如有任何疑问请咨询：smilelegend@smilelegend.com || lovemoon@yeah.net
 ---
@@ -1573,13 +1573,13 @@ provides: [Hash]
 /*************************************************Mootools Core包结束********************************************************/
 
 // 设置全局
-jQuery.ajaxSetup({
+$.ajaxSetup({
   cache: false,
   timeout: 20000
 });
 
 // 全局AJAX请求失败处理
-jQuery(document).ajaxError(function (e, xmlhttp, opt) {
+$(document).ajaxError(function (e, xmlhttp, opt) {
   if (xmlhttp.statusText === 'timeout' || xmlhttp.readyState === 4) {
     smallnotes('网络异常，请检查您的网络连接，或稍候再试！');
   }
@@ -1610,7 +1610,7 @@ var Toolkit = this.Toolkit = {
 
   // 纵向滚动到指定位置
   scrollTween: function (y, callback) {
-    jQuery('html,body').animate({
+    $('html,body').animate({
       scrollTop: (y || 0)
     }, 500, 'easeOutExpo', function () {
       return callback && callback();
@@ -1658,7 +1658,7 @@ var Toolkit = this.Toolkit = {
         var key = decodeURIComponent(param[0]);
         var val = decodeURIComponent(param[1]);
         if (paramObj.hasOwnProperty(key)) {
-          paramObj[key] = jQuery.makeArray(paramObj[key]);
+          paramObj[key] = $.makeArray(paramObj[key]);
           paramObj[key].push(val);
         }
         else {
@@ -1711,20 +1711,20 @@ var Toolkit = this.Toolkit = {
     }
 
     var self = this;
-    return jQuery.get(url, function (templ) {
+    return $.get(url, function (templ) {
       self.templHash.set(url, templ);
     });
   },
 
   resizeIframe: function () {
-    var frame = jQuery(window.parent.document).find('iframe[name=' + window.name + ']');
+    var frame = $(window.parent.document).find('iframe[name=' + window.name + ']');
     frame.css('height', 'auto');
-    frame.height(Math.max(jQuery(document).height(), 650));
+    frame.height(Math.max($(document).height(), 650));
   }
 };
 
 // 扩展几个TWEEN
-jQuery.extend(jQuery.easing, {
+$.extend($.easing, {
 
   easeInQuad: function (x, t, b, c, d) {
     return c * (t /= d) * t + b;
@@ -1739,9 +1739,9 @@ jQuery.extend(jQuery.easing, {
   }
 });
 
-// 扩展jQuery.support 添加fixed属性 用来检查浏览器是否支持fixed定位 (IE6)
-jQuery.support.fixed = !(navigator.appName == 'Microsoft Internet Explorer' && navigator.appVersion.indexOf('MSIE 6') != -1);
-jQuery.support.placeholder = 'placeholder' in document.createElement('input');
+// 扩展$.support 添加fixed属性 用来检查浏览器是否支持fixed定位 (IE6)
+$.support.fixed = !(navigator.appName == 'Microsoft Internet Explorer' && navigator.appVersion.indexOf('MSIE 6') != -1);
+$.support.placeholder = 'placeholder' in document.createElement('input');
 
 // 所有由脚本创建的DOM结构都应该放置在这个容器里
 // 以便统一DOM树形结构 方便调试
@@ -1761,9 +1761,9 @@ var DOMPanel = this.DOMPanel = (function () {
 
     getPanel: function () {
       if (panel === null) {
-        panel = jQuery('#domPanel');
+        panel = $('#domPanel');
         if (panel.size() === 0) {
-          panel = jQuery('<div id="domPanel" />').prependTo('body');
+          panel = $('<div id="domPanel" />').prependTo('body');
         }
 
         // 点击对话框不会触发给document绑定的点击行为
@@ -1782,13 +1782,13 @@ var DOMPanel = this.DOMPanel = (function () {
 
   var types = ['DOMMouseScroll', 'mousewheel'];
 
-  if (jQuery.event.fixHooks) {
+  if ($.event.fixHooks) {
     for (var i = types.length; i;) {
-      jQuery.event.fixHooks[types[--i]] = jQuery.event.mouseHooks;
+      $.event.fixHooks[types[--i]] = $.event.mouseHooks;
     }
   }
 
-  jQuery.event.special.mousewheel = {
+  $.event.special.mousewheel = {
     setup: function () {
       if (this.addEventListener) {
         for (var i = types.length; i;) {
@@ -1812,7 +1812,7 @@ var DOMPanel = this.DOMPanel = (function () {
     }
   };
 
-  jQuery.fn.extend({
+  $.fn.extend({
     mousewheel: function (fn) {
       return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
     },
@@ -1828,7 +1828,7 @@ var DOMPanel = this.DOMPanel = (function () {
       delta = 0,
       deltaX = 0,
       deltaY = 0;
-    event = jQuery.event.fix(orgEvent);
+    event = $.event.fix(orgEvent);
     event.type = "mousewheel";
 
     if (orgEvent.wheelDelta) {
@@ -1856,16 +1856,16 @@ var DOMPanel = this.DOMPanel = (function () {
 
     args.unshift(event, delta, deltaX, deltaY);
 
-    return (jQuery.event.dispatch || jQuery.event.handle).apply(this, args);
+    return ($.event.dispatch || $.event.handle).apply(this, args);
   };
 })();
 
 // 光标操作相关扩展
-jQuery.fn.extend({
+$.fn.extend({
 
   // 获取光标位置
   getCaret: function () {
-    var obj = jQuery(this)[0];
+    var obj = $(this)[0];
     var caretPos = 0;
     if (document.selection) {
       obj.focus();
@@ -1882,7 +1882,7 @@ jQuery.fn.extend({
 
   // 定位光标到指定位置
   setCaret: function (pos) {
-    return jQuery.each(this, function () {
+    return $.each(this, function () {
       if (this.setSelectionRange) {
         this.focus();
         this.setSelectionRange(pos, pos);
@@ -1899,7 +1899,7 @@ jQuery.fn.extend({
 
   // 在光标位置插入或替换选择文本
   insertAtCaret: function (myValue) {
-    var obj = jQuery(this)[0];
+    var obj = $(this)[0];
     if (document.selection) {
       this.focus();
       var sel = document.selection.createRange();
@@ -1956,10 +1956,10 @@ jQuery.fn.extend({
 
   // 支持表单的 Ctrl + Enter 快速提交
   ctrlEnter: function () {
-    jQuery(this).keydown(function (e) {
+    $(this).keydown(function (e) {
       if (!e.shiftKey && !e.altKey && e.ctrlKey && e.keyCode == 13) {
-        var obj = jQuery(e.target),
-          form = obj.is('form') ? obj : jQuery(obj[0].form);
+        var obj = $(e.target),
+          form = obj.is('form') ? obj : $(obj[0].form);
 
         form.trigger('submit');
       }
@@ -1967,7 +1967,7 @@ jQuery.fn.extend({
     return this;
   },
 
-  // 判断两个jQuery元素相等
+  // 判断两个$元素相等
   equals: function (compareTo) {
     if (!compareTo || this.length != compareTo.length) {
       return false;
@@ -1984,15 +1984,15 @@ jQuery.fn.extend({
   // 注意：计算方式是小于255的字符记长0.5 大于记长为 1
   limitLength: function (limit, bytes, fn) {
     return this.each(function () {
-      var obj = jQuery(this);
+      var obj = $(this);
       if (obj.is('input:text') || obj.is('textarea')) {
         var that = this;
         var events = ['keyup', 'focus', 'blur'];
-        jQuery.each(events, function (i, type) {
-          jQuery(that).bind(type, function () {
+        $.each(events, function (i, type) {
+          $(that).bind(type, function () {
             var val = '',
               size = 0,
-              obj = jQuery(this);
+              obj = $(this);
 
             if (bytes) {
               val = Toolkit.substrByByte(obj.val(), limit * 2);
@@ -2037,15 +2037,15 @@ jQuery.fn.extend({
     return val != null ? String(val) : null;
   };
 
-  jQuery.fn.datasets = function () {
+  $.fn.datasets = function () {
     var sets = [];
     this.each(function () {
-      sets.push(jQuery(this).dataset());
+      sets.push($(this).dataset());
     });
     return sets;
   };
 
-  jQuery.fn.dataset = function (attr, val) {
+  $.fn.dataset = function (attr, val) {
     // 获取数据集
     var dataset = null;
     if (arguments.length === 0) {
@@ -2074,17 +2074,17 @@ jQuery.fn.extend({
       dataset[attr] = val;
     }
     var tmp = {};
-    jQuery.each(dataset, function (k, v) {
+    $.each(dataset, function (k, v) {
       tmp[encode(k)] = autobox(v);
     });
     return this.attr(tmp);
   };
 
-  jQuery.fn.removeDataset = function (attr) {
+  $.fn.removeDataset = function (attr) {
     if (typeof attr === 'string') {
       if (attr == '*') {
         attr = [];
-        jQuery.each(jQuery(this).dataset(), function (k) {
+        $.each($(this).dataset(), function (k) {
           attr.push(k);
         });
       }
@@ -2094,8 +2094,8 @@ jQuery.fn.extend({
     }
     return this.each(function () {
       var self = this;
-      jQuery.each(attr, function (i, n) {
-        jQuery(self).removeAttr(encode(n));
+      $.each(attr, function (i, n) {
+        $(self).removeAttr(encode(n));
       });
     });
   };
@@ -2124,7 +2124,7 @@ this.CometRequest = new Class({
     this.closeConnect();
 
     var self = this;
-    this.request = jQuery.ajax({
+    this.request = $.ajax({
       url: this.options.url,
       timeout: this.options.timeout,
       type: this.options.method,
@@ -2183,14 +2183,14 @@ this.AjaxQueue = new Class({
 
     var self = this,
       opt = this.queue.shift(),
-      temp = opt.complete || jQuery.noop;
+      temp = opt.complete || $.noop;
     opt.complete = function () {
       temp.apply(this, arguments);
       self.request = null;
       self.start();
     };
 
-    this.request = jQuery.ajax(opt);
+    this.request = $.ajax(opt);
   }
 });
 
@@ -2202,7 +2202,7 @@ this.AjaxOnly = new Class({
   ajax: function (opt) {
     if (this.request !== null) this.request.abort();
 
-    this.request = jQuery.ajax(opt);
+    this.request = $.ajax(opt);
     return this.request;
   }
 });
@@ -2218,7 +2218,7 @@ var Offset = this.Offset = new Class({
   },
 
   initialize: function (element, options) {
-    this.element = jQuery(element);
+    this.element = $(element);
     this.setOptions(options);
     this.setOffset();
     this.listenResize();
@@ -2228,21 +2228,21 @@ var Offset = this.Offset = new Class({
     var left = this.options.left;
     // 如果LEFT没有指定 那么水平居中
     if (left == null) {
-      left = (jQuery(window).width() - this.element.outerWidth()) / 2;
+      left = ($(window).width() - this.element.outerWidth()) / 2;
       left = Math.max(0, left);
     }
 
     var top = this.options.top;
     // 如果TOP没有指定 那么垂直居中
     if (top == null) {
-      top = (jQuery(window).height() - this.element.outerHeight()) / 2;
+      top = ($(window).height() - this.element.outerHeight()) / 2;
       top = Math.max(0, top);
     }
 
     // 如果元素不是fixed定位 那么加上滚动条距离
     if (this.element.css('position') != 'fixed') {
-      left += jQuery(document).scrollLeft();
-      top += jQuery(document).scrollTop();
+      left += $(document).scrollLeft();
+      top += $(document).scrollTop();
     }
 
     this.element.css({
@@ -2256,13 +2256,13 @@ var Offset = this.Offset = new Class({
     var contextProxy = function () {
       // 防止销毁元素后导致内存泄露（因为RESIZE事件是注册在WINDOW对象上 而不是ELEMENT元素上）
       if (self.element.parent().size() === 0) {
-        jQuery(window).unbind('resize', contextProxy);
+        $(window).unbind('resize', contextProxy);
       }
       else if (self.element.is(':visible') && self.element.css('top').toInt() >= 0) {
         self.setOffset();
       }
     };
-    jQuery(window).resize(contextProxy);
+    $(window).resize(contextProxy);
   },
 
   show: function () {
@@ -2304,9 +2304,9 @@ var MaskLayer = this.MaskLayer = {
 
   getElement: function () {
     if (this.element === null) {
-      this.element = jQuery('#masklayer');
+      this.element = $('#masklayer');
       if (this.element.size() === 0) {
-        this.element = jQuery('<div id="masklayer" />').appendTo(DOMPanel.getPanel());
+        this.element = $('<div id="masklayer" />').appendTo(DOMPanel.getPanel());
       }
     }
 
@@ -2349,8 +2349,8 @@ var DialogManager = this.DialogManager = {
   },
 
   bindEvent: function () {
-    jQuery(document).keydown(this.escCancel);
-    this.bindEvent = jQuery.noop;
+    $(document).keydown(this.escCancel);
+    this.bindEvent = $.noop;
   }
 };
 
@@ -2372,7 +2372,7 @@ var CommonDialog = this.CommonDialog = new Class({
     visible: true,
     noheader: false,
     classes: '',
-    prehide: jQuery.noop
+    prehide: $.noop
   },
 
   initialize: function (message, options) {
@@ -2404,14 +2404,14 @@ var CommonDialog = this.CommonDialog = new Class({
     // 是否点击遮罩隐藏弹窗
     if (this.options.autohide) {
       element.click(Toolkit.stopPropagation);
-      jQuery(document).one('click', this.hide.bind(this));
+      $(document).one('click', this.hide.bind(this));
     }
   },
 
   getElement: function () {
     var fragment = ['<div class="common-dialog ' + this.options.classes + '">', '<div class="wrapper">', '<header>', '<h3 class="title">', this.options.title, '</h3>', this.options.minify ? '<a class="minify" title="最小">最小</a>' : '', '<a class="close" title="关闭"></a>', '</header>', '<section>', this.options.message, '</section>', '</div>', '</div>'].join('');
 
-    var element = jQuery(fragment);
+    var element = $(fragment);
 
     if (this.options.noheader === true) {
       element.find('.wrapper > header').remove();
@@ -2422,7 +2422,7 @@ var CommonDialog = this.CommonDialog = new Class({
       width: this.options.width
     });
 
-    if (this.options.isFixed === true && jQuery.support.fixed) {
+    if (this.options.isFixed === true && $.support.fixed) {
       element.css({
         position: 'fixed'
       });
@@ -2434,7 +2434,7 @@ var CommonDialog = this.CommonDialog = new Class({
   getHeader: function () {
     var header = this.element.find('.wrapper > header');
     if (header.size() === 0 && !this.options.noheader) {
-      header = jQuery('<header />').prependTo(this.element.find('.wrapper'));
+      header = $('<header />').prependTo(this.element.find('.wrapper'));
     }
     return header;
   },
@@ -2446,7 +2446,7 @@ var CommonDialog = this.CommonDialog = new Class({
   getFooter: function () {
     var footer = this.element.find('.wrapper > footer');
     if (footer.size() === 0) {
-      footer = jQuery('<footer />').appendTo(this.element.find('.wrapper'));
+      footer = $('<footer />').appendTo(this.element.find('.wrapper'));
     }
     return footer;
   },
@@ -2456,10 +2456,10 @@ var CommonDialog = this.CommonDialog = new Class({
       button = null;
 
     if (opt.type === 'anchor') {
-      button = jQuery('<a class="' + opt.clazz + '">' + opt.text + '</a>');
+      button = $('<a class="' + opt.clazz + '">' + opt.text + '</a>');
     }
     else {
-      button = jQuery('<input type="button" value="' + opt.text + '" class="' + opt.clazz + '" />');
+      button = $('<input type="button" value="' + opt.text + '" class="' + opt.clazz + '" />');
     }
 
     if (opt.prepend) {
@@ -2469,7 +2469,7 @@ var CommonDialog = this.CommonDialog = new Class({
       footer.append(button);
     }
 
-    button.click((opt.callback || jQuery.noop).bind(this));
+    button.click((opt.callback || $.noop).bind(this));
     return button;
   },
 
@@ -2538,7 +2538,7 @@ var AlertDialog = this.AlertDialog = new Class({
   Extends: CommonDialog,
 
   options: {
-    callback: jQuery.noop,
+    callback: $.noop,
     disableButton: false,
     warn: false,
     confirmText: '确定'
@@ -2584,7 +2584,7 @@ var ConfirmDialog = this.ConfirmDialog = new Class({
 
   options: {
     cancelText: '取消',
-    closure: jQuery.noop
+    closure: $.noop
   },
 
   initialize: function (message, options) {
@@ -2605,8 +2605,8 @@ var ConfirmDialog = this.ConfirmDialog = new Class({
 });
 
 // 选项卡效果
-jQuery(document).on('click.tabview.data-api', '.tabview [data-tab]', function () {
-  var tab = jQuery(this),
+$(document).on('click.tabview.data-api', '.tabview [data-tab]', function () {
+  var tab = $(this),
     name = tab.dataset('tab'),
     panel = tab.closest('.tabview');
 
@@ -2624,16 +2624,16 @@ jQuery(document).on('click.tabview.data-api', '.tabview [data-tab]', function ()
   var selector = '[data-toggle="dropdown"]';
 
   var clearMenus = function () {
-    jQuery(selector).each(function () {
+    $(selector).each(function () {
       getPanel(this).removeClass('open');
     });
   };
 
   var getPanel = function (entry) {
-    var express = jQuery(entry).dataset('panel');
+    var express = $(entry).dataset('panel');
 
     if (!express) {
-      express = jQuery(entry).attr('href');
+      express = $(entry).attr('href');
       if (express && express.indexOf('#') !== -1) {
         express = express.replace(/.*(?=#[^\s]*$)/, '');
       }
@@ -2641,18 +2641,18 @@ jQuery(document).on('click.tabview.data-api', '.tabview [data-tab]', function ()
 
     var panel = null;
     if (express) {
-      panel = jQuery(entry).closest(express);
+      panel = $(entry).closest(express);
     }
 
     if (panel && panel.length > 0) {
       return panel;
     }
 
-    return jQuery(entry).parent();
+    return $(entry).parent();
   };
 
   var toggle = function (e) {
-    var entry = jQuery(this);
+    var entry = $(this);
 
     if (entry.is('.disabled, :disabled')) {
       return;
@@ -2670,8 +2670,8 @@ jQuery(document).on('click.tabview.data-api', '.tabview [data-tab]', function ()
     return false;
   };
 
-  jQuery(document).on('click', '.dropdown-menu', function (e) {
-    if (jQuery(this).dataset('stop')) {
+  $(document).on('click', '.dropdown-menu', function (e) {
+    if ($(this).dataset('stop')) {
       e.stopPropagation();
     }
   }).on('click.dropdown.data-api', clearMenus).on('click.dropdown.data-api', selector, toggle);
@@ -2680,8 +2680,8 @@ jQuery(document).on('click.tabview.data-api', '.tabview [data-tab]', function ()
 (function () {
   // 阻止冒泡
   // 左侧菜单切换
-  jQuery(document).on('click', '#lside .menubar li', function (e) {
-    var menu = jQuery(this);
+  $(document).on('click', '#lside .menubar li', function (e) {
+    var menu = $(this);
     if (menu.is('.cascade')) {
       menu.toggleClass('open');
     }
@@ -2699,8 +2699,8 @@ jQuery(document).on('click.tabview.data-api', '.tabview [data-tab]', function ()
   });
 
   // 模块收展效果
-  jQuery(document).on('click', '.module .module-head', function () {
-    var header = jQuery(this),
+  $(document).on('click', '.module .module-head', function () {
+    var header = $(this),
       module = header.closest('.module');
 
     if (header.find('.icon-down').size() > 0) {
@@ -2708,10 +2708,10 @@ jQuery(document).on('click.tabview.data-api', '.tabview [data-tab]', function ()
     }
   });
 
-  jQuery(document).on('click', '#lside .menubar li', function () {
-    var name = jQuery(this).dataset('name');
+  $(document).on('click', '#lside .menubar li', function () {
+    var name = $(this).dataset('name');
     if (name) {
-      jQuery('iframe[name=mainframe]').attr('src', '/works/frames/' + name + '.html?_' + new Date().getTime());
+      $('iframe[name=mainframe]').attr('src', '/works/frames/' + name + '.html?_' + new Date().getTime());
     }
   });
 })();
@@ -2727,8 +2727,8 @@ jQuery(document).on('click.tabview.data-api', '.tabview [data-tab]', function ()
 })();
 
 // 展开会议描述
-jQuery(document).on('click', '.meetings .title .name', function () {
-  var item = jQuery(this).closest('.item');
+$(document).on('click', '.meetings .title .name', function () {
+  var item = $(this).closest('.item');
   item.find('.information > [data-name]').removeClass('active');
   item.find('.dynamic').children().not('.describe').hide();
   item.find('.dynamic .describe').toggle();
@@ -2736,8 +2736,8 @@ jQuery(document).on('click', '.meetings .title .name', function () {
 });
 
 // 展开相关设置
-jQuery(document).on('click', '.meetings .information > [data-name]', function () {
-  var obj = jQuery(this),
+$(document).on('click', '.meetings .information > [data-name]', function () {
+  var obj = $(this),
     name = obj.dataset('name'),
     item = obj.closest('.item'),
     target = '.dynamic .' + name + '-panel';
@@ -2749,6 +2749,6 @@ jQuery(document).on('click', '.meetings .information > [data-name]', function ()
 });
 
 // 高级参数设置
-jQuery(document).on('click', '.meeting-dialog .regular .legend .config', function () {
-  jQuery(this).closest('.regular').toggleClass('open');
+$(document).on('click', '.meeting-dialog .regular .legend .config', function () {
+  $(this).closest('.regular').toggleClass('open');
 });
