@@ -5,7 +5,9 @@ html, body { background-color: #DCE0E7; min-width: 1050px; }
 #logo img { display: block; }
 #header .name { float: left; font-size: 18px; line-height: 60px; color: #fff; margin-left: 20px; letter-spacing: 2px; }
 #header nav { float: right; }
-#header nav a { float: left; color: #fff; width: 111px; height: 55px; line-height: 55px; margin-top: 2px; background-color: #eee; margin-right: 3px; text-decoration: none; }
+#header nav a { float: left; color: #fff; width: 107px; height: 51px; border: 2px solid transparent; line-height: 55px; margin-top: 2px; background-color: #eee; margin-right: 3px; text-decoration: none; }
+#header nav a:hover { border-color: #fff; }
+#header nav a.cyan:hover { border-color: transparent; }
 #header nav a .icon { display: inline-block; background: transparent url(/assets/images/login/icons-cloud.png) 0 0 no-repeat; vertical-align: middle; width: 25px; height: 25px; margin: 0 8px 0 10px; }
 #header nav a.red { background-color: #db552d; }
 #header nav a.green { background-color: #00A200; }

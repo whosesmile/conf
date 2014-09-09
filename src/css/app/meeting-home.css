@@ -1,12 +1,16 @@
 html, body { background: #fff; }
 body { padding: 20px; }
 .btn { display: inline-block; padding: 4px 15px; margin: 0; font-size: 12px; font-weight: normal; line-height: 20px; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; background-image: none; border: 1px solid transparent; border-radius: 2px; outline: 0; overflow: visible; }
-.btn-default { background-color: #F9F9F9; }
+.btn-default { background-color: #E4E8EE; }
+.btn-default:hover { background-color: #F9F9F9; }
+.btn-default:active { background-color: #C5CAD0; }
 .btn-primary { background-color: #2C86EE; color: #fff; }
-.btn-primary:hover { background-color: #2B94D6; }
+.btn-primary:hover { background-color: #61A4F2; }
+.btn-primary:active { background-color: #236BBE; }
 .btn-success { background-color: #00A200; color: #fff; }
-.btn-success:hover { background-color: #5da127; }
-.btn[disabled] { opacity: 0.5; filter: alpha(opacity=50); cursor: not-allowed; }
+.btn-success:hover { background-color: #40B940; }
+.btn-success:active { background-color: #008200; }
+.btn[disabled], .btn[disabled]:hover, .btn[disabled]:active { cursor: not-allowed; color: #fff; background-color: #b3b3b3; }
 .text-overflow { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; zoom: 1; }
 .banner { height: 108px; background-color: #E4E8EE; }
 .banner > .wrapper { padding: 20px 0 20px 20px; }
