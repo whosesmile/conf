@@ -104,13 +104,13 @@ $(function () {
 /**
  * 防止页面高度过小 无法看到全部内容
  */
-// $(function () {
-//   var nodes = $('#banner,#footer');
-//   var limit = parseInt($('body').css('minHeight'), 10);
+$(function () {
+  var nodes = $('#banner,#footer');
+  var limit = parseInt($('body').css('minHeight'), 10);
 
-//   $(window).resize(function () {
-//     var position = $('body').height() <= limit ? 'static' : 'absolute';
-//     nodes.css('position', position);
-//   }).triggerHandler('resize');
+  $(window).resize(function () {
+    var position = $('body').height() <= limit ? 'static' : 'absolute';
+    nodes.css('position', position);
+  }).triggerHandler('resize');
 
-// });
+});
