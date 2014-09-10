@@ -31,10 +31,30 @@
             <div class="options">
               <span class="corner"></span>
               <div class="text-overflow">
-                <button class="btn btn-primary">修改本次</button>
-                <button class="btn btn-primary">修改全部</button>
-                <button class="btn btn-primary">取消本次</button>
-                <button class="btn btn-primary">取消全部</button>
+                <div class="">
+                  <div class="form-group first-child">
+                    <span>会议主题：</span>
+                    <input type="text" class="input-text input-lg" />
+                  </div>
+                  <div class="form-group">
+                    <span>会议类型：</span>
+                    <label><input type="radio" class="input-radio" name="type" /> 视频会议</label>
+                    <label><input type="radio" class="input-radio" name="type" /> 屏幕共享会议</label>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="form-group first-child">
+                    <span>允许主持人入会前加入：</span>
+                    <label><input type="radio" class="input-radio" name="allow" /> 允许</label>
+                    <label><input type="radio" class="input-radio" name="allow" /> 不允许</label>
+                  </div>
+                  <div class="form-group">
+                    <span>会议密码：</span>
+                    <input type="password" class="input-text input-sm" />
+                    <i>(4-8位数字)</i>
+                  </div>
+                  <button class="btn btn-primary">保存</button>
+                </div>
               </div>
             </div>
           </li>

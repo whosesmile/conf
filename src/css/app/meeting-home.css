@@ -32,12 +32,20 @@ body { padding: 20px; }
 .list-actions a:hover .icon.invite { background-position: -470px -106px; }
 .list-actions a:hover .icon.notice { background-position: -435px -106px; }
 .list-actions a:hover .icon.copy { background-position: -542px -106px; }
+.list-actions li.active { *z-index: 100; }
 .list-actions li.active > a .icon.settings, .list-actions a:hover .icon.settings { background-position: -399px -106px; }
 .list-actions li.disabled, .list-actions li.disabled a:hover { opacity: 0.5; filter: alpha(opacity=50); color: #333; }
 .list-actions li.active .options { display: block; }
-.list-actions li .options { display: none; position: absolute; top: 38px; right: -100px; z-index: 10; text-align: right; background: #606060; background: rgba(0, 0, 0, 0.6); padding: 15px 13px; *width: 340px; }
+.list-actions li .options { display: none; position: absolute; top: 38px; right: -100px; z-index: 100; text-align: right; background: #606060; background: rgba(0, 0, 0, 0.6); padding: 15px 13px; *width: 340px; color: #fff; }
 .list-actions li .options .corner { position: absolute; width: 0; height: 0; overflow: hidden; font-size: 0; line-height: 0; top: -30px; *top: -28px; right: 102px; border-top: 15px solid transparent; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 15px solid #606060; border-bottom: 15px solid rgba(0, 0, 0, 0.6); }
 .list-actions li .options .btn { margin: 0 2px; }
+.banner .list-actions li .options { text-align: left; *width: 562px; }
+.banner .list-actions li .options .form-group { display: inline-block; *display: inline; width: 250px; }
+.banner .list-actions li .options .form-group.first-child { margin-right: 30px; }
+.banner .list-actions li .options .form-group label { margin-right: 10px; *margin-right: 0; }
+.banner .list-actions li .options .form-group input { vertical-align: middle; }
+.banner .list-actions li .options .form-group .input-lg { width: 165px; }
+.banner .list-actions li .options .form-group .input-sm { width: 86px; }
 .summary { padding: 10px 0; }
 .summary .filter { float: left; }
 .summary .filter .time-case .input-text { width: 70px; padding-right: 30px; background: #FFFFFF url(/assets/images/bg/year.png) 85px center no-repeat; }

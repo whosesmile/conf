@@ -2,6 +2,7 @@ $(function () {
   $('.list-actions li.settings').on('click', function (e) {
     if (!$(this).is('.disabled')) {
       $(this).toggleClass('active');
+      $('.list-actions li.settings').not(this).removeClass('active');
     }
     e.stopPropagation();
   });
