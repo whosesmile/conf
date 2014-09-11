@@ -22,7 +22,7 @@ i.icon.camera { background-position: -612px -78px; width: 25px; height: 20px; }
 .login .title { font-size: 16px; margin: 40px 0 10px; }
 .login .form-control { margin-right: 5px; font-size: 14px; }
 .login .btn-primary { box-shadow: 0 0 2px #1167b5 inset; font-size: 14px; height: 36px; }
-.login .holder { width: 178px; margin-right: 5px; display: inline-block; *display: inline; }
+.login .holder { width: 178px; margin-right: 5px; display: inline-block; *display: inline; zoom: 1; }
 .login .forget a { color: #fff; text-decoration: underline; }
 /* hack ie */
 .no-rgba #banner { padding: 1px 0; background: transparent url(/assets/images/login/banner-rgba.png) 0 0 repeat-x; }
