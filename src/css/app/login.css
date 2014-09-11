@@ -25,12 +25,7 @@ i.icon.camera { background-position: -612px -78px; width: 25px; height: 20px; }
 .login .holder { width: 178px; margin-right: 5px; display: inline-block; *display: inline; }
 .login .forget a { color: #fff; text-decoration: underline; }
 /* hack ie */
-.no-rgba #banner { border-color: #eee; }
-.no-rgba #banner .hack-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
-.no-rgba #banner .hack-bg * { position: absolute; width: 100%; }
-.no-rgba #banner .hack-bg .middle { top: 1px; bottom: 1px; background: #fff; opacity: 0.2; filter: alpha(opacity=20); }
-.no-rgba #banner .hack-bg .top { top: 0; width: 100%; border-top: 1px solid #fff; pacity: 0.4; filter: alpha(opacity=40); }
-.no-rgba #banner .hack-bg .bottom { bottom: 0; width: 100%; border-bottom: 1px solid #fff; pacity: 0.4; filter: alpha(opacity=40); }
+.no-rgba #banner { padding: 1px 0; background: transparent url(/assets/images/login/banner-rgba.png) 0 0 repeat-x; }
 .no-placeholder .login { width: 545px; }
 .no-placeholder label.for { display: inline-block; *display: inline; }
 .no-placeholder .login .holder { padding-left: 42px; }
