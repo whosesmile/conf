@@ -14,8 +14,10 @@ i.icon.camera { background-position: -612px -78px; width: 25px; height: 20px; }
 #meeting h1 { font-size: 30px; font-weight: normal; margin: 30px auto 40px; }
 #meeting .btn { width: 80px; margin-left: 5px; font-size: 18px; width: 80px; height: 48px; border-radius: 8px; }
 #meeting .form-control { font-size: 20px; width: 400px; border-radius: 8px; padding: 10px 15px; }
-#footer { color: #fff; text-align: center; width: 100%; position: absolute; bottom: 0; opacity: 0.5; filter: alpha(opacity=50); }
+#footer { color: #fff; text-align: center; width: 100%; position: absolute; bottom: 0; }
 #footer .nav li a { color: #fff; }
+#footer { padding: 15px 0; background: transparent url(/assets/images/login/footer.png) 0 0 repeat; }
+#footer .copyright { margin-bottom: 0; }
 #banner { height: 195px; width: 100%; color: #fff; position: absolute; top: 390px; border: 1px solid rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.2); border-left: none; border-right: 0; margin-bottom: 20px; }
 .login { width: 460px; margin: 0 auto; position: relative; z-index: 10; }
 .login label.for { font-size: 14px; display: none; }

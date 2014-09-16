@@ -70,4 +70,8 @@ html, body { background-color: #DCE0E7; min-width: 1050px; }
 #lside .list li > ul > li.active > a.help > .mark .icon { background-position: -638px -11px; }
 #lside .list li > ul > li > a.download > .mark > .icon { background-position: -686px -47px }
 #lside .list li > ul > li.active > a.download > .mark .icon { background-position: -686px -11px }
+#lside .list li > ul > li > a.total-report > .mark > .icon { background-position: -435px -139px }
+#lside .list li > ul > li.active > a.total-report > .mark .icon { background-position: -398px -139px }
+#lside .list li > ul > li > a.month-report > .mark > .icon { background-position: -504px -138px }
+#lside .list li > ul > li.active > a.month-report > .mark .icon { background-position: -469px -138px }
 #mainbox { margin-left: 220px; background-color: #fff; }
