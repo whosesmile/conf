@@ -26,8 +26,14 @@ i.icon.camera { background-position: -612px -78px; width: 25px; height: 20px }
 .login .btn-primary { box-shadow: 0 0 2px #1167b5 inset; font-size: 14px; height: 36px }
 .login .holder { width: 178px; margin-right: 5px; display: inline-block; *display: inline; zoom: 1 }
 .login .forget a { color: #fff; text-decoration: underline }
-.no-rgba #banner { padding: 1px 0; background: transparent url(/assets/images/login/banner-rgba.png) 0 0 repeat-x }
+.login nav { position: absolute; right: -150px; bottom: -40px; *bottom: -30px; }
+.login nav a { display: inline-block; width: 26px; height: 27px; margin: 0 5px; background: transparent url(/assets/images/login/icons-cloud.png) 0 0 no-repeat; opacity: 0.8; }
+.login nav a:hover { opacity: 1; }
+.login nav a.left { background-position: -583px -131px; }
+.login nav a.right { background-position: -610px -131px; }
+.no-rgba #banner { padding: 1px 0; background: transparent url(/assets/images/login/banner-rgba.png) 0 0 repeat-x; }
 .no-placeholder .login { width: 545px }
+.no-placeholder .login nav { right: -100px; }
 .no-placeholder label.for { display: inline-block; *display: inline }
 .no-placeholder .login .holder { padding-left: 42px }
 .no-placeholder .login .holder.forget { padding-left: 46px }

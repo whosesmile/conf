@@ -3,6 +3,7 @@ html { background: #00697e url(/assets/images/login/download.jpg) center bottom 
 body { background: transparent; }
 #content { width: 1150px; margin: 0 auto; }
 #content .wrapper { padding: 0 50px; background: #fff; }
+.download { background: transparent url(/assets/images/login/qrcode.png) 780px 165px no-repeat }
 .download .item { padding: 40px 0 40px 450px; line-height: 28px; font-size: 14px; border-bottom: 1px solid #ddd; }
 .download .item h3 { margin-bottom: 30px; font-size: 26px; color: #1268cd; }
 .download .item ul { padding-left: 6px; }
