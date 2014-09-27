@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>会畅通讯 - 会议系统</title>
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /><![endif]-->
+<!--[if lt IE 9]><script src="/assets/js/lib/modernizr.js"></script><![endif]-->
+<link type="image/x-icon" rel="shortcut icon" href="/assets/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="/assets/css/base.css" />
+<link type="text/css" rel="stylesheet" href="/assets/css/app/participate.css" />
+</head>
+<body>
+  <nav>
+    <a class="profile" href="">个人资料</a>
+    <a class="concats" href="">通讯录</a>
+    <a class="groups" href="">通讯组</a>
+  </nav>
+  <div class="box">
+    <div class="box-header">
+      <h3>选择参会人</h3>
+      <a class="export" href="">导出本次会议参选人</a>
+    </div>
+    <div class="box-content">
+      <div class="box-group choose-group">
+        <h4>选择通讯组作为参会人<i>（已选择 0 人）</i></h4>
+        <div class="panel">
+          <label>
+            <input type="checkbox" class="form-group" /><span>Operation部门(26)</span>
+          </label>
+          <label>
+            <input type="checkbox" class="form-group" /><span>开发组(26)</span>
+          </label>
+          <label>
+            <input type="checkbox" class="form-group" /><span>产品部(26)</span>
+          </label>
+          <label>
+            <input type="checkbox" class="form-group" /><span>市场部(26)</span>
+          </label>
+          <label>
+            <input type="checkbox" class="form-group" /><span>运维组(26)</span>
+          </label>
+          <label>
+            <input type="checkbox" class="form-group" /><span>Operation部门(26)</span>
+          </label>
+          <label>
+            <input type="checkbox" class="form-group" /><span>开发组(26)</span>
+          </label>
+          <label>
+            <input type="checkbox" class="form-group" /><span>产品部(26)</span>
+          </label>
+          <label>
+            <input type="checkbox" class="form-group" /><span>市场部(26)</span>
+          </label>
+          <label>
+            <input type="checkbox" class="form-group" /><span>运维组(26)</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="box-group choose-person active">
+        <h4 onclick="$(this).parent().toggleClass('active');">单独选择其他联系人作为参会人<i>（已选择 0 人）</i></h4>
+        <div class="panel">
+          <div class="search clearfix">
+            <form method="get">
+              <span class="pull-left">姓名：</span>
+              <input type="text" class="input-text" placeholder="请输入姓名..." />
+              <button class="submit-search" type="submit">搜索</button>
+            </form>
+          </div>
+          <table class="table table-borderd">
+            <tbody>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>固定电话</th>
+                <th>分机</th>
+                <th>手机号码</th>
+                <th>外呼</th>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>010-88888888</td>
+                <td>123</td>
+                <td>18666666666</td>
+                <td>12345678</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>010-88888888</td>
+                <td>123</td>
+                <td>18666666666</td>
+                <td>12345678</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>010-88888888</td>
+                <td>123</td>
+                <td>18666666666</td>
+                <td>12345678</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>010-88888888</td>
+                <td>123</td>
+                <td>18666666666</td>
+                <td>12345678</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="no-result">
+            没有找到与“高洪亮”相关的内容，试试其他关键字吧。
+          </div>
+        </div>
+      </div>
+
+      <div class="box-group action">
+        <div class="case">
+          <strong>主持人线路号码：</strong>
+          <select class="input-select">
+            <option>086186333333</option>
+          </select>
+        </div>
+        
+        <a href="" class="confirm">立即开会</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/assets/js/lib/jquery.js"></script>
+  <script type="text/javascript" src="/assets/js/lib/base.js"></script>
+</body>
+</html>
