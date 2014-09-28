@@ -27,7 +27,7 @@ nav a.groups { background-position: -160px 0; }
 .box-content .search .input-text { float: left; border-radius: 0; border-right: none; width: 210px; height: 16px; }
 .box-content .search .submit-search { float: left; width: 35px; height: 28px; overflow: hidden; border: 1px solid #CCCCCC; background: transparent url(../../images/sprite/icons.png) -36px -77px no-repeat; cursor: pointer; text-indent: -9999px; }
 .box-content .box-group.action { padding: 25px 0; text-align: center; background: transparent url(../../images/bg/participants.png) 0 0 repeat-x; }
-.box-content .box-group.action .confirm { font-size: 0px; display: block; zoom: 1; width: 222px; height: 66px; margin: 10px auto; background: transparent url(../../images/icons/confirm.png) 0 0 no-repeat; }
+.box-content .box-group.action .confirm { display: block; zoom: 1; width: 177px; font-size: 22px; color: #fff; height: 66px; line-height: 66px; margin: 10px auto; background: transparent url(../../images/icons/confirm.png) 0 0 no-repeat; text-align: left; padding-left: 85px; text-decoration: none; }
 .box-content .no-result { border-top: 1px solid #b4b4b4; padding-top: 160px; height: 85px; text-align: center; background: transparent url(../../images//bg/silence.jpg) center 60px no-repeat; }
 .box-content .box-group.choose-person .search-result { display: none; }
 .box-content .box-group.choose-person.active .search-result { display: block; }
