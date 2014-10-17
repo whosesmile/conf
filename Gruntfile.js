@@ -81,7 +81,7 @@ module.exports = function (grunt) {
         options: {
           base: ['<%= config.folder %>'],
           port: '<%= config.port %>',
-          open: 'http://127.0.0.1:<%= config.port %>/works/login.html',
+          open: 'http://127.0.0.1:<%= config.port %>/works/home.html',
           // keepalive: true,
           // livereload: '<%= config.livereload%>',
           hostname: '*',
