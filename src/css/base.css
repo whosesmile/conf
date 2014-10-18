@@ -125,14 +125,14 @@ label[for] { vertical-align: middle; }
 .dropdown-menu li a:hover { background: #F2F5F9; }
 .normal-player { width: 800px; height: 600px; overflow: hidden; background: #130E10 url(/assets/images/bg/player_holder.jpg) 0 0 repeat; }
 /* default style */
-html, body { background: #FFFFFF; }
+html, body { background: #fff url(/assets/images/manager/body.png) 0 0 repeat-y; }
 #header { height: 70px; background: #131e30 url(/assets/images/manager/line.jpg) 0 bottom repeat-x; }
 #header .logo { float: left; margin: 12px 0 0 25px; color: #fff; font-size: 20px; letter-spacing: 2px; text-decoration: none; }
 #header .logo span { margin-left: 25px; }
-#content .wrapper { min-height: 600px; position: relative; }
+#content .wrapper { min-height: 675px; position: relative; }
 #lside { float: left; width: 215px; background: #f2f2f2; }
 #lside dl { line-height: 43px; font-size: 14px; }
-#lside dt { background: transparent url(/assets/images/manager/lside.png) 0 0 repeat-x; color: #fff; position: relative; }
+#lside dt { background: transparent url(/assets/images/manager/lside.png) 0 0 repeat-x; color: #fff; position: relative; cursor: pointer; }
 #lside dt span { display: block; height: 43px; padding-left: 40px; background: transparent url(/assets/images/manager/icons-title.png) 0 0 no-repeat; }
 #lside .portal dt span { background-position: 12px -115px; }
 #lside .account dt span { background-position: 12px -20px; }
@@ -140,17 +140,15 @@ html, body { background: #FFFFFF; }
 #lside .order dt span { background-position: 12px -19px; }
 #lside .personal dt span { background-position: 12px -83px; }
 #lside .toggle { position: absolute; right: 15px; width: 10px; height: 10px; top: 16px; background: transparent url(/assets/images/manager/sprite.png) 0 0 no-repeat; }
-#lside .open .toggle { background-position: 0 -13px; }
-#mainbox { margin-left: 215px; zoom: 1; }
-
-
-
-#footer { text-align: center; width: 100%; margin-top: 20px; color: #aaa; }
-#footer .nav { margin-bottom: 5px; }
-#footer .nav li { display: inline-block; *display: inline; }
-#footer .nav li a { color: #aaa; text-decoration: none; margin: 0 10px; }
-#footer .copyright { margin-bottom: 20px; }
-.error-item .input-text { border-color: #C56360; background: #FAE2E2; color: #C51500; }
+#lside .active .toggle { background-position: 0 -13px; }
+#lside dd { display: none; border: 1px solid transparent; border-left: none; border-right: none; }
+#lside dd a { display: block; height: 41px; line-height: 41px; padding-left: 65px; color: #333; }
+#lside dl.active dd { display: block; }
+#lside dd.active { background: #fff; border-color: #919191; margin-right: -1px; }
+#lside dd.active a { color: #1375cc; }
+#mainbox { margin-left: 216px; zoom: 1; }
+#footer { text-align: center; width: 100%; padding: 20px 0; border-top: 1px solid #bfbfbf; background: #f2f2f2; }
+.error-item .input-text { border-color: #C56360; color: #C51500; }
 .error-item .error { color: #C91600; line-height: 20px; }
 .success-item .tips, .error-item .tips { display: none; }
 .error-item .error i { width: 20px; height: 20px; margin-right: 2px; background: transparent url(/assets/images/sprite/icons.png) -10px -154px no-repeat; }

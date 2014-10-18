@@ -2604,118 +2604,6 @@ var ConfirmDialog = this.ConfirmDialog = new Class({
   }
 });
 
-// 选项卡效果
-$(document).on('click.tabview.data-api', '.tabview [data-tab]', function () {
-  var tab = $(this),
-    name = tab.dataset('tab'),
-    panel = tab.closest('.tabview');
-
-  // switch tabs status
-  tab.addClass('active').siblings().removeClass('active');
-
-  // switch views status
-  var viewspanel = panel.find('[data-view]:first').parent();
-  viewspanel.children('[data-view]').hide().filter('[data-view="' + name + '"]').show();
-});
-
-// 下拉菜单
-(function () {
-
-  var selector = '[data-toggle="dropdown"]';
-
-  var clearMenus = function () {
-    $(selector).each(function () {
-      getPanel(this).removeClass('open');
-    });
-  };
-
-  var getPanel = function (entry) {
-    var express = $(entry).dataset('panel');
-
-    if (!express) {
-      express = $(entry).attr('href');
-      if (express && express.indexOf('#') !== -1) {
-        express = express.replace(/.*(?=#[^\s]*$)/, '');
-      }
-    }
-
-    var panel = null;
-    if (express) {
-      panel = $(entry).closest(express);
-    }
-
-    if (panel && panel.length > 0) {
-      return panel;
-    }
-
-    return $(entry).parent();
-  };
-
-  var toggle = function (e) {
-    var entry = $(this);
-
-    if (entry.is('.disabled, :disabled')) {
-      return;
-    }
-
-    var panel = getPanel(entry),
-      isActive = panel.hasClass('open');
-
-    clearMenus();
-
-    if (!isActive) {
-      panel.addClass('open');
-    }
-
-    return false;
-  };
-
-  $(document).on('click', '.dropdown-menu', function (e) {
-    if ($(this).dataset('stop')) {
-      e.stopPropagation();
-    }
-  }).on('click.dropdown.data-api', clearMenus).on('click.dropdown.data-api', selector, toggle);
-})();
-
-(function () {
-  // 阻止冒泡
-  // 左侧菜单切换
-  $(document).on('click', '#lside .menubar li', function (e) {
-    var menu = $(this);
-    if (menu.is('.cascade')) {
-      menu.toggleClass('open');
-    }
-    else {
-      menu.closest('.menubar').find('li').removeClass('active');
-      // 保持展开一个子菜单
-      // menu.closest('.menubar').find('.cascade').removeClass('open');
-      menu.closest('.cascade').addClass('open');
-      menu.addClass('active');
-    }
-
-    // HACK IE outline
-    menu.find('a').blur();
-    return false;
-  });
-
-  // 模块收展效果
-  $(document).on('click', '.module .module-head', function () {
-    var header = $(this),
-      module = header.closest('.module');
-
-    if (header.find('.icon-down').size() > 0) {
-      module.toggleClass('module-close');
-    }
-  });
-
-  $(document).on('click', '#lside .menubar li', function () {
-    var name = $(this).dataset('name');
-    if (name) {
-      $('iframe[name=mainframe]').attr('src', '/works/frames/' + name + '.html?_' + new Date().getTime());
-    }
-  });
-})();
-
 // IFRAME 自动展开高度
 (function () {
   if (window !== top) {
@@ -2726,29 +2614,15 @@ $(document).on('click.tabview.data-api', '.tabview [data-tab]', function () {
   }
 })();
 
-// 展开会议描述
-$(document).on('click', '.meetings .title .name', function () {
-  var item = $(this).closest('.item');
-  item.find('.information > [data-name]').removeClass('active');
-  item.find('.dynamic').children().not('.describe').hide();
-  item.find('.dynamic .describe').toggle();
-  return false;
-});
+// 左侧菜单自动展开
+$(function () {
+  var group = $('#lside dl');
+  var menus = $('#lside dd');
+  menus.on('click', function (e) {
+    group.removeClass('active');
+    menus.removeClass('active');
+    $(this).addClass('active').parent().addClass('active');
 
-// 展开相关设置
-$(document).on('click', '.meetings .information > [data-name]', function () {
-  var obj = $(this),
-    name = obj.dataset('name'),
-    item = obj.closest('.item'),
-    target = '.dynamic .' + name + '-panel';
-
-  obj.toggleClass('active');
-  item.find('.dynamic').children().not(target).hide();
-  item.find(target).toggle();
-  return false;
-});
-
-// 高级参数设置
-$(document).on('click', '.meeting-dialog .regular .legend .config', function () {
-  $(this).closest('.regular').toggleClass('open');
+    return false;
+  });
 });

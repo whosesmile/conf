@@ -6,7 +6,9 @@ html, body { background: #fff; }
 .breadcrumb nav a { color: #777; }
 .breadcrumb nav .divider { margin: 0 3px; font-family: serif; }
 .common-table .check { width: 20px; text-align: center; }
-.common-table .actions .modify { margin: 0 20px 0 10px; }
+.common-table .actions { width: 160px; }
+.common-table .actions .modify { margin: 0 20px 0 0; }
+.common-table .user { text-decoration: none !important; cursor: text; }
 .pagebar { margin-top: 10px; }
 .icon { width: 20px; height: 20px; background: transparent url(/assets/images/sprite/icons.png) -118px -260px no-repeat; }
 .icon-add { background-position: -118px -260px; }
