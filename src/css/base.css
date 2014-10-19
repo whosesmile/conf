@@ -139,7 +139,8 @@ body.home { padding-bottom: 45px; }
 #footer { position: fixed; left: 0; bottom: 0; height: 45px; line-height: 45px; text-align: center; width: 100%; border-top: 1px solid #bfbfbf; background: #f2f2f2; }
 #content .wrapper { position: relative; }
 #header .logo { float: left; margin: 12px 0 0 25px; color: #fff; font-size: 20px; letter-spacing: 2px; text-decoration: none; }
-#header .logo span { margin-left: 25px; }
+#header .logo img { float: left; }
+#header .logo span { float: left; margin: 7px 0 0 25px; }
 #header .infomation { float: right; padding: 5px 20px 0 0; zoom: 1; }
 #header .infomation .message { color: #fff; margin-right: 5px; }
 #header .infomation a { color: #ffffff; }
@@ -170,12 +171,6 @@ body.embed { background: #fff; }
 .embed .breadcrumb nav a { color: #777; }
 .embed .breadcrumb nav .divider { margin: 0 3px; font-family: serif; }
 .embed .panel { padding: 15px; }
-.embed .common-table .check { width: 20px; text-align: center; }
-.embed .common-table .actions .modify { margin: 0 10px 0 0; }
-.embed .pagebar { margin-top: 10px; }
-.embed form.filter { border: 1px solid #bfbfbf; background: #f7f7f7; padding: 8px 0 0; margin-bottom: 8px; }
-.embed form.filter .btn { margin-left: 30px; padding: 0 20px; }
-.embed .total { font-size: 14px; margin-top: 10px; }
 .embed .panel .summary { margin-bottom: 10px; overflow: hidden; line-height: 28px; }
 .embed .panel .summary .actions { float: left; margin-left: 5px; }
 .embed .panel .summary .actions li { float: left; margin-right: 25px; }
@@ -183,3 +178,9 @@ body.embed { background: #fff; }
 .embed .panel .summary .search .input-text { float: left; border-radius: 0; border-right: none; width: 210px; height: 16px; }
 .embed .panel .summary .search .submit-search { float: left; width: 35px; height: 28px; overflow: hidden; border: 1px solid #CCCCCC; background: transparent url(/assets/images/sprite/icons.png) -36px -77px no-repeat; cursor: pointer; text-indent: -9999px; }
 .embed .panel .summary .actions li.divider { margin: 0 0 0 -20px; }
+.embed .common-table .check { width: 20px; text-align: center; }
+.embed .common-table .actions .modify { margin: 0 10px 0 0; }
+.embed .pagebar { margin-top: 10px; }
+.embed .filter { border: 1px solid #bfbfbf; background: #f7f7f7; padding: 8px 0 0; margin-bottom: 8px; }
+.embed .filter .btn { margin-left: 30px; padding: 0 20px; }
+.embed .total { font-size: 14px; margin-top: 10px; }
