@@ -13,10 +13,5 @@
   "eqnull": true,
   "browser": true,
   "globals": {
-    "angular": true,
-    "IScroll": true,
-    "WeixinJSBridge": true,
-    "BMap": true,
-    "BMAP_STATUS_SUCCESS": true
   }
 }
