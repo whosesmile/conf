@@ -1,13 +1,12 @@
 html, body { background: #fff; }
-.panel { padding: 10px 20px 20px; }
+.panel { padding: 15px; }
 .breadcrumb { color: #777; height: 31px; line-height: 31px; background: transparent url(/assets/images/manager/crumb.png) 0 0 repeat-x; border-bottom: 1px solid #bfbfbf; }
 .breadcrumb .home { float: left; width: 32px; margin-right: 10px; height: 31px; background: transparent url(/assets/images/manager/home.png) center center no-repeat; border-right: 1px solid #bfbfbf; }
 .breadcrumb nav { float: left; }
 .breadcrumb nav a { color: #777; }
 .breadcrumb nav .divider { margin: 0 3px; font-family: serif; }
 .common-table .check { width: 20px; text-align: center; }
-.common-table .actions { width: 160px; }
-.common-table .actions .modify { margin: 0 20px 0 0; }
+.common-table .actions .modify { margin: 0 10px 0 0; }
 .common-table .user { text-decoration: none !important; cursor: text; }
 .pagebar { margin-top: 10px; }
 .icon { width: 20px; height: 20px; background: transparent url(/assets/images/sprite/icons.png) -118px -260px no-repeat; }

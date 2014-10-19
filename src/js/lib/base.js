@@ -2618,11 +2618,19 @@ var ConfirmDialog = this.ConfirmDialog = new Class({
 $(function () {
   var group = $('#lside dl');
   var menus = $('#lside dd');
+  var title = $('#lside dt');
+  title.on('click', function (e) {
+    $(this).parent().toggleClass('active').siblings().removeClass('active');
+  });
   menus.on('click', function (e) {
-    group.removeClass('active');
     menus.removeClass('active');
-    $(this).addClass('active').parent().addClass('active');
+    $(this).addClass('active');
+  });
+});
 
-    return false;
+$(function () {
+  $('dl a').on('click', function (e) {
+    $('#mainbox iframe').attr('src', $(this).attr('href'));
+    e.preventDefault();
   });
 });
