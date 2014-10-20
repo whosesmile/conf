@@ -426,16 +426,13 @@ var CommonDialog = this.CommonDialog = new Class({
   options: {
     width: 700,
     title: '提示',
-    message: '<p class="default-loading"><i class="default-text"></i><span>正在加载，请稍后...</span></p>',
+    message: '<section><p class="default-loading"><i class="default-text"></i><span>正在加载，请稍后...</span></p></section>',
     isFixed: true,
     autohide: false,
     denyEsc: false,
     modal: true,
-    minify: false,
     independence: false,
     visible: true,
-    noheader: false,
-    classes: '',
     prehide: $.noop
   },
 
@@ -473,13 +470,7 @@ var CommonDialog = this.CommonDialog = new Class({
   },
 
   getElement: function () {
-    var fragment = ['<div class="common-dialog ' + this.options.classes + '">', '<div class="wrapper">', '<header>', '<h3 class="title">', this.options.title, '</h3>', this.options.minify ? '<a class="minify" title="最小">最小</a>' : '', '<a class="close" title="关闭"></a>', '</header>', '<section>', this.options.message, '</section>', '</div>', '</div>'].join('');
-
-    var element = $(fragment);
-
-    if (this.options.noheader === true) {
-      element.find('.wrapper > header').remove();
-    }
+    var element = $('<div class="common-dialog"><div class="wrapper">' + this.options.message + '</div></div>');
 
     // 设置样式
     element.css({
@@ -493,14 +484,6 @@ var CommonDialog = this.CommonDialog = new Class({
     }
 
     return element;
-  },
-
-  getHeader: function () {
-    var header = this.element.find('.wrapper > header');
-    if (header.size() === 0 && !this.options.noheader) {
-      header = $('<header />').prependTo(this.element.find('.wrapper'));
-    }
-    return header;
   },
 
   getBody: function () {
