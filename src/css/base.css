@@ -67,7 +67,7 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 .success-item .success i { width: 20px; height: 20px; margin-right: 2px; background: transparent url(/assets/images/sprite/icons.png) -10px -225px no-repeat; }
 /* icons */
 .icon { vertical-align: middle; display: inline-block; width: 20px; height: 20px; background: transparent url(/assets/images/manager/sprite-opacity.png) 0 0 no-repeat; }
-.icon-meeting-list { background-position: -10px -361px; }
+.icon-meeting-list { background-position: -10px -360px; }
 .icon-concat { background-position: -10px -256px; }
 .icon-concat-group { background-position: -44px -254px; }
 .icon-record-download { background-position: -10px -290px; }
@@ -84,6 +84,27 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 .icon-update-pwd { background-position: -45px -220px; }
 .icon-personal { background-position: -45px  -468px; }
 .icon-myservice { background-position: -10px  -468px; }
+
+dd.active .icon-meeting-list { background-position: -118px -360px; }
+dd.active .icon-concat { background-position: -118px -256px; }
+dd.active .icon-concat-group { background-position: -152px -254px; }
+dd.active .icon-record-download { background-position: -118px -290px; }
+dd.active .icon-modify-password { background-position: -153px -291px; }
+dd.active .icon-company-concat { background-position: -117px -432px; }
+dd.active .icon-check-user { background-position: -188px -77px; }
+dd.active .icon-meeting-user { background-position: -189px -113px; }
+dd.active .icon-meeting-account { background-position: -188px -149px; }
+dd.active .icon-meeting-details { background-position: -188px -362px; }
+dd.active .icon-month-check { background-position: -188px -432px; }
+dd.active .icon-head-office { background-position: -156px -113px; }
+dd.active .icon-statistical { background-position: -153px -43px; }
+dd.active .icon-branch-office { background-position: -152px -78px; }
+dd.active .icon-update-pwd { background-position: -153px -220px; }
+dd.active .icon-personal { background-position: -153px  -468px; }
+dd.active .icon-myservice { background-position: -118px  -468px; }
+
+
+/* old */
 .icon-add { background-position: -118px -260px; }
 .icon-exp { background-position: -228px -189px; }
 .icon-del { background-position: -190px -153px; }
