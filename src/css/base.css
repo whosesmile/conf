@@ -66,7 +66,24 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 .success-item .success { color: #529B03; }
 .success-item .success i { width: 20px; height: 20px; margin-right: 2px; background: transparent url(/assets/images/sprite/icons.png) -10px -225px no-repeat; }
 /* icons */
-.icon { vertical-align: middle; display: inline-block; width: 20px; height: 20px; background: transparent url(/assets/images/sprite/icons.png) -118px -260px no-repeat; }
+.icon { vertical-align: middle; display: inline-block; width: 20px; height: 20px; background: transparent url(/assets/images/manager/sprite-opacity.png) 0 0 no-repeat; }
+.icon-meeting-list { background-position: -10px -361px; }
+.icon-concat { background-position: -10px -256px; }
+.icon-concat-group { background-position: -44px -254px; }
+.icon-record-download { background-position: -10px -290px; }
+.icon-modify-password { background-position: -45px -291px; }
+.icon-company-concat { background-position: -9px -432px; }
+.icon-check-user { background-position: -80px -77px; }
+.icon-meeting-user { background-position: -81px -113px; }
+.icon-meeting-account { background-position: -80px -149px; }
+.icon-meeting-details { background-position: -80px -362px; }
+.icon-month-check { background-position: -80px -432px; }
+.icon-head-office { background-position: -48px -113px; }
+.icon-statistical { background-position: -45px -43px; }
+.icon-branch-office { background-position: -44px -78px; }
+.icon-update-pwd { background-position: -45px -220px; }
+.icon-personal { background-position: -45px  -468px; }
+.icon-myservice { background-position: -10px  -468px; }
 .icon-add { background-position: -118px -260px; }
 .icon-exp { background-position: -228px -189px; }
 .icon-del { background-position: -190px -153px; }
@@ -157,7 +174,7 @@ body.home { padding-bottom: 45px; background: #fff url(/assets/images/manager/bo
 #lside .toggle { position: absolute; right: 15px; width: 10px; height: 10px; top: 16px; background: transparent url(/assets/images/manager/sprite.png) 0 0 no-repeat; }
 #lside .active .toggle { background-position: 0 -13px; }
 #lside dd { display: none; border: 1px solid transparent; border-left: none; border-right: none; }
-#lside dd a { display: block; height: 41px; line-height: 41px; padding-left: 65px; color: #333; }
+#lside dd a { display: block; height: 41px; line-height: 41px; padding-left: 42px; color: #333; }
 #lside dl.active dd { display: block; }
 #lside dd.active { background: #fff; border-color: #919191; margin-right: -1px; }
 #lside dd.active a { color: #1375cc; }
