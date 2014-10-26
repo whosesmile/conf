@@ -21,7 +21,7 @@ a:hover { text-decoration: underline; }
 ::-webkit-input-placeholder { color: #999999; }
 :-ms-input-placeholder { color: #999999; font-family: "Microsoft Yahei", "微软雅黑", "宋体"; }
 body { color: #333333; font-size: 12px; font-family: "Microsoft Yahei", "微软雅黑", "宋体"; }
-select, option, textarea, input { margin: 0; padding: 0; font-family: inherit; }
+select, option, textarea, input, button { margin: 0; padding: 0; font-family: inherit; }
 select, textarea { border: 1px solid #DADADA; outline: medium none; resize: none; }
 select:focus, textarea:focus { border: 1px solid #78A8D5; box-shadow: 0 0 3px #EEEEEE; }
 .input-time, .input-date { cursor: pointer; }
@@ -111,7 +111,9 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .icon-modify { background-position: -152px -149px; }
 .icon-remove { background-position: -118px -397px; }
 .icon-down { background-position: -186px -253px; }
+.icon-down-black { background-position: -81px -253px; }
 .icon-add-black { background-position: -8px -184px; }
+.icon-modify-black { background-position: -44px -149px; }
 /* table */
 .common-table tr { border: 1px solid #CCCCCC; background: #FFFFFF; }
 .common-table tr:hover { background: #F9F9F9; }
@@ -155,8 +157,8 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .common-dialog .default-text { display: block; font-size: 14px; width: 50px; height: 80px; margin: 0 auto; background: transparent url(/assets/images/animate/loading.gif) center center no-repeat; }
 .common-dialog footer { padding: 8px 10px; text-align: center; background: #F7F7F7; border-top: 1px solid #CCCCCC; position: relative; }
 .common-dialog footer .btn { margin: 0 30px; }
-.common-dialog.small {width: 400px;}
-.common-dialog.small section{height:110px;}
+.common-dialog.small { width: 400px; }
+.common-dialog.small section { height: 110px; }
 /* ////////////// */
 .btn { padding: 0 15px; height: 28px; background: #fff; border: 1px solid #eee; vertical-align: middle; border-radius: 3px; cursor: pointer; }
 .btn-lg { height: 32px; min-width: 80px; }
@@ -180,7 +182,7 @@ a.btn-lg { line-height: 30px; }
 .form-horizontal .form-group label { min-width: 100px; text-align: right; float: left; line-height: 28px; }
 .form-horizontal .form-group .wrap { margin-left: 105px; position: relative; }
 .form-horizontal .form-group .form-control { display: block; width: 100%; }
-.form-horizontal .form-group .message { display: block; margin-top: 5px; }
+.form-horizontal .form-group .message { display: block; margin-top: 6px; }
 .form-horizontal .form-group .required { color: #f00; position: absolute; right: -15px; top: 6px; font-size: 14px; }
 /* default style */
 body.home { padding-bottom: 45px; background: #fff url(/assets/images/manager/body.png) 0 0 repeat-y; }

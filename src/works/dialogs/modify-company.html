@@ -1,0 +1,40 @@
+<div class="common-dialog">
+  <header>
+    <h3 class="title"><i class="icon icon-modify-black"></i> 编辑</h3>
+    <a class="close" title="关闭"></a>
+  </header>
+  <section style="height:230px;">
+    <form class="form-horizontal" onsubmit="return false;" style="padding-right:50px;">
+      <div class="form-group">
+        <label>公司名称：</label>
+        <div class="wrap">
+          <input type="text" class="form-control" />
+          <span class="message text-muted">6-18个字符，可使用字母、数字、下划线</span>
+          <span class="required">*</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>公司LOGO图片：</label>
+        <div class="wrap">
+          <div class="clearfix">
+            <input type="text" class="form-control" style="width:215px;float:left" />
+            <button class="btn btn-default" style="float:right;">选择文件</button>
+          </div>
+          <span class="message text-muted">小于100kb，支持jpg、png、gif格式</span>
+          <span class="required">*</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Portal地址：</label>
+        <div class="wrap">
+          <input type="text" class="form-control" />
+          <span class="required">*</span>
+        </div>
+      </div>
+    </form>
+  </section>
+  <footer>
+    <button class="btn btn-lg btn-success">确定</button>
+    <button class="btn btn-lg btn-gray">取消</button>
+  </footer>
+</div>
