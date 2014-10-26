@@ -124,6 +124,10 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .common-table td.first-child { *border-left: 1px solid #CCCCCC; }
 .common-table td.last-child { *border-right: 1px solid #CCCCCC; }
 .common-table th { font-weight: normal; color: #333333; background: #f4f4f4; background: -moz-linear-gradient(top, #FFFFFF, #ECECEC); background: -webkit-linear-gradient(top, #FFFFFF, #ECECEC); background: linear-gradient(top, #FFFFFF, #ECECEC); border: 1px solid #CCCCCC; }
+.common-table th.sort { cursor: pointer; }
+.common-table th.sort span { display: inline-block; padding-right: 15px; background: transparent url(/assets/images/manager/sort.png) right -37px no-repeat; }
+.common-table th.sort.up span { background-position: right 4px; }
+.common-table th.sort.down span { background-position: right -15px; }
 /* pagebar */
 .pagebar { padding: 0; margin: 0 auto; }
 .pagebar .count { float: left; line-height: 24px; }
