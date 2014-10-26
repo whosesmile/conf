@@ -424,7 +424,7 @@ var CommonDialog = this.CommonDialog = new Class({
   Implements: [Options, Events],
 
   options: {
-    width: 700,
+    width: 460,
     title: '提示',
     message: '<section><p class="default-loading"><i class="default-text"></i><span>正在加载，请稍后...</span></p></section>',
     isFixed: true,
