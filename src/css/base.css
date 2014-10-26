@@ -145,18 +145,18 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .pagebar .jumpto .icon-jump { width: 17px; height: 16px; margin-right: 2px; background: transparent url(/assets/images/icons/jump.png) 0 0 no-repeat; }
 /* masklayer */
 #masklayer { position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.5; z-index: 1000; display: none; background-color: #000000; filter: alpha(opacity=50); }
-.common-dialog { position: absolute; z-index: 2000; top: -9999px; }
-.common-dialog .wrapper { border: 1px solid #444; background-color: #FFFFFF !important; background-clip: padding-box; }
-.common-dialog .wrapper header { border-bottom: 1px solid #CCCCCC; height: 36px; line-height: 36px; padding: 0 15px; background: #F9F9F9; background: linear-gradient(top, #F9F9F9, #EBEBEB); background: -moz-linear-gradient(top, #F9F9F9, #EBEBEB); background: -webkit-linear-gradient(top, #F9F9F9, #EBEBEB); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#F9F9F9, endColorstr=#EBEBEB); }
-.common-dialog .wrapper header .title { font-size: 12px; font-weight: normal; max-width: 400px; display: inline-block; white-space: nowrap; overflow: hidden; float: left; text-overflow: ellipsis; }
-.common-dialog .wrapper header .close { background: url(/assets/images/buttons/close.png) no-repeat scroll center center transparent; height: 20px; overflow: hidden; position: absolute; right: 15px; text-indent: -9999px; top: 10px; width: 20px; }
-.common-dialog .wrapper header .close:hover { background-image: url(/assets/images/buttons/close-hover.png); }
-.common-dialog .wrapper section { word-wrap: break-word; }
-.common-dialog .wrapper section.no-padding { padding: 0; }
-.common-dialog .wrapper .default-loading { text-align: center; padding: 0 0 20px; color: #666666; }
-.common-dialog .wrapper .default-text { display: block; font-size: 14px; width: 50px; height: 80px; margin: 0 auto; background: transparent url(/assets/images/animate/loading.gif) center center no-repeat; }
-.common-dialog .wrapper footer { padding: 8px 10px; text-align: center; background: #F7F7F7; border-top: 1px solid #CCCCCC; position: relative; }
-.common-dialog .wrapper footer .btn { margin: 0 30px; }
+.common-dialog { width: 460px; position: absolute; z-index: 2000; top: -9999px; border: 1px solid #444; background-color: #FFFFFF !important; background-clip: padding-box; }
+.common-dialog header { border-bottom: 1px solid #CCCCCC; height: 36px; line-height: 36px; padding: 0 15px; background: #F9F9F9; background: linear-gradient(top, #F9F9F9, #EBEBEB); background: -moz-linear-gradient(top, #F9F9F9, #EBEBEB); background: -webkit-linear-gradient(top, #F9F9F9, #EBEBEB); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#F9F9F9, endColorstr=#EBEBEB); }
+.common-dialog header .title { font-size: 12px; font-weight: normal; max-width: 400px; display: inline-block; white-space: nowrap; overflow: hidden; float: left; text-overflow: ellipsis; }
+.common-dialog header .close { background: url(/assets/images/buttons/close.png) no-repeat scroll center center transparent; height: 20px; overflow: hidden; position: absolute; right: 15px; text-indent: -9999px; top: 10px; width: 20px; }
+.common-dialog header .close:hover { background-image: url(/assets/images/buttons/close-hover.png); }
+.common-dialog section { word-wrap: break-word; padding: 15px 0; height: 324px; overflow: auto; }
+.common-dialog .default-loading { text-align: center; color: #666666; }
+.common-dialog .default-text { display: block; font-size: 14px; width: 50px; height: 80px; margin: 0 auto; background: transparent url(/assets/images/animate/loading.gif) center center no-repeat; }
+.common-dialog footer { padding: 8px 10px; text-align: center; background: #F7F7F7; border-top: 1px solid #CCCCCC; position: relative; }
+.common-dialog footer .btn { margin: 0 30px; }
+.common-dialog.small {width: 400px;}
+.common-dialog.small section{height:110px;}
 /* ////////////// */
 .btn { padding: 0 15px; height: 28px; background: #fff; border: 1px solid #eee; vertical-align: middle; border-radius: 3px; cursor: pointer; }
 .btn-lg { height: 32px; min-width: 80px; }
@@ -256,4 +256,4 @@ body.notfound { background-color: #f2f2f2; }
 .verify-identity .form-horizontal .captcha { width: 66px; height: 22px; vertical-align: middle; margin-left: 5px; }
 .verify-identity.step2 .form-horizontal { margin-top: 25px; }
 .verify-identity.step2 .form-horizontal .form-group { margin-bottom: 25px; }
-.verify-identity.step3 .infomation { text-align: center; line-height: 20px; padding-top: 115px; }
+.verify-identity.step3 .infomation { text-align: center; line-height: 24px; padding-top: 115px; background: transparent url(/assets/images/manager/face-success.png) center 37px no-repeat; }

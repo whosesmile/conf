@@ -424,7 +424,6 @@ var CommonDialog = this.CommonDialog = new Class({
   Implements: [Options, Events],
 
   options: {
-    width: 460,
     title: '提示',
     message: '<section><p class="default-loading"><i class="default-text"></i><span>正在加载，请稍后...</span></p></section>',
     isFixed: true,
@@ -470,12 +469,7 @@ var CommonDialog = this.CommonDialog = new Class({
   },
 
   getElement: function () {
-    var element = $('<div class="common-dialog"><div class="wrapper">' + this.options.message + '</div></div>');
-
-    // 设置样式
-    element.css({
-      width: this.options.width
-    });
+    var element = $(this.options.message);
 
     if (this.options.isFixed === true && $.support.fixed) {
       element.css({
@@ -484,40 +478,6 @@ var CommonDialog = this.CommonDialog = new Class({
     }
 
     return element;
-  },
-
-  getBody: function () {
-    return this.element.find('.wrapper > section');
-  },
-
-  getFooter: function () {
-    var footer = this.element.find('.wrapper > footer');
-    if (footer.size() === 0) {
-      footer = $('<footer />').appendTo(this.element.find('.wrapper'));
-    }
-    return footer;
-  },
-
-  addButton: function (opt) {
-    var footer = this.getFooter(),
-      button = null;
-
-    if (opt.type === 'anchor') {
-      button = $('<a class="' + opt.clazz + '">' + opt.text + '</a>');
-    }
-    else {
-      button = $('<input type="button" value="' + opt.text + '" class="' + opt.clazz + '" />');
-    }
-
-    if (opt.prepend) {
-      footer.prepend(button);
-    }
-    else {
-      footer.append(button);
-    }
-
-    button.click((opt.callback || $.noop).bind(this));
-    return button;
   },
 
   show: function () {
@@ -573,80 +533,6 @@ var CommonDialog = this.CommonDialog = new Class({
     });
     this.find('header .minify').click(function () {
       self.minimize();
-    });
-  }
-});
-
-// Alert弹窗
-// 注: callback为点击确定按钮触发的回调
-// 当且仅当callback方法返回false时 弹窗不会触发隐藏事件
-var AlertDialog = this.AlertDialog = new Class({
-
-  Extends: CommonDialog,
-
-  options: {
-    callback: $.noop,
-    disableButton: false,
-    warn: false,
-    confirmText: '确定'
-  },
-
-  initialize: function (message, options) {
-    this.parent(message, options);
-
-    var self = this;
-    this.button = this.addButton({
-      text: this.options.confirmText,
-      clazz: 'button input-gray' + (this.options.warn ? ' input-warn' : ''),
-      callback: function () {
-        if (self.options.callback.call(self) !== false) {
-          self.hide();
-        }
-      }
-    });
-
-    if (this.options.disableButton) {
-      this.disableButton();
-    }
-
-    // 显示
-    if (this.options.visible) {
-      this.show();
-    }
-  },
-
-  disableButton: function () {
-    this.button.addClass('input-disable').attr('disabled', 'disabled');
-  },
-
-  enableButton: function () {
-    this.button.removeClass('input-disable').removeAttr('disabled', 'disabled');
-  }
-});
-
-// Confirm弹窗
-var ConfirmDialog = this.ConfirmDialog = new Class({
-
-  Extends: AlertDialog,
-
-  options: {
-    cancelText: '取消',
-    closure: $.noop
-  },
-
-  initialize: function (message, options) {
-    this.parent(message, options);
-
-    var self = this;
-    this.addButton({
-      type: 'anchor',
-      text: this.options.cancelText,
-      clazz: 'button anchor-cancel',
-      callback: function () {
-        if (self.options.closure.call(self) !== false) {
-          self.hide();
-        }
-      }
     });
   }
 });

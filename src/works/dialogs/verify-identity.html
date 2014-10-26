@@ -1,46 +1,48 @@
-<header>
-  <h3 class="title"><i class="icon icon-verify"></i> 首次使用身份验证</h3>
-  <a class="close" title="关闭"></a>
-</header>
-<section class="verify-identity step1">
-  <ul class="steps">
-    <li class="active"><i class="icon icon-step"></i>身份验证</li>
-    <li class="divider"></li>
-    <li><i class="icon icon-step"></i>用户注册</li>
-    <li class="divider"></li>
-    <li><i class="icon icon-step"></i>完成</li>
-  </ul>
-  <div class="tips text-warning">
-    在您收到的会畅通讯全球会议中心账户信息邮件中，可以查阅到会议编号和密码。 
-  </div>
-  <form class="form-horizontal" style="padding-right:55px;">
-    <div class="form-group">
-      <label>用户编号：</label>
-      <div class="wrap">
-        <input type="text" class="form-control" />
-        <span class="message text-danger"><i class="icon icon-danger"></i>您输入的用户编号不存在！</span>
-        <span class="required">*</span>
-      </div>
+<div class="common-dialog">
+  <header>
+    <h3 class="title"><i class="icon icon-verify"></i> 首次使用身份验证</h3>
+    <a class="close" title="关闭"></a>
+  </header>
+  <section class="verify-identity step1">
+    <ul class="steps">
+      <li class="active"><i class="icon icon-step"></i>身份验证</li>
+      <li class="divider"></li>
+      <li><i class="icon icon-step"></i>用户注册</li>
+      <li class="divider"></li>
+      <li><i class="icon icon-step"></i>完成</li>
+    </ul>
+    <div class="tips text-warning">
+      在您收到的会畅通讯全球会议中心账户信息邮件中，可以查阅到会议编号和密码。
     </div>
-    <div class="form-group">
-      <label>验证密码：</label>
-      <div class="wrap">
-        <input type="password" class="form-control" />
-        <span class="message text-danger"><i class="icon icon-danger"></i>您输入的验证密码有误！</span>
-        <span class="required">*</span>
+    <form class="form-horizontal" style="padding-right:55px;">
+      <div class="form-group">
+        <label>用户编号：</label>
+        <div class="wrap">
+          <input type="text" class="form-control" />
+          <span class="message text-danger"><i class="icon icon-danger"></i>您输入的用户编号不存在！</span>
+          <span class="required">*</span>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label>验证码：</label>
-      <div class="wrap">
-        <input type="text" class="form-control inline-control" />
-        <img class="captcha" src="/assets/images/manager/captcha.png" />
-        <span class="message"><i class="icon icon-success"></i></span>
+      <div class="form-group">
+        <label>验证密码：</label>
+        <div class="wrap">
+          <input type="password" class="form-control" />
+          <span class="message text-danger"><i class="icon icon-danger"></i>您输入的验证密码有误！</span>
+          <span class="required">*</span>
+        </div>
       </div>
-    </div>
-  </form>
-</section>
-<footer>
-  <button class="btn btn-lg btn-success">下一步</button>
-  <button class="btn btn-lg btn-gray">取消</button>
-</footer>
+      <div class="form-group">
+        <label>验证码：</label>
+        <div class="wrap">
+          <input type="text" class="form-control inline-control" />
+          <img class="captcha" src="/assets/images/manager/captcha.png" />
+          <span class="message"><i class="icon icon-success"></i></span>
+        </div>
+      </div>
+    </form>
+  </section>
+  <footer>
+    <button class="btn btn-lg btn-success">下一步</button>
+    <button class="btn btn-lg btn-gray">取消</button>
+  </footer>
+</div>
