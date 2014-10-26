@@ -24,6 +24,7 @@ body { color: #333333; font-size: 12px; font-family: "Microsoft Yahei", "微软�
 select, option, textarea, input, button { margin: 0; padding: 0; font-family: inherit; }
 select, textarea { border: 1px solid #DADADA; outline: medium none; resize: none; }
 select:focus, textarea:focus { border: 1px solid #78A8D5; box-shadow: 0 0 3px #EEEEEE; }
+hr { margin: 30px 0; border: none; border-top: 1px solid #ddd; }
 .input-time, .input-date { cursor: pointer; }
 .input-select { padding: 3px; }
 .input-select option { padding: 0 5px; }
@@ -84,7 +85,9 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 .icon-danger { background-position: -225px -7px; }
 .icon-success { background-position: -224px -43px; }
 .icon-verify { background-position: -224px  -150px; }
-.icon-items { background-position: -81px  -467px; }
+.icon-forget { background-position: -227px -185px; }
+.icon-call { background-position: -226px -220px; }
+.icon-items { background-position: -226px -185px; }
 dd.active .icon-meeting-list { background-position: -118px -361px; }
 dd.active .icon-concat { background-position: -118px -256px; }
 dd.active .icon-concat-group { background-position: -152px -254px; }
@@ -118,7 +121,7 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .common-table tr { border: 1px solid #CCCCCC; background: #FFFFFF; }
 .common-table tr:hover { background: #F9F9F9; }
 .common-table th, .common-table td { vertical-align: middle; padding: 10px; text-align: left; }
-.common-table td { padding: 8px 10px; *background-color: #FFFFFF; *border-top: 1px solid #CCCCCC; *border-bottom: 1px solid #CCCCCC; }
+.common-table td { padding: 10px; *background-color: #FFFFFF; *border-top: 1px solid #CCCCCC; *border-bottom: 1px solid #CCCCCC; }
 .common-table td.first-child { *border-left: 1px solid #CCCCCC; }
 .common-table td.last-child { *border-right: 1px solid #CCCCCC; }
 .common-table th { font-weight: normal; color: #333333; background: #f4f4f4; background: -moz-linear-gradient(top, #FFFFFF, #ECECEC); background: -webkit-linear-gradient(top, #FFFFFF, #ECECEC); background: linear-gradient(top, #FFFFFF, #ECECEC); border: 1px solid #CCCCCC; }
@@ -153,12 +156,14 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .common-dialog header .close { background: url(/assets/images/buttons/close.png) no-repeat scroll center center transparent; height: 20px; overflow: hidden; position: absolute; right: 15px; text-indent: -9999px; top: 10px; width: 20px; }
 .common-dialog header .close:hover { background-image: url(/assets/images/buttons/close-hover.png); }
 .common-dialog section { word-wrap: break-word; padding: 15px 0; height: 324px; overflow: auto; }
-.common-dialog .default-loading { text-align: center; color: #666666; }
-.common-dialog .default-text { display: block; font-size: 14px; width: 50px; height: 80px; margin: 0 auto; background: transparent url(/assets/images/animate/loading.gif) center center no-repeat; }
 .common-dialog footer { padding: 8px 10px; text-align: center; background: #F7F7F7; border-top: 1px solid #CCCCCC; position: relative; }
-.common-dialog footer .btn { margin: 0 30px; }
+.common-dialog footer .btn { margin: 0 32px; }
+.common-dialog .loading { text-align: center; color: #666666; background: transparent url(/assets/images/animate/loading.gif) center 25px no-repeat; padding: 70px 35px 0;}
+.common-dialog .text { display: block; font-size: 14px; width: 50px; height: 80px; margin: 0 auto; background: transparent url(/assets/images/animate/loading.gif) center center no-repeat; }
 .common-dialog.small { width: 400px; }
 .common-dialog.small section { height: 110px; }
+.common-dialog.large { width: 800px; }
+.common-dialog.large section { height: 540px; padding: 10px; overflow: auto; }
 /* ////////////// */
 .btn { padding: 0 15px; height: 28px; background: #fff; border: 1px solid #eee; vertical-align: middle; border-radius: 3px; cursor: pointer; }
 .btn-lg { height: 32px; min-width: 80px; }
@@ -246,16 +251,18 @@ body.notfound { background-color: #f2f2f2; }
 .notfound .info { margin-top: 35px; line-height: 24px; color: #666; }
 .notfound .back { display: block; padding-left: 18px; background: transparent url(/assets/images/manager/back.png) 0 4px no-repeat; margin-top: 40px; line-height: 20px; }
 /* dialog */
-.verify-identity { height: 275px; padding: 10px 30px 0; }
-.verify-identity .steps { text-align: center; border-bottom: 1px solid #bfbfbf; padding: 0 0 10px; }
-.verify-identity .steps li { display: inline-block; margin: 0 3px; }
-.verify-identity .steps li.active { color: #47a6f7; }
-.verify-identity .steps li.divider { width: 50px; background: #e3e3e3; height: 4px; position: relative; top: -2px; }
-.verify-identity .tips { line-height: 20px; margin-top: 5px; }
-.verify-identity .form-horizontal { margin-top: 10px; }
-.verify-identity .form-horizontal .form-group label { width: 80px; }
-.verify-identity .form-horizontal .inline-control { width: 60%; display: inline-block; }
-.verify-identity .form-horizontal .captcha { width: 66px; height: 22px; vertical-align: middle; margin-left: 5px; }
-.verify-identity.step2 .form-horizontal { margin-top: 25px; }
-.verify-identity.step2 .form-horizontal .form-group { margin-bottom: 25px; }
-.verify-identity.step3 .infomation { text-align: center; line-height: 24px; padding-top: 115px; background: transparent url(/assets/images/manager/face-success.png) center 37px no-repeat; }
+section.verify-identity { height: 275px; padding: 10px 30px 0; }
+section.verify-identity .steps { text-align: center; border-bottom: 1px solid #bfbfbf; padding: 0 0 10px; }
+section.verify-identity .steps li { display: inline-block; margin: 0 3px; }
+section.verify-identity .steps li.active { color: #47a6f7; }
+section.verify-identity .steps li.divider { width: 50px; background: #e3e3e3; height: 4px; position: relative; top: -2px; }
+section.verify-identity .tips { line-height: 20px; margin-top: 5px; }
+section.verify-identity .form-horizontal { margin-top: 10px; }
+section.verify-identity .form-horizontal .form-group label { width: 80px; }
+section.verify-identity .form-horizontal .inline-control { width: 60%; display: inline-block; }
+section.verify-identity .form-horizontal .captcha { width: 66px; height: 22px; vertical-align: middle; margin-left: 5px; }
+section.verify-identity.step2 .form-horizontal { margin-top: 25px; }
+section.verify-identity.step2 .form-horizontal .form-group { margin-bottom: 25px; }
+section.verify-identity.step3 .infomation { text-align: center; line-height: 24px; padding-top: 115px; background: transparent url(/assets/images/manager/face-success.png) center 37px no-repeat; }
+section.down-record { height: auto; padding: 20px 65px 20px 125px; line-height: 24px; background: transparent url(/assets/images/manager/prompt.png) 45px center no-repeat; }
+section.call-list img { margin-right: 5px; }

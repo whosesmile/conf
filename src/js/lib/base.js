@@ -372,6 +372,10 @@ var MaskLayer = this.MaskLayer = {
       if (this.element.size() === 0) {
         this.element = $('<div id="masklayer" />').appendTo(DOMPanel.getPanel());
       }
+
+      this.element.on('click', function () {
+        DialogManager.present && DialogManager.present.hide();
+      });
     }
 
     return this.element;
