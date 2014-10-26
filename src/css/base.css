@@ -88,6 +88,17 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 .icon-forget { background-position: -227px -185px; }
 .icon-call { background-position: -226px -220px; }
 .icon-items { background-position: -226px -185px; }
+.icon-del { background-position: -187px -9px; }
+.icon-add { background-position: -116px -184px; }
+.icon-exp { background-position: -187px -186px; }
+.icon-imp { background-position: -185px -292px; }
+.icon-modify { background-position: -152px -149px; }
+.icon-remove { background-position: -118px -397px; }
+.icon-down { background-position: -186px -253px; }
+.icon-down-black { background-position: -81px -253px; }
+.icon-add-black { background-position: -8px -184px; }
+.icon-modify-black { background-position: -44px -149px; }
+.active .icon-step { background-position: -226px -78px; }
 dd.active .icon-meeting-list { background-position: -118px -361px; }
 dd.active .icon-concat { background-position: -118px -256px; }
 dd.active .icon-concat-group { background-position: -152px -254px; }
@@ -105,18 +116,6 @@ dd.active .icon-branch-office { background-position: -152px -78px; }
 dd.active .icon-update-pwd { background-position: -153px -220px; }
 dd.active .icon-personal { background-position: -153px  -468px; }
 dd.active .icon-myservice { background-position: -118px  -468px; }
-.active .icon-step { background-position: -226px -78px; }
-/* default active icons */
-.icon-del { background-position: -187px -9px; }
-.icon-add { background-position: -116px -184px; }
-.icon-exp { background-position: -187px -186px; }
-.icon-imp { background-position: -185px -292px; }
-.icon-modify { background-position: -152px -149px; }
-.icon-remove { background-position: -118px -397px; }
-.icon-down { background-position: -186px -253px; }
-.icon-down-black { background-position: -81px -253px; }
-.icon-add-black { background-position: -8px -184px; }
-.icon-modify-black { background-position: -44px -149px; }
 /* table */
 .common-table tr { border: 1px solid #CCCCCC; background: #FFFFFF; }
 .common-table tr:hover { background: #F9F9F9; }
@@ -158,12 +157,17 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .common-dialog section { word-wrap: break-word; padding: 15px 0; height: 324px; overflow: auto; }
 .common-dialog footer { padding: 8px 10px; text-align: center; background: #F7F7F7; border-top: 1px solid #CCCCCC; position: relative; }
 .common-dialog footer .btn { margin: 0 32px; }
-.common-dialog .loading { text-align: center; color: #666666; background: transparent url(/assets/images/animate/loading.gif) center 25px no-repeat; padding: 70px 35px 0;}
-.common-dialog .text { display: block; font-size: 14px; width: 50px; height: 80px; margin: 0 auto; background: transparent url(/assets/images/animate/loading.gif) center center no-repeat; }
+.common-dialog .loading { text-align: center; color: #666666; background: transparent url(/assets/images/animate/loading.gif) center 25px no-repeat; padding: 70px 35px 0; }
+.common-dialog .check { width: 20px; text-align: center; }
 .common-dialog.small { width: 400px; }
 .common-dialog.small section { height: 110px; }
 .common-dialog.large { width: 800px; }
 .common-dialog.large section { height: 540px; padding: 10px; overflow: auto; }
+.common-dialog .pagebar { margin-top: 10px }
+.common-dialog .summary { margin-bottom: 10px; }
+.common-dialog .summary .search { float: right; }
+.common-dialog .summary .search .input-text { float: left; border-radius: 0; border-right: none; width: 210px; height: 16px; }
+.common-dialog .summary .search .submit-search { float: left; width: 35px; height: 28px; overflow: hidden; border: 1px solid #CCCCCC; background: transparent url(/assets/images/sprite/icons.png) -36px -77px no-repeat; cursor: pointer; text-indent: -9999px; }
 /* ////////////// */
 .btn { padding: 0 15px; height: 28px; background: #fff; border: 1px solid #eee; vertical-align: middle; border-radius: 3px; cursor: pointer; }
 .btn-lg { height: 32px; min-width: 80px; }
@@ -266,3 +270,9 @@ section.verify-identity.step2 .form-horizontal .form-group { margin-bottom: 25px
 section.verify-identity.step3 .infomation { text-align: center; line-height: 24px; padding-top: 115px; background: transparent url(/assets/images/manager/face-success.png) center 37px no-repeat; }
 section.down-record { height: auto; padding: 20px 65px 20px 125px; line-height: 24px; background: transparent url(/assets/images/manager/prompt.png) 45px center no-repeat; }
 section.call-list img { margin-right: 5px; }
+section.call-list .persons { border: 1px solid #c0c0c0; height: 80px; overflow: auto; margin-bottom: 10px; padding: 3px; }
+section.call-list .persons .person { position: relative; display: inline-block; padding: 4px 25px 4px 8px; background-color: #ddeffd; color: #1c74cd; margin: 3px; text-decoration: none; float: left; }
+section.call-list .persons .person .close { background: url(/assets/images/manager/close.png) no-repeat scroll center center transparent; width: 15px; height: 15px; overflow: hidden; position: absolute; right: 3px; text-indent: -9999px; top: 4px; display: none; }
+section.call-list .persons .person:hover { background-color: #1e75cc; color: #fefdfb; }
+section.call-list .persons .person.active { background-color: #4381bf; color: #fefdfb; }
+section.call-list .persons .person.active .close { display: block; }
