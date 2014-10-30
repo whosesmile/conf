@@ -7,7 +7,7 @@
     <!--[if lt IE 9]><script src="/assets/js/lib/modernizr.js"></script><![endif]-->
     <link type="image/x-icon" rel="shortcut icon" href="/assets/favicon.ico" />
     <link type="text/css" rel="stylesheet" href="/assets/css/base.css" />
-    <link type="text/css" rel="stylesheet" href="/assets/css/app/login.css" />
+    <link type="text/css" rel="stylesheet" href="/assets/css/login.css" />
   </head>
   <body>
     <div id="meeting">
@@ -20,42 +20,65 @@
         </div>
       </form>
     </div>
-    
-    <div id="banner">
-      <div class="login">
-        <form autoComplete="off">
-          <div class="title"><i class="icon camera"></i>主持会议</div>
-          <div class="form-group">
-            <label class="for">账户：</label>
-            <input type="text" class="form-control" placeholder="账户" name="username" />
-            <label class="for">密码：</label>
-            <input type="password" class="form-control" placeholder="密码" name="password" />
-            <button type="submit" class="btn btn-primary">登录</button>
-          </div>
-          <div class="form-group">
-            <label class="holder remember"><input type="checkbox" name="remember" /> 记住我</label>
-            <label class="holder forget"><a href="">忘记密码？</a></label>
-          </div>
-        </form>
 
-        <nav>
-          <a class="left"></a>
-          <a class="right"></a>
-        </nav>
+    <div id="content">
+      <div class="wrapper">
+        <div id="login">
+          <div class="content center-block">
+            <form method="post" name="form" ng-submit="login()">
+              <h3 class="form-title"><img ng-src="{{$host}}/qding/img/logo.png" alt="logo" /> 千丁管理平台</h3>
+              <div class="alert alert-danger" ng-if="error">
+                <button type="button" class="close" ng-click="$parent.error=false" title="关闭">&times;</button>
+                <span><i class="fa fa-info-circle fa-lg"></i> 账号或密码错误</span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group" ng-class="{'ng-dirty': form.name.$dirty, 'ng-valid': form.name.$valid, 'ng-invalid': form.name.$invalid}">
+                  <div class="input-group-addon">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <input class="form-control" type="text" placeholder="账号" name="name" ng-model="name" cs-autofill autofocus required />
+                </div>
+                <p class="text-danger" ng-if="form.name.$dirty &amp;&amp; form.name.$invalid"><i class="fa fa-exclamation-circle"></i> 请输入您的账号</p>
+              </div>
+              <div class="form-group">
+                <div class="input-group" ng-class="{'ng-dirty': form.pwd.$dirty, 'ng-valid': form.pwd.$valid, 'ng-invalid': form.pwd.$invalid}">
+                  <div class="input-group-addon">
+                    <i class="fa fa-lock"></i>
+                  </div>
+                  <input class="form-control" type="password" placeholder="密码" name="pwd" ng-model="pwd" cs-autofill required />
+                </div>
+                <p class="text-danger" ng-if="form.pwd.$dirty &amp;&amp; form.pwd.$invalid"><i class="fa fa-exclamation-circle"></i> 请输入您的密码</p>
+              </div>
+              <div class="form-group clearfix">
+                <label class="pull-left">
+                  <input type="checkbox" name="remember" ng-model="remember" value="true" /> 保持登录
+                </label>
+                <a href="" class="pull-right">忘记密码？</a>
+              </div>
+              <div class="form-group text-center">
+                <button class="btn btn-success btn-block" type="submit" ng-disabled="form.$invalid || processing">
+                <span ng-if="!processing">立即登录</span>
+                <span ng-if="processing">正在登录</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-
+    
     <div id="footer">
-      <ul class="nav">
-        <li><a href="">下载中心</a></li>
-        <li><a href="">视频云SLA</a></li>
-        <li><a href="">使用指南</a></li>
-        <li>热线：400 082 6161</li>
-      </ul>
-      <p class="copyright">Copyright &copy; 2003-2014 BizConf Telecom Co., Ltd. All right Reserved. 沪ICP备 11034277号-5</p>
+      <div class="wrapper clearfix">
+        <p class="copyright pull-left">Copyright &copy; 2012-2014. 沪ICP备 11034277号-5</p>
+        <ul class="nav pull-right">
+          <li><a href="">会畅通讯首页</a></li>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">保密政策</a></li>
+          <li>联系我们</li>
+        </ul>
+      </div>
     </div>
     <script type="text/javascript" src="/assets/js/lib/jquery.js"></script>
-    <script type="text/javascript" src="/assets/js/lib/mootools.js"></script>
-    <script type="text/javascript" src="/assets/js/app/login.js"></script>
   </body>
 </html>
