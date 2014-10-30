@@ -130,9 +130,12 @@ var Toolkit = this.Toolkit = {
   },
 
   resizeIframe: function () {
-    var frame = $(window.parent.document).find('iframe[name=' + window.name + ']');
-    frame.css('height', 'auto');
-    frame.height(Math.max($(document).height(), 650));
+    try {
+      var frame = $(window.parent.document).find('iframe[name=' + window.name + ']');
+      frame.css('height', 'auto');
+      frame.height(Math.max($(document).height(), 650));
+    }
+    catch (e) {}
   }
 };
 

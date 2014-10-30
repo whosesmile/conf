@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>会畅通讯 - 会议系统</title>
+    <!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+    <!--[if lt IE 9]><script src="js/lib/modernizr.js"></script><![endif]-->
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="css/base.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div class="wrapper" style="padding: 20px;">
+
+        <div class="group">
+          <button class="btn btn-primary" template="loading">LOADING</button>
+        </div>
+
+        <hr class="horizon-line" />
+
+        <div class="group">
+          <button class="btn btn-primary" template="create-meeting-account">添加会议账号</button>
+          <button class="btn btn-primary" template="create-meeting-user">添加会议用户</button>
+          <button class="btn btn-primary" template="create-concat">添加联系人</button>
+          <button class="btn btn-primary" template="create-company">添加分公司</button>
+          <button class="btn btn-primary" template="create-cs">添加CS账号</button>
+        </div>
+
+        <hr class="horizon-line" />
+
+        <div class="group">
+          <button class="btn btn-primary" template="verify-identity">首次使用身份验证</button>
+          <button class="btn btn-primary" template="register">首次使用用户注册</button>
+          <button class="btn btn-primary" template="register-success">注册完成</button>
+        </div>
+        
+        <hr class="horizon-line" />
+
+        <div class="group">
+          <button class="btn btn-primary" template="modify-company">编辑公司</button>
+          <button class="btn btn-primary" template="forget-password">忘记密码</button>
+          <button class="btn btn-primary" template="download">下载</button>
+        </div>
+        
+        <hr class="horizon-line" />
+
+        <div class="group">
+          <button class="btn btn-primary" template="call-list">接入号码表</button>
+          <button class="btn btn-primary" template="participants">接入号码表</button>
+        </div>
+
+      </div>
+    </div>
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/mootools.js"></script>
+    <script type="text/javascript" src="js/lib/base.js"></script>
+    <script type="text/javascript" src="js/lib/mustache.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+
+
+    <script type="text/template" id="loading">
+      <div class="common-dialog small">
+        <section>
+          <p class="loading">
+            正在加载，请稍后...
+          </p>
+        </section>
+      </div>
+    </script>
+
+    <script type="text/template" id="create-meeting-account">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-add-black"></i> 添加会议账号</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section>
+          <form class="form-horizontal" onsubmit="return false;" style="padding-right:80px;">
+            <div class="form-group">
+              <label>分公司编号：</label>
+              <div class="wrap">
+                <select class="form-control">
+                  <option>12345678</option>
+                  <option>12345678</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>分公司名称：</label>
+              <div class="wrap">
+                <select class="form-control">
+                  <option>阿里巴巴</option>
+                  <option>大众点评</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>用户编号：</label>
+              <div class="wrap">
+                <select class="form-control" style="width:50%;">
+                  <option>12345678</option>
+                  <option>12345678</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>用户姓名：</label>
+              <div class="wrap">
+                <select class="form-control" style="width:50%;">
+                  <option>高洪亮</option>
+                  <option>高洪亮</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>会议号码：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" value="12345678" disabled />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>主持人密码：</label>
+              <div class="wrap">
+                <input type="password" class="form-control" value="********" disabled />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>创建人：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" value="王静" disabled />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>创建日期：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" value="2014-10-22 12:00:00" disabled />
+              </div>
+            </div>
+          </form>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">确定</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="create-meeting-user">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-add-black"></i> 添加会议用户</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section>
+          <form class="form-horizontal" onsubmit="return false;" style="padding-right:80px;">
+            <div class="form-group">
+              <label>分公司编号：</label>
+              <div class="wrap">
+                <select class="form-control">
+                  <option>12345678</option>
+                  <option>12345678</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>分公司名称：</label>
+              <div class="wrap">
+                <select class="form-control">
+                  <option>阿里巴巴</option>
+                  <option>大众点评</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>用户编号：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" value="12345678" disabled="" />
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>姓氏：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">请输入姓氏</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>名字：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">请输入名字</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>用户部门：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>成本中心：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>客户职位：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>可选输入项：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" placeholder="请自行添加输入项" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>必填输入项：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" placeholder="请自行添加输入项" />
+                <span class="required">*</span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">确定</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="create-concat">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-add-black"></i> 添加联系人</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section>
+          <form class="form-horizontal" onsubmit="return false;" style="padding-right:80px;">
+            <div class="form-group">
+              <label>姓名：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" value="12345678" disabled="" />
+                <span class="message text-muted">6-18个字符，可使用字母、数字、下划线</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>国家：</label>
+              <div class="wrap">
+                <select class="form-control">
+                  <option>中国</option>
+                  <option>韩国</option>
+                </select>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>固定电话：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">如：01078920916</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>分机号：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">如：888</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>手机号码：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">如：18688888888</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>电子邮箱：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">如：username@bizconf.com</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">确定</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="create-company">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-add-black"></i> 添加分公司</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section>
+          <form class="form-horizontal" onsubmit="return false;" style="padding-right:80px;">
+            <div class="form-group">
+              <label>分公司编号：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" value="12345678" disabled />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>分公司名称：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">请输入分公司名称</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>联系人姓名：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">请输入真实姓名</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>国家：</label>
+              <div class="wrap">
+                <select class="form-control">
+                  <option>中国</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>省份：</label>
+              <div class="wrap">
+                <select class="form-control">
+                  <option>请选择</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>城市：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">请输入您所在的城市</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>通信地址：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">请输入您的通信地址</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">确定</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="create-cs">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-add-black"></i> 添加CS账号</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section>
+          <form class="form-horizontal" onsubmit="return false;" style="padding-right:80px;">
+            <div class="form-group">
+              <label>账号名称：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">6-18个字符，可使用字母、数字、下划线</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>账号密码：</label>
+              <div class="wrap">
+                <input type="password" class="form-control" />
+                <span class="message text-muted">6-18个字符，可使用字母、数字、下划线</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>确认账号密码：</label>
+              <div class="wrap">
+                <input type="password" class="form-control" />
+                <span class="message text-muted">再次输入账号密码</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>姓名：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">请输入真实姓名</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>部门：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>固定电话：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">如：01078920916</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>手机号码：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">如：18688888888</span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">确定</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="verify-identity">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-verify"></i> 首次使用身份验证</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section class="verify-identity step1">
+          <ul class="steps">
+            <li class="active"><i class="icon icon-step"></i>身份验证</li>
+            <li class="divider"></li>
+            <li><i class="icon icon-step"></i>用户注册</li>
+            <li class="divider"></li>
+            <li><i class="icon icon-step"></i>完成</li>
+          </ul>
+          <div class="tips text-warning">
+            在您收到的会畅通讯全球会议中心账户信息邮件中，可以查阅到会议编号和密码。
+          </div>
+          <form class="form-horizontal" onsubmit="return false" style="padding-right:55px;">
+            <div class="form-group">
+              <label>用户编号：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-danger"><i class="icon icon-danger"></i>您输入的用户编号不存在！</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>验证密码：</label>
+              <div class="wrap">
+                <input type="password" class="form-control" />
+                <span class="message text-danger"><i class="icon icon-danger"></i>您输入的验证密码有误！</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>验证码：</label>
+              <div class="wrap">
+                <input type="text" class="form-control inline-control" />
+                <img class="captcha" src="images/manager/captcha.png" />
+                <span class="message"><i class="icon icon-success"></i></span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">下一步</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="register">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-verify"></i> 首次使用用户注册</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section class="verify-identity step2">
+          <ul class="steps">
+            <li><i class="icon icon-step"></i>身份验证</li>
+            <li class="divider"></li>
+            <li class="active"><i class="icon icon-step"></i>用户注册</li>
+            <li class="divider"></li>
+            <li><i class="icon icon-step"></i>完成</li>
+          </ul>
+          <form class="form-horizontal" onsubmit="return false" style="padding-right:55px;">
+            <div class="form-group">
+              <label>账户名称：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>密码：</label>
+              <div class="wrap">
+                <input type="password" class="form-control" />
+                <span class="required">*</span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">注册</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="register-success">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-verify"></i> 完成</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section class="verify-identity step3">
+          <ul class="steps">
+            <li><i class="icon icon-step"></i>身份验证</li>
+            <li class="divider"></li>
+            <li><i class="icon icon-step"></i>用户注册</li>
+            <li class="divider"></li>
+            <li class="active"><i class="icon icon-step"></i>完成</li>
+          </ul>
+          <div class="infomation">
+            <div class="text-success">您已完成首次使用身份验证及注册！</div>
+            <div class="text-muted">此页面将在 <i>5</i> 秒后自动关闭</div>
+          </div>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">开始使用</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="modify-company">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-modify-black"></i> 编辑</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section style="height:230px;">
+          <form class="form-horizontal" onsubmit="return false;" style="padding-right:50px;">
+            <div class="form-group">
+              <label>公司名称：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="message text-muted">6-18个字符，可使用字母、数字、下划线</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>公司LOGO图片：</label>
+              <div class="wrap">
+                <div class="clearfix">
+                  <input type="text" class="form-control" style="width:215px;float:left" />
+                  <button class="btn btn-default" style="float:right;">选择文件</button>
+                </div>
+                <span class="message text-muted">小于100kb，支持jpg、png、gif格式</span>
+                <span class="required">*</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Portal地址：</label>
+              <div class="wrap">
+                <input type="text" class="form-control" />
+                <span class="required">*</span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">确定</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="forget-password">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-forget"></i> 忘记密码</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section style="height:auto;">
+          <form class="form-horizontal" onsubmit="return false;" style="padding-right:50px;">
+            <div class="form-group">
+              <label>用户名：</label>
+              <div class="wrap">
+                <div class="clearfix">
+                  <input type="text" class="form-control" style="width:200px;float:left" />
+                  <button class="btn btn-default" style="float:right;">发送至邮箱</button>
+                </div>
+                <span class="message text-muted">输入用户名，系统将会发送邮件至对应的邮箱。</span>
+              </div>
+            </div>
+          </form>
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">确定</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="download">
+      <div class="common-dialog">
+        <header>
+          <h3 class="title"><i class="icon icon-down-black"></i> 下载</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section class="down-record">
+          下载录音文件会在月账单中自动产生下载费用，如确认下载，请点击 “确定” 按钮。
+        </section>
+        <footer>
+          <button class="btn btn-lg btn-success">确定</button>
+          <button class="btn btn-lg btn-gray">取消</button>
+        </footer>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="call-list">
+      <div class="common-dialog large">
+        <header>
+          <h3 class="title"><i class="icon icon-call"></i> 接入号码表</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section class="call-list">
+          <table class="common-table">
+            <tbody>
+              <tr>
+                <th>国家(Country)</th>
+                <th>号码类型(Number Type)</th>
+                <th>号码(Number)</th>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+              <tr>
+                <td><img src="images/manager/country.png" />中国(China)</td>
+                <td>国内免费(中文语音)English</td>
+                <td>8888 9999 6666</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </script>
+
+    <script type="text/template" id="participants">
+      <div class="common-dialog large" style="width:720px;">
+        <header>
+          <h3 class="title"><i class="icon icon-add-black"></i> 选择参与人</h3>
+          <a class="close" title="关闭"></a>
+        </header>
+        <section class="call-list" style="height:450px;">
+          <div class="persons">
+            <a class="person">
+              <span>Liu Jing</span>
+              <i class="close"></i>
+            </a>
+            <a class="person active">
+              <span>高洪亮</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>王三</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>老四</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>Liu Jing</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>高洪亮</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>王三</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>老四</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>Liu Jing</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>高洪亮</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>王三</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>老四</span>
+              <i class="close"></i>
+            </a>
+            <a class="person active">
+              <span>Liu Jing</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>高洪亮</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>王三</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>老四</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>Liu Jing</span>
+              <i class="close"></i>
+            </a>
+            <a class="person active">
+              <span>高洪亮</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>王三</span>
+              <i class="close"></i>
+            </a>
+            <a class="person">
+              <span>老四</span>
+              <i class="close"></i>
+            </a>
+          </div>
+          <div class="summary clearfix">
+            <div class="search">
+              <form method="get">
+                <input type="text" class="input-text" placeholder="姓名、电话、邮箱" />
+                <button class="submit-search" type="button">搜索</button>
+              </form>
+            </div>
+          </div>
+          <table class="common-table">
+            <tbody>
+              <tr>
+                <th class="check"><input type="checkbox" /></th>
+                <th>编号</th>
+                <th>组名/姓名</th>
+                <th>电子邮箱</th>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+              <tr>
+                <td class="check"><input type="checkbox" /></td>
+                <td>1</td>
+                <td>高洪亮</td>
+                <td>lovemoon@yeah.net</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="pagebar clearfix">
+            <div class="jumpto">
+              <form action="" method="get" autocomplete="off">
+                <span class="to">
+                  跳至<input type="text" class="input-text" name="p" value="2">页
+                </span>
+                <button class="go">跳转</button>
+              </form>
+            </div>
+            <ul>
+              <li class="first"><a href="">首页</a></li>
+              <li class="prev dis fix-png"><a title="上一页"></a></li> 
+              <li class="cur"><a>1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+              <li class="next fix-png"><a href="" title="下一页"></a></li>
+              <li class="last"><a href="">尾页</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </script>
+
+  </body>
+</html>

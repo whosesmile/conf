@@ -1,7 +1,7 @@
 /*global Mustache, AlertDialog, ConfirmDialog, CommonDialog  */
 
 // jQuery(document).on('click', '#content .wrapper button', function () {
-//   jQuery.when(Toolkit.loadTempl('/assets/works/dialogs/test.html')).done(function (template) {
+//   jQuery.when(Toolkit.loadTempl('works/dialogs/test.html')).done(function (template) {
 //     new CommonDialog({
 //       noheader: true,
 //       width: 500,
@@ -24,7 +24,7 @@ jQuery(document).on('click', '#content .wrapper button', function () {
 
   // 计算弹窗模板地址
   // 规则：{{name}}.template.html
-  var url = Mustache.render('/assets/js/partials/{{name}}.template.html', {
+  var url = Mustache.render('js/partials/{{name}}.template.html', {
     name: name
   });
 
