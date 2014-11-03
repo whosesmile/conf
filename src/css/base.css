@@ -16,6 +16,7 @@ table { border-collapse: collapse; border-spacing: 0; width: 100%; }
 :focus { outline: 0; }
 .pull-left { float: left; }
 .pull-right { float: right; }
+.no-scroll { overflow: hidden; }
 a, a:link, a:visited { color: #47a6f7; cursor: pointer; text-decoration: none; }
 a:hover { text-decoration: underline; }
 :placeholder { color: #999999; }
@@ -112,6 +113,7 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .common-table th.sort a { color: #333; text-decoration: none; display: inline-block; padding-right: 15px; background: transparent url(../images/manager/sort.png) right -37px no-repeat; }
 .common-table th.sort.up a { background-position: right 4px; }
 .common-table th.sort.down a { background-position: right -15px; }
+.common-table.only-head tr, .common-table.only-head th { border-bottom: none !important; }
 /* pagebar */
 .pagebar { padding: 0; margin: 0 auto; }
 .pagebar .count { float: left; line-height: 24px; }
@@ -189,6 +191,7 @@ body.home { padding-bottom: 45px; background: #fff url(../images/manager/body.pn
 #header .logo { float: left; margin: 12px 0 0 25px; color: #fff; font-size: 22px; letter-spacing: 2px; text-decoration: none; }
 #header .logo img { float: left; }
 #header .logo span { float: left; margin: 10px 0 0 25px; }
+#header .green-banner { position: absolute; right: 130px; top: 33px; }
 #header .infomation { float: right; padding: 8px 20px 0 0; zoom: 1; }
 #header .infomation .message { color: #fff; margin-right: 5px; }
 #header .infomation a { color: #ffffff; }
@@ -257,7 +260,6 @@ section.verify-identity.step2 .form-horizontal { margin-top: 25px; }
 section.verify-identity.step2 .form-horizontal .form-group { margin-bottom: 25px; }
 section.verify-identity.step3 .infomation { text-align: center; line-height: 24px; padding-top: 115px; background: transparent url(../images/manager/face-success.png) center 37px no-repeat; }
 section.down-record { height: auto; padding: 20px 65px 20px 125px; line-height: 24px; background: transparent url(../images/manager/prompt.png) 45px center no-repeat; }
-section.call-list { overflow: hidden; }
 section.call-list img { margin-right: 5px; }
 section.call-list .persons { border: 1px solid #c0c0c0; height: 80px; overflow: auto; margin-bottom: 10px; padding: 3px; }
 section.call-list .persons .person { position: relative; display: inline-block; padding: 4px 25px 4px 8px; background-color: #ddeffd; color: #1c74cd; margin: 3px; text-decoration: none; float: left; }
@@ -265,4 +267,4 @@ section.call-list .persons .person .close { background: url(../images/manager/cl
 section.call-list .persons .person:hover { background-color: #1e75cc; color: #fefdfb; }
 section.call-list .persons .person.active { background-color: #4381bf; color: #fefdfb; }
 section.call-list .persons .person.active .close { display: block; }
-section.call-list .inner-scroll { height: 350px; padding-right: 10px; overflow-y: auto; }
+section.call-list .inner-scroll { overflow-y: auto; }
