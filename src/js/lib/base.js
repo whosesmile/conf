@@ -330,6 +330,26 @@ var Offset = this.Offset = new Class({
       }
     };
     $(window).resize(contextProxy);
+    this.addMoveListener();
+  },
+
+  addMoveListener: function () {
+    var self = this;
+    var calculate = function (o, e, s) {
+      self.element.css({
+        top: o.top + (e.pageY - s.pageY),
+        left: o.left + (e.pageX - s.pageX)
+      });
+    };
+    self.element.find('header').css('cursor', 'move').on('mousedown', function (s) {
+      var o = self.element.offset();
+      $(document).on('mousemove', function (e) {
+        calculate(o, e, s);
+      });
+      $(document).on('mouseup', function () {
+        $(document).off('mousemove');
+      });
+    });
   },
 
   show: function () {

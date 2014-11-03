@@ -182,7 +182,7 @@ a.btn-lg { line-height: 30px; }
 .form-horizontal .form-group .message { display: block; margin-top: 6px; }
 .form-horizontal .form-group .required { color: #f00; position: absolute; right: -15px; top: 6px; font-size: 14px; }
 /* default style */
-body.home { padding-bottom: 45px; background: #fff url(../images/manager/body.png) 0 0 repeat-y; }
+body.home { padding-bottom: 45px; background: #fff url(../images/manager/body.png) 0 0 repeat-y; min-width: 1220px; overflow: auto; }
 #header { height: 75px; background: #131e30 url(../images/manager/line.jpg) 0 bottom repeat-x; }
 #footer { position: fixed; left: 0; bottom: 0; height: 45px; line-height: 45px; text-align: center; width: 100%; border-top: 1px solid #bfbfbf; background: #f2f2f2; }
 #content .wrapper { position: relative; }
@@ -257,6 +257,7 @@ section.verify-identity.step2 .form-horizontal { margin-top: 25px; }
 section.verify-identity.step2 .form-horizontal .form-group { margin-bottom: 25px; }
 section.verify-identity.step3 .infomation { text-align: center; line-height: 24px; padding-top: 115px; background: transparent url(../images/manager/face-success.png) center 37px no-repeat; }
 section.down-record { height: auto; padding: 20px 65px 20px 125px; line-height: 24px; background: transparent url(../images/manager/prompt.png) 45px center no-repeat; }
+section.call-list { overflow: hidden; }
 section.call-list img { margin-right: 5px; }
 section.call-list .persons { border: 1px solid #c0c0c0; height: 80px; overflow: auto; margin-bottom: 10px; padding: 3px; }
 section.call-list .persons .person { position: relative; display: inline-block; padding: 4px 25px 4px 8px; background-color: #ddeffd; color: #1c74cd; margin: 3px; text-decoration: none; float: left; }
@@ -264,3 +265,4 @@ section.call-list .persons .person .close { background: url(../images/manager/cl
 section.call-list .persons .person:hover { background-color: #1e75cc; color: #fefdfb; }
 section.call-list .persons .person.active { background-color: #4381bf; color: #fefdfb; }
 section.call-list .persons .person.active .close { display: block; }
+section.call-list .inner-scroll { height: 350px; padding-right: 10px; overflow-y: auto; }
