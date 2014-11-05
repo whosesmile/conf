@@ -13,8 +13,8 @@ select:focus, textarea:focus { border: 1px solid #78A8D5; box-shadow: 0 0 3px #E
 a, a:link, a:visited { color: #47a6f7; cursor: pointer; text-decoration: none; }
 a:hover { text-decoration: underline; }
 img { vertical-align: middle; }
-h1 { font-size: 30px; color: #444e72; }
-h2 { font-size: 14px; color: #444e72; margin: 10px 0 25px; }
+h1 { font-size: 30px; color: #444e72; font-weight: normal; }
+h2 { font-size: 14px; color: #444e72; margin: 10px 0 25px; font-weight: normal; }
 .clearfix:before, .clearfix:after { content: '\0020'; display: block; height: 0; overflow: hidden; visibility: hidden; width: 100%; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
