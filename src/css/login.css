@@ -37,7 +37,7 @@ h2 { font-size: 14px; color: #444e72; margin: 10px 0 25px; font-weight: normal; 
 #header { height: 89px; background: #263f65 url(../images/login/header.png) 0 0 no-repeat; }
 #header .wrapper { width: 925px; margin: 0 auto; }
 #content { background: #415e70 url(../images/login/content-bg.png) 0 0 repeat-x; }
-#content .wrapper { width: 925px; margin: 0 auto; height: 635px; background: transparent url(../images/login/content.png) top center no-repeat; }
+#content .wrapper { position: relative; width: 925px; margin: 0 auto; height: 635px; background: transparent url(../images/login/content.png) top center no-repeat; }
 #header .logo { float: left; margin: 12px 0 0 0; color: #fff; font-size: 22px; letter-spacing: 2px; text-decoration: none; }
 #header .logo img { float: left; }
 #header .logo span { float: left; margin: 10px 0 0 25px; }
@@ -62,3 +62,4 @@ h2 { font-size: 14px; color: #444e72; margin: 10px 0 25px; font-weight: normal; 
 .query-panel h3 { font-weight: normal; font-size: 14px; color: #666; margin-bottom: 10px; background: transparent url(../images/login/search.png) 4px 4px no-repeat; padding-left: 28px; }
 .query-panel .form-group { text-align: center; }
 .query-panel .form-control { width: 240px; }
+.green-banner { position: absolute; right: 40px; top: 550px; }
