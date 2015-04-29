@@ -1,9 +1,0 @@
-/*body { background: transparent url(../images/holder/showcase.jpg) center 0 no-repeat; }*/
-#content { padding-top: 35px; }
-li { padding: 25px 50px; border-bottom: 1px solid #ddd;  position: relative;}
-li .figure { float: left; width: 466px; height: 180px; overflow: hidden; }
-li .figure img { display: block; }
-li .information { margin-left: 540px;}
-li .information h3 { font-size: 20px; font-weight: 900; margin: 10px 0 0 0; line-height: 1; }
-li .information p { margin-top:15px;font-size: 16px;line-height: 24px;}
-li .information .details {position: absolute;right: 50px;bottom: 25px; border:1px solid #98509e;font-size: 16px;color: #822b89;padding: 8px 18px;border-radius: 3px;}
