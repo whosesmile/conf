@@ -1,5 +1,5 @@
 /*body { background: transparent url(../images/holder/showcase.jpg) center 0 no-repeat; }*/
-#content { padding-top: 35px; }
+#content { padding-top: 25px; }
 li { padding: 25px 50px; border-bottom: 1px solid #ddd;  position: relative;}
 li .figure { float: left; width: 466px; height: 180px; overflow: hidden; }
 li .figure img { display: block; }

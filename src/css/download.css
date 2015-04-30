@@ -1,0 +1,19 @@
+@charset "UTF-8";
+body { background: #067489 url(../images/download/bg.jpg) center 0 no-repeat; background-size: cover; }
+#content .wrapper { margin: 40px auto 0; height: 643px; padding: 35px 70px; background: transparent url(../images/download/opacity.png) center 0 repeat; }
+#footer { margin-top: 20px; background-color: #fff; }
+.box { border-top: 1px solid #888; font-size: 16px; line-height: 30px; }
+.box h2 { font-weight: bold; font-size: 20px; margin: 40px 0 20px; }
+.app { float: left; width: 510px; position: relative; }
+.client { margin-left: 570px; position: relative; }
+.app .actions { position: absolute; right: 0; top: 85px; }
+.link { display: inline-block; min-width: 152px; height: 44px; line-height: 44px; color: #fff !important; text-align: center; margin-top: 15px; font-size: 18px; }
+.link.ios { background-color: #797979; }
+.link.android { background-color: #96bc29; }
+.link.windows { background-color: #338eff; }
+.qrcode { display: block; margin: 0 auto; }
+.client .actions { position: absolute; right: 0; bottom: -20px; }
+.icon { display: inline-block; margin-right: 10px; height: 44px; width: 34px; background: transparent url() 0 3px no-repeat; vertical-align: middle; }
+.icon-apple { background-image: url(../images/download/icon-apple.png); }
+.icon-android { background-image: url(../images/download/icon-android.png); }
+.icon-windows { background-image: url(../images/download/icon-windows.png); }

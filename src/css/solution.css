@@ -2,7 +2,7 @@
 #content { padding-top: 25px; }
 .deploy .list { padding: 0 55px; }
 .deploy .list .item { border-bottom: 1px solid #ddd; padding-bottom: 48px; font-size: 16px; }
-.deploy .list .item.last { border-bottom: none; }
+/*.deploy .list .item.last { border-bottom: none; }*/
 .deploy .list .item h3 { font-weight: 900; font-size: 28px; margin: 40px 0; }
 .deploy dl dt, dl dd { line-height: 28px; }
 .deploy dl.first { float: left; width: 440px; }
