@@ -1,2 +1,8 @@
 @charset "UTF-8";
-#content { width:auto;max-width: 1400px; margin: 0 auto; }
+#content { width: auto; margin: 0 auto; }
+#slider {-webkit-transition:-webkit-transform .9s cubic-bezier(.86, 0, .07, 1);transition:transform .9s cubic-bezier(.86, 0, .07, 1);}
+#slider img { display: block; width: 100%; }
+
+#navButtons { position: fixed; top: 50%; right: 30px; height: 150px; margin-top: -75px; }
+#navButtons li { list-style: none; width: 10px; height: 10px; border-radius: 50%; border: 1px solid #fff; background-color: #000; margin-top: 10px; cursor: pointer; opacity: 0.5; position: relative; }
+#navButtons li.active {opacity: 0.3;}
