@@ -45,7 +45,7 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 .text-normal { font-weight: normal; font-style: normal; }
 .text-right { text-align: right; }
 body { -webkit-font-smoothing: antialiased; /*max-width: 1400px; margin: 0 auto; */ }
-#header { height: 85px; background-color: #7f7f7f; width: 100%; }
+#header { height: 85px; background-color: #7f7f7f; width: 100%; min-width: 1120px;}
 #header.opacity { background: transparent url(../images/home/header.png) 0 0 repeat-x; background: rgba(255, 255, 255, 0.2); }
 #header .wrapper { width: 1120px; margin: 0 auto; position: relative; }
 #header .wrapper .logo { float: left; padding-top: 20px; }

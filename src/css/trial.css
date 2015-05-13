@@ -13,7 +13,7 @@ body { background: #fff url(../images/trial/bg.jpg) center 0 repeat-x; backgroun
 .form-group { margin-bottom: 10px; }
 .form-group label { font-size: 16px; float: left; width: 115px; text-align: left; line-height: 36px; }
 .form-control { box-sizing: border-box; display: block; margin-left: 95px; width: 518px; padding: 0 10px; height: 36px; font-size: 16px; border: 1px solid #a0a0a0; background-color: transparent; }
-.form-inline { margin-right: 15px; display: inline-block; }
+.form-inline { margin-right: 19px; float:left; }
 .form-inline label { width: 70px; }
 .form-inline .form-control { width: 212px; }
 .captcha { position: relative; }

@@ -6,4 +6,8 @@ $(function () {
     dots: true, //  Display dot navigation
     fluid: false //  Support responsive design. May break non-responsive designs
   });
+
+  $(window).on('resize', function (e) {
+    $('#slider,#slider>ul>li').css('width', $(document).width());
+  });
 });

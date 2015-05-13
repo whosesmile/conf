@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #header { position: absolute; top: 0; z-index: 100; }
-#banner { width: 100%; margin: 0 auto; overflow: hidden; max-height: 665px; }
+#banner { width: 100%; margin: 0 auto; overflow: hidden; max-height: 665px; min-width: 1120px;}
 #slider { position: relative; overflow: hidden; }
 #slider ul li { float: left; overflow: hidden; width: 100%; list-style: none; }
 #slider img.slider { display: block; width: 100%; margin: 0 auto; max-height: 665px; }
@@ -8,6 +8,7 @@
 #slider .dots .dot { float: left; width: 14px; height: 14px; overflow: hidden; border-radius: 3px; margin-left: 5px; background-color: #000; opacity: 0.3; text-indent: -999px; cursor: pointer; }
 #slider .dots .dot.active { opacity: 0.5; }
 #render { margin-top: 38px; }
-#render li { float: left; list-style: none; margin-left: 35px; position: relative; }
+#render li { float: left; list-style: none; margin-left: 35px; }
+#render li a { display: block; position: relative; }
 #render li:first-child { margin-left: 0; }
-#render li span { position: absolute; bottom: 0; width: 100%; color: #fff; background-color: rgba(0, 0, 0, 0.5); text-align: center; line-height: 45px; font-size: 16px; }
+#render li span { position: absolute; bottom: 0; width: 100%; color: #fff; background-color: rgba(0, 0, 0, 0.5); text-align: center; line-height: 45px; font-size: 16px; z-index: 10;}
