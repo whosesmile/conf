@@ -11,4 +11,4 @@
 #render li { float: left; list-style: none; margin-left: 35px; }
 #render li a { display: block; position: relative; }
 #render li:first-child { margin-left: 0; }
-#render li span { position: absolute; bottom: 0; width: 100%; color: #fff; background-color: rgba(0, 0, 0, 0.5); text-align: center; line-height: 45px; font-size: 16px; z-index: 10;}
+#render li span { position: absolute; left:0;bottom: 0; width: 100%; color: #fff; background-color: rgba(0, 0, 0, 0.5); text-align: center; line-height: 45px; font-size: 16px; z-index: 10;}
