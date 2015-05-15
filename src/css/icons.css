@@ -1,0 +1,14 @@
+.icon-android { width: 31px; height: 36px; background-image: url(../images/icons/android.png);}
+.icon-apple { width: 32px; height: 40px; background-image: url(../images/icons/apple.png);}
+.icon-dir-down { width: 126px; height: 29px; background-image: url(../images/icons/dir-down.png);}
+.icon-dir-up { width: 126px; height: 29px; background-image: url(../images/icons/dir-up.png);}
+.icon-meeting { width: 50px; height: 50px; background-image: url(../images/icons/meeting.png);}
+.icon-password { width: 50px; height: 50px; background-image: url(../images/icons/password.png);}
+.icon-tab-account-active, :active > .icon-tab-account, .active > .icon-tab-account { width: 55px; height: 48px; background-image: url(../images/icons/tab-account-active.png);}
+.icon-tab-account { width: 55px; height: 48px; background-image: url(../images/icons/tab-account.png);}
+.icon-tab-join-active, :active > .icon-tab-join, .active > .icon-tab-join { width: 74px; height: 51px; background-image: url(../images/icons/tab-join-active.png);}
+.icon-tab-join { width: 74px; height: 51px; background-image: url(../images/icons/tab-join.png);}
+.icon-tab-list-active, :active > .icon-tab-list, .active > .icon-tab-list { width: 54px; height: 49px; background-image: url(../images/icons/tab-list-active.png);}
+.icon-tab-list { width: 54px; height: 49px; background-image: url(../images/icons/tab-list.png);}
+.icon-tab-schedule-active, :active > .icon-tab-schedule, .active > .icon-tab-schedule { width: 73px; height: 51px; background-image: url(../images/icons/tab-schedule-active.png);}
+.icon-tab-schedule { width: 73px; height: 51px; background-image: url(../images/icons/tab-schedule.png);}

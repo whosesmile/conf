@@ -1,17 +1,16 @@
 {
-  "name": "confcloud",
-  "version": "0.1.0",
+  "name": "mobile",
+  "version": "0.0.1",
   "author": {
     "name": "lovemoon@yeah.net"
   },
-  "description": "上海慧畅通信",
   "licenses": [{
     "type": "GPLv2",
     "url": "http://www.example.com/licenses/gpl.html"
   }],
   "repository": {
     "type": "git",
-    "url": "https://github.com/whosesmile/weixin.git"
+    "url": "https://github.com/whosesmile/generator-whosesmile.git"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -19,15 +18,19 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "load-grunt-tasks": "~0.5.0",
-    "grunt-contrib-copy": "~0.4.0",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-jshint": "~0.7.2",
     "grunt-contrib-cssmin": "~0.10.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-concat": "~0.4.0",
-    "grunt-contrib-connect": "~0.8.0",
-    "connect-livereload": "~0.4.0"
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-imagemin": "~0.9.4",
+    "grunt-autoicons": "^0.1.1",
+    "grunt-px2rem": "^0.1.1",
+    "grunt-sync": "^0.2.3"
   },
-  "dependencies": {}
+  "dependencies": {
+
+  }
 }

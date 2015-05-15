@@ -1,0 +1,29 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  //"vars":true,
+  "unused": "vars",
+  "boss": true,
+  "eqnull": true,
+  "browser": true,
+  "globals": {
+    "$": true,
+    "angular": true,
+    "IScroll": true,
+    "WeixinJSBridge": true,
+    "BMap": true,
+    "BMAP_STATUS_SUCCESS": true,
+    "CryptoJS": true,
+    "$LAB": true,
+    "Hammer": true,
+    "confirm": true,
+    "prompt": true,
+    "alert": true
+  }
+}

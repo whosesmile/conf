@@ -1,0 +1,18 @@
+{
+  "name": "package",
+  "version": "0.0.1",
+  "dependencies": {
+    "zepto": "latest",
+    "swiper": "latest"
+  },
+  "install": {
+    "path": "vendor",
+    "sources": {
+      "zepto": "bower_components/zepto/zepto.js",
+      "swiper": [
+        "bower_components/swiper/dist/css/swiper.css",
+        "bower_components/swiper/dist/js/swiper.js"
+      ]
+    }
+  }
+}
