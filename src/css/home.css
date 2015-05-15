@@ -5,3 +5,6 @@
 .home .icon-input > .icon { position: absolute; top: 50%; margin-top: -25px; left: 0; }
 .home .list { margin-bottom: 68px; }
 .home .submit .button { margin-bottom: 30px; }
+.cornertips { width: 640px; margin: 0 auto; color: #fff;text-align: center;line-height: 50px;padding-top: 215px;}
+.cornertips .icon-arrow-corner { position: absolute; top: 15px; right: 60px; }
+.cornertips .icon-pointer {margin-top: 50px;}

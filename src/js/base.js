@@ -78,3 +78,27 @@ $(function () {
     section.addClass('has-appstore');
   }
 });
+
+// masklayer
+(function (global) {
+  var instance = null;
+
+  global.masklayer = {
+    show: function (html) {
+      this.getInstance(html).show();
+    },
+    hide: function () {
+      this.getInstance().hide();
+    },
+    getInstance: function (html) {
+      if (!instance) {
+        instance = $('<div id="masklayer" />').appendTo('body');
+        instance.on('click', function () {
+          this.hide();
+        }.bind(this));
+      }
+      instance.html(html || '');
+      return instance;
+    }
+  };
+})(window);

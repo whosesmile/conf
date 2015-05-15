@@ -6,7 +6,7 @@
   <title>商会云</title>
   <meta content="yes" name="apple-touch-fullscreen" />
   <meta content="yes" name="apple-mobile-web-app-capable" />
-  <meta content="#8b2c92" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
   <meta content="telephone=no,email=no,address=no" name="format-detection" />
   <link rel="shortcut icon" href="./images/favicon.ico" />
   <link rel="stylesheet" href="./css/base.css" />
@@ -16,25 +16,25 @@
 </head>
 <body>
   <div class="home">
-    <header class="bar fixed">
+    <!-- <header class="bar fixed">
       <h1>商会云</h1>
-    </header>
-    <section class="has-header has-footer">
+    </header> -->
+    <section class="has-footer">
       <h2>加入会议</h2>
-      <form method="post" autocomplete="off">
+      <form method="post" autocomplete="off" onsubmit="return false">
         <div class="list">
           <label class="item-input icon-input">
             <i class="icon icon-meeting"></i>
-            <input type="text" name="meeting" placeholder="会议号" required />
+            <input type="text" name="meeting" placeholder="会议号" readonly="true" required />
           </label>
           <label class="item-input icon-input">
             <i class="icon icon-password"></i>
-            <input type="password" name="password" placeholder="密码 (可选)" required />
+            <input type="password" name="password" placeholder="密码 (可选)" readonly="true" required />
           </label>
         </div>
         <div class="submit">
           <button class="button button-warning button-outline button-block">确定</button>
-          <button class="button button-default button-outline button-block">取消</button>
+          <a class="button button-default button-outline button-block">取消</a>
         </div>
       </form>
     </section>

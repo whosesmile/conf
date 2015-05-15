@@ -186,6 +186,7 @@ footer.bar nav a:active span, footer.bar nav a.active span { color: #8b2c92; }
 #appstore .col.android { color: #99ce00; }
 #appstore .col .icon { margin-top: -7px; }
 #appstore .info { height: 75px; line-height: 75px; border-bottom: 1px solid #ddd; font-size: 28px; }
-#appstore .handler { position: absolute; top: -28px; left: 50%; margin-left: -63px; }
+#appstore .handler { position: absolute; top: -28px; left: 50%; margin-left: -63px; z-index: 300; }
 #appstore.fold { -webkit-animation-duration: 0.35s; -webkit-animation-name: foldstore; bottom: -58px; }
 #appstore.open { -webkit-animation-duration: 0.35s; -webkit-animation-name: openstore; bottom: 98px; }
+#masklayer { position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; max-width: 640px; margin:0 auto; background-color: rgba(0, 0, 0, 0.7); z-index: 1000;}
