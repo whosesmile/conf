@@ -1,13 +1,4 @@
 @charset "UTF-8";
-
-/*@-webkit-keyframes foldstore {
-    0% { bottom: 98px; }
-    100% { bottom: -58px; }
-}
-@-webkit-keyframes openstore {
-    0% { bottom: -58px; }
-    100% { bottom: 98px; }
-}*/
 @-webkit-keyframes hidenotice {
   0% { display: block; opacity: 1; }
   99% { display: none; opacity: 0; }
@@ -32,7 +23,7 @@ select, input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -we
 select { background-color: #fff; }
 label.checkbox, label.radio { line-height: 38px; }
 input[type='checkbox'], input[type='radio'] { width: 38px; height: 38px; margin: 0; line-height: normal; -webkit-appearance: none; appearance: none; vertical-align: middle; position: relative; top: -4px; }
-input[type='checkbox']:before, input[type='radio']:before { display: table; width: 100%; height: 100%; box-sizing: border-box; border-width: 1px; border-style: solid; border-radius: 28px; background: #fff; border-color: #8b2c92; content: ' '; transition: background-color 20ms ease-in-out; }
+input[type='checkbox']:before, input[type='radio']:before { display: table; width: 100%; height: 100%; box-sizing: border-box; border-width: 1px; border-style: solid; border-radius: 28px; background: #fff; border-color: #8b2c92; content: ' '; -webkit-transition: background-color 20ms ease-in-out; -moz-transition: background-color 20ms ease-in-out; transition: background-color 20ms ease-in-out; }
 input[type='checkbox']:after, input[type='radio']:after { -webkit-transition: opacity 0.05s ease-in-out; -moz-transition: opacity 0.05s ease-in-out; transition: opacity 0.05s ease-in-out; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); transform: rotate(-45deg); position: absolute; top: 35%; left: 25%; display: table; width: 20px; height: 10px; border: 3px solid #fff; border-top: 0; border-right: 0; content: ' '; opacity: 0; }
 input[type='checkbox']:checked:before, input[type='radio']:checked:before { background-color: #8b2c92; }
 input[type='checkbox']:checked:after, input[type='radio']:checked:after { opacity: 1 }
@@ -184,15 +175,15 @@ footer.bar nav a { float: left; width: 25%; text-align: center; padding-top: 15p
 footer.bar nav a .icon { vertical-align: top; }
 footer.bar nav span { display: block; text-align: center; margin-top: 5px; color: #333; font-size: 18px; font-weight: bold; }
 footer.bar nav a:active span, footer.bar nav a.active span { color: #8b2c92; }
-#appstore { position: fixed; bottom: 98px; width: 100%; max-width: 640px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; background-color: #fff; z-index: 100; }
+#appstore { position: fixed; bottom: 98px; width: 100%; max-width: 640px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; background-color: #fff; z-index: 100; transition: bottom 0.3s ease-out; }
 #appstore .col { height: 80px; line-height: 80px; }
 #appstore .col.ios { border-right: 1px solid #ddd; }
 #appstore .col.android { color: #99ce00; }
 #appstore .col .icon { margin-top: -7px; }
 #appstore .info { height: 75px; line-height: 75px; border-bottom: 1px solid #ddd; font-size: 28px; }
 #appstore .handler { position: absolute; top: -28px; left: 50%; margin-left: -63px; z-index: 300; }
-#appstore.fold { -webkit-animation-duration: 0.35s; -webkit-animation-name: foldstore; bottom: -58px; }
-#appstore.open { -webkit-animation-duration: 0.35s; -webkit-animation-name: openstore; bottom: 98px; }
+#appstore.fold { bottom: -58px; }
+#appstore.open { bottom: 98px; }
 #masklayer { position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; max-width: 640px; margin: 0 auto; background-color: rgba(0, 0, 0, 0.7); z-index: 1000; }
 .cornertips { width: 640px; margin: 0 auto; color: #fff; text-align: center; line-height: 50px; padding-top: 215px; }
 .cornertips .icon-arrow-corner { position: absolute; top: 15px; right: 60px; }
