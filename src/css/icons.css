@@ -1,11 +1,18 @@
 .icon-android { width: 31px; height: 36px; background-image: url(../images/icons/android.png);}
 .icon-apple { width: 32px; height: 40px; background-image: url(../images/icons/apple.png);}
 .icon-arrow-corner { width: 165px; height: 151px; background-image: url(../images/icons/arrow-corner.png);}
+.icon-datetime { width: 39px; height: 38px; background-image: url(../images/icons/datetime.png);}
 .icon-dir-down { width: 126px; height: 29px; background-image: url(../images/icons/dir-down.png);}
 .icon-dir-up { width: 126px; height: 29px; background-image: url(../images/icons/dir-up.png);}
+.icon-during { width: 40px; height: 39px; background-image: url(../images/icons/during.png);}
 .icon-meeting { width: 50px; height: 50px; background-image: url(../images/icons/meeting.png);}
 .icon-password { width: 50px; height: 50px; background-image: url(../images/icons/password.png);}
 .icon-pointer { width: 245px; height: 245px; background-image: url(../images/icons/pointer.png);}
+.icon-small-during { width: 31px; height: 31px; background-image: url(../images/icons/small-during.png);}
+.icon-small-number { width: 31px; height: 31px; background-image: url(../images/icons/small-number.png);}
+.icon-small-password { width: 31px; height: 31px; background-image: url(../images/icons/small-password.png);}
+.icon-small-time { width: 31px; height: 31px; background-image: url(../images/icons/small-time.png);}
+.icon-small-topic { width: 31px; height: 31px; background-image: url(../images/icons/small-topic.png);}
 .icon-tab-account-active, :active > .icon-tab-account, .active > .icon-tab-account { width: 57px; height: 48px; background-image: url(../images/icons/tab-account-active.png);}
 .icon-tab-account { width: 55px; height: 48px; background-image: url(../images/icons/tab-account.png);}
 .icon-tab-join-active, :active > .icon-tab-join, .active > .icon-tab-join { width: 74px; height: 51px; background-image: url(../images/icons/tab-join-active.png);}
@@ -14,3 +21,4 @@
 .icon-tab-list { width: 54px; height: 49px; background-image: url(../images/icons/tab-list.png);}
 .icon-tab-schedule-active, :active > .icon-tab-schedule, .active > .icon-tab-schedule { width: 74px; height: 51px; background-image: url(../images/icons/tab-schedule-active.png);}
 .icon-tab-schedule { width: 74px; height: 51px; background-image: url(../images/icons/tab-schedule.png);}
+.icon-topic { width: 40px; height: 39px; background-image: url(../images/icons/topic.png);}

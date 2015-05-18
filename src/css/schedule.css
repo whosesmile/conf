@@ -1,0 +1,8 @@
+/*body { background: transparent url(../images/holder/home.jpg) center -40px no-repeat; }*/
+.schedule section { padding-top: 55px; padding-left: 68px; padding-right: 68px; }
+.schedule .tabs { margin-bottom: 35px; }
+.schedule .icon-input > input { padding-left: 55px; }
+.schedule .icon-input > .icon { position: absolute; top: 50%; margin-top: -25px; left: 0; }
+.schedule .icon-input > .icon-topic { margin-top: -18px; }
+.schedule .list { margin-bottom: 68px; }
+.schedule .submit .button { margin-bottom: 30px; }

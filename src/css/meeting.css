@@ -1,0 +1,8 @@
+.meeting section { padding-top: 55px; padding-left: 68px; padding-right: 68px; }
+.meeting section h2 { margin-bottom: 30px; }
+.meeting .icon-input > input { padding-left: 55px; }
+.meeting .icon-input > .icon { position: absolute; top: 50%; margin-top: -25px; left: 0; }
+.meeting .list { margin-bottom: 68px; }
+.meeting .item .name {color: #8b2c92;}
+.meeting .item .icon {position: relative;top: -3px;}
+.meeting .submit .button { margin-bottom: 30px; }

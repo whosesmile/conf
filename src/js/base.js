@@ -82,9 +82,11 @@ $(function () {
 // masklayer
 (function (global) {
   var instance = null;
+  var autohide = true;
 
   global.masklayer = {
-    show: function (html) {
+    show: function (html, bool) {
+      autohide = bool === false ? false : true;
       this.getInstance(html).show();
     },
     hide: function () {
@@ -94,7 +96,9 @@ $(function () {
       if (!instance) {
         instance = $('<div id="masklayer" />').appendTo('body');
         instance.on('click', function () {
-          this.hide();
+          if (autohide === true) {
+            this.hide();
+          }
         }.bind(this));
       }
       instance.html(html || '');
@@ -102,3 +106,17 @@ $(function () {
     }
   };
 })(window);
+
+// tabview
+$(function () {
+  $('.tab').on('click', function () {
+    var tab = $(this);
+    var name = tab.data('tab');
+    if (!name) {
+      return;
+    }
+
+    tab.addClass('active').siblings().removeClass('active');
+    $('.view').filter('[data-view="' + name + '"]').addClass('active').siblings().removeClass('active');
+  });
+});

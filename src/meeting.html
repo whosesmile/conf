@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <title>商会云</title>
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no,email=no,address=no" name="format-detection" />
+  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/meeting.css" />
+  <script src="./js/base.js"></script>
+</head>
+<body>
+  <div class="meeting">
+    <header class="bar fixed">
+      <h1>商会云</h1>
+    </header>
+    <section class="has-header has-footer">
+      <h2>会议详情</h2>
+      <form method="post" autocomplete="off" onsubmit="return false">
+        <div class="list">
+          <div class="item oneline">
+            <span class="name"><i class="icon icon-small-topic"></i> 主题：</span>动物也有同情心吗
+          </div>
+          <div class="item oneline">
+            <span class="name"><i class="icon icon-small-time"></i> 开始时间：</span>2015-06-06 10:00
+          </div>
+          <div class="item oneline">
+            <span class="name"><i class="icon icon-small-during"></i> 会议时长：</span>1小时30分
+          </div>
+          <div class="item oneline">
+            <span class="name"><i class="icon icon-small-number"></i> 会议号：</span>18688888888
+          </div>
+          <div class="item oneline">
+            <span class="name"><i class="icon icon-small-password"></i> 密码：</span>******
+          </div>
+        </div>
+        <div class="submit">
+          <a class="button button-warning button-outline button-block" href="home.html">开始会议</a>
+          <a class="button button-warning button-outline button-block">邀请微信好友</a>
+        </div>
+      </form>
+    </section>
+    <footer class="bar fixed">
+      <nav>
+        <a href="home.html"><i class="icon icon-tab-join"></i> <span>加入会议</span></a>
+        <a href="schedule.html"><i class="icon icon-tab-schedule"></i> <span>安排会议</span></a>
+        <a href="meetings.html" class="active"><i class="icon icon-tab-list"></i> <span>会议列表</span></a>
+        <a href="bind.html"><i class="icon icon-tab-account"></i> <span>账号绑定</span></a>
+      </nav>
+    </footer>
+
+    <div id="appstore" class="fold">
+      <i class="handler icon icon-dir-up"></i>
+      <div class="info text-center">商会云视频服务，下载开始使用吧！</div>
+      <div class="row">
+        <div class="col text-center ios"><i class="icon icon-apple"></i> IOS下载</div>
+        <div class="col text-center android"><i class="icon icon-android"></i> 安卓下载</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

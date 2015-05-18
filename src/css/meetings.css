@@ -1,0 +1,5 @@
+.meetings section { padding-top: 55px; padding-left: 68px; padding-right: 68px; }
+.meetings section h2 { padding-bottom: 30px; border-bottom: 1px solid #ddd; }
+.meetings .item { height: 205px; padding: 35px 0; }
+.meetings .item .ellipsis { height: 50px; }
+.meetings .item .ellipsis .icon-meeting { margin-top: -3px; margin-right: 10px; }

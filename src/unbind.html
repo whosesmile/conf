@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <title>商会云</title>
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no,email=no,address=no" name="format-detection" />
+  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/account.css" />
+  <script src="./js/base.js"></script>
+  <script src="./js/account.js"></script>
+</head>
+<body>
+  <div class="account">
+    <header class="bar fixed">
+      <h1>商会云</h1>
+    </header>
+    <section class="has-header has-footer">
+      <h2>账号绑定</h2>
+      <form name="unbind" method="post" autocomplete="off">
+        <div class="list">
+          <label class="item-input icon-input">
+            <i class="icon icon-meeting"></i>
+            <input type="text" name="account" placeholder="邮箱/手机号" required />
+          </label>
+          <label class="item-input icon-input">
+            <i class="icon icon-password"></i>
+            <input type="password" name="password" placeholder="密码" required />
+          </label>
+        </div>
+        <div class="submit">
+          <button class="button button-warning button-outline button-block">解除绑定</button>
+          <a class="button button-default button-outline button-block">取消</a>
+        </div>
+      </form>
+    </section>
+    <footer class="bar fixed">
+      <nav>
+        <a href="home.html"><i class="icon icon-tab-join"></i> <span>加入会议</span></a>
+        <a href="schedule.html"><i class="icon icon-tab-schedule"></i> <span>安排会议</span></a>
+        <a href="meetings.html"><i class="icon icon-tab-list"></i> <span>会议列表</span></a>
+        <a href="bind.html" class="active"><i class="icon icon-tab-account"></i> <span>账号绑定</span></a>
+      </nav>
+    </footer>
+
+    <div id="appstore" class="fold">
+      <i class="handler icon icon-dir-up"></i>
+      <div class="info text-center">商会云视频服务，下载开始使用吧！</div>
+      <div class="row">
+        <div class="col text-center ios"><i class="icon icon-apple"></i> IOS下载</div>
+        <div class="col text-center android"><i class="icon icon-android"></i> 安卓下载</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

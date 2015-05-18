@@ -1,0 +1,8 @@
+.invite section { padding-top: 55px; padding-left: 68px; padding-right: 68px; }
+.invite section h2 { margin-bottom: 30px; }
+.invite .icon-input > input { padding-left: 55px; }
+.invite .icon-input > .icon { position: absolute; top: 50%; margin-top: -25px; left: 0; }
+.invite .list { margin-bottom: 68px; }
+.invite .item .name {color: #8b2c92;}
+.invite .item .icon {position: relative;top: -3px;}
+.invite .submit .button { margin-bottom: 30px; }
