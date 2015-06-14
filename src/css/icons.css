@@ -8,11 +8,14 @@
 .icon-meeting { width: 50px; height: 50px; background-image: url(../images/icons/meeting.png);}
 .icon-password { width: 50px; height: 50px; background-image: url(../images/icons/password.png);}
 .icon-pointer { width: 245px; height: 245px; background-image: url(../images/icons/pointer.png);}
+.icon-sedit { width: 31px; height: 31px; background-image: url(../images/icons/sedit.png);}
 .icon-small-during { width: 31px; height: 31px; background-image: url(../images/icons/small-during.png);}
 .icon-small-number { width: 31px; height: 31px; background-image: url(../images/icons/small-number.png);}
 .icon-small-password { width: 31px; height: 31px; background-image: url(../images/icons/small-password.png);}
 .icon-small-time { width: 31px; height: 31px; background-image: url(../images/icons/small-time.png);}
 .icon-small-topic { width: 31px; height: 31px; background-image: url(../images/icons/small-topic.png);}
+.icon-stime { width: 30px; height: 30px; background-image: url(../images/icons/stime.png);}
+.icon-stopic { width: 34px; height: 33px; background-image: url(../images/icons/stopic.png);}
 .icon-tab-account-active, :active > .icon-tab-account, .active > .icon-tab-account { width: 57px; height: 48px; background-image: url(../images/icons/tab-account-active.png);}
 .icon-tab-account { width: 55px; height: 48px; background-image: url(../images/icons/tab-account.png);}
 .icon-tab-join-active, :active > .icon-tab-join, .active > .icon-tab-join { width: 74px; height: 51px; background-image: url(../images/icons/tab-join-active.png);}

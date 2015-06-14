@@ -40,7 +40,7 @@ input[type='checkbox']:checked+em, input[type='radio']:checked+em { font-weight:
 .text-gray, .text-muted { color: #999 !important; }
 .text-warning { color: #8b2c92 !important; }
 .text-danger { color: #f35050 !important; }
-.text-success { color: #5cc18b !important; }
+.text-success { color: #55b534 !important; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 .text-center { text-align: center; }

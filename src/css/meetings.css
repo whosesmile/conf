@@ -1,5 +1,8 @@
 .meetings section { padding-top: 55px; padding-left: 68px; padding-right: 68px; }
 .meetings section h2 { padding-bottom: 30px; border-bottom: 1px solid #ddd; }
-.meetings .item { height: 205px; padding: 35px 0; }
-.meetings .item .ellipsis { height: 50px; }
-.meetings .item .ellipsis .icon-meeting { margin-top: -3px; margin-right: 10px; }
+.meetings .item { height: 300px; padding: 35px 0; }
+.meetings .item .ellipsis { position: relative; height: 50px; line-height: 50px; padding-left: 40px; }
+.meetings .item .ellipsis > .icon { position: absolute; top: 10px; left: 0; }
+.meetings .item.current { height: 210px; }
+.meetings .item.current .button { margin-top: 15px; }
+.meetings .row.buttons .button-small { height: 60px; line-height: 60px; }
