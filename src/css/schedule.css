@@ -1,7 +1,8 @@
 .schedule section { padding-top: 55px; padding-left: 68px; padding-right: 68px; }
 .schedule .tabs { margin-bottom: 35px; }
 .schedule .icon-input > input { padding-left: 55px; }
-.schedule .icon-input > .icon { position: absolute; top: 50%; margin-top: -25px; left: 0; }
+.schedule .icon-input > select { position: absolute; left: 25px; }
+.schedule .icon-input > .icon { position: absolute; top: 50%; margin-top: -20px; left: 0; z-index: 10; }
 .schedule .icon-input > .icon-topic { margin-top: -18px; }
 .schedule .list { margin-bottom: 68px; }
 .schedule .submit .button { margin-bottom: 30px; }

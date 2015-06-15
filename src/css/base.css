@@ -22,7 +22,7 @@ img { vertical-align: middle; }
 select, input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 select { background-color: #fff; }
 label.checkbox, label.radio { line-height: 38px; }
-input[type='checkbox'], input[type='radio'] { width: 38px; height: 38px; margin: 0; line-height: normal; -webkit-appearance: none; appearance: none; vertical-align: middle; position: relative; top: -4px; }
+input[type='checkbox'], input[type='radio'] { width: 38px; height: 38px; margin: 0; line-height: normal; -webkit-appearance: none; appearance: none; vertical-align: middle; position: relative; top: -4px; background-color: #fff; border: none; }
 input[type='checkbox']:before, input[type='radio']:before { display: table; width: 100%; height: 100%; box-sizing: border-box; border-width: 1px; border-style: solid; border-radius: 28px; background: #fff; border-color: #8b2c92; content: ' '; -webkit-transition: background-color 20ms ease-in-out; -moz-transition: background-color 20ms ease-in-out; transition: background-color 20ms ease-in-out; }
 input[type='checkbox']:after, input[type='radio']:after { -webkit-transition: opacity 0.05s ease-in-out; -moz-transition: opacity 0.05s ease-in-out; transition: opacity 0.05s ease-in-out; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); transform: rotate(-45deg); position: absolute; top: 35%; left: 25%; display: table; width: 20px; height: 10px; border: 3px solid #fff; border-top: 0; border-right: 0; content: ' '; opacity: 0; }
 input[type='checkbox']:checked:before, input[type='radio']:checked:before { background-color: #8b2c92; }

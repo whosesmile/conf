@@ -51,7 +51,24 @@
               </label>
               <label class="item-input icon-input">
                 <i class="icon icon-during"></i>
-                <input type="number" name="during" placeholder="会议时长(小时)" required pattern="[\d]*" />
+                <select name="hours">
+                  <option value="0">0小时</option>
+                  <option value="1">1小时</option>
+                  <option value="2">2小时</option>
+                  <option value="3">3小时</option>
+                  <option value="4">4小时</option>
+                </select>
+              </label>
+              <label class="item-input icon-input">
+                <i class="icon icon-during"></i>
+                <select name="minutes">
+                  <option value="0">0分钟</option>
+                  <option value="10">10分钟</option>
+                  <option value="20">20分钟</option>
+                  <option value="30">30分钟</option>
+                  <option value="40">40分钟</option>
+                  <option value="50">50分钟</option>
+                </select>
               </label>
               <label class="item-input icon-input">
                 <i class="icon icon-password"></i>
