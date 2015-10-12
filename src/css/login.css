@@ -42,9 +42,8 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 .text-right { text-align: right; }
 
 /* /////////// */
-#header, #content, #footer { max-width: 1280px; margin: 0 auto; }
-html { background: #f8f9fc url(../images/bg.jpg) top center no-repeat; }
-#header { padding: 48px 0 20px; height: 116px; }
+#header, #content, #footer { width: 1280px; margin: 0 auto; }
+#header { padding: 30px 0 20px; height: 116px; }
 #header .logo { float: left; }
 #header .logo img { display: block; vertical-align: middle; }
 #header h1 { font-size: 32px; color: #1a9ec9; font-weight: normal; line-height: 48px; margin-left: 15px; }
@@ -62,4 +61,10 @@ html { background: #f8f9fc url(../images/bg.jpg) top center no-repeat; }
 #content .login .form-control.password { background-position: 10px -50px; }
 #content .login .form-control.captcha { background-position: 10px -110px; }
 #content .login .button { height: 43px; text-align: center; font-size: 16px; background: #3babd0; border: none; border-radius: 3px; cursor: pointer; display: block; width: 280px; color: #fff; }
-#footer { color: #fff; position: absolute; left: 40px; bottom: 20px; font-size: 13px; }*/
+#footer { text-align: center; margin-top: 20px; color: #999; }
+#footer .nav { margin-bottom: 5px; }
+#footer .nav li { display: inline-block; }
+#footer .nav li.split { border-left: 1px solid #ddd; margin: 0 10px; vertical-align: middle; height: 12px; }
+#footer .nav li a { color: #999 !important; }
+#footer { padding: 15px 0; }
+#footer .copyright { margin-bottom: 0 }
