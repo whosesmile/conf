@@ -42,7 +42,8 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 .text-right { text-align: right; }
 
 /* /////////// */
-#header, #content, #footer { width: 1280px; margin: 0 auto; }
+#header, #content, #footer { min-width: 1000px; max-width: 1260px; margin: 0 auto; }
+#header .wrapper, #content .wrapper, #footer.wrapper { margin: 0 20px; position: relative; }
 #header { padding: 30px 0; }
 #header .logo { float: left; }
 #header .logo img { display: block; vertical-align: middle; }
@@ -50,17 +51,18 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 #header form { float: right; border-radius: 3px; border: 1px solid #1a9ec9; overflow: hidden; margin-top: 8px; }
 #header input { float: left; padding: 0 10px; width: 170px; height: 30px; font-size: 14px; border: none; box-shadow: none; background-color: transparent; }
 #header button { float: left; height: 30px; width: 85px; line-height: 30px; font-size: 14px; border: none; padding: 0; margin: 0; box-shadow: none; text-align: center; color: #fff; background-color: #1a9ec9; }
-#content { position: relative; min-height: 616px; background: transparent url(../images/cb.jpg) top center no-repeat; }
-#content .information { position: absolute; top: 120px; left: 160px; color: #fff; width: 460px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+#content .wrapper { position: relative; min-height: 616px; background: transparent url(../images/cb.jpg) top center no-repeat; }
+#content .information { position: absolute; top: 120px; left: 10%; color: #fff; width: 36%; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
 #content .information h2 { font-size: 48px; font-weight: normal; }
 #content .information h3 { font-size: 30px; font-weight: normal; }
-#content .login { position: absolute; top: 85px; right: 160px; width: 390px; height: 313px; padding: 30px 55px 0; background: transparent url(../images/lg.png) 0 0 no-repeat; font-size: 16px; }
+#content .login { position: absolute; top: 85px; right: 10%; width: 390px; height: 313px; padding: 30px 55px 0; background: transparent url(../images/lg.png) 0 0 no-repeat; font-size: 16px; }
 #content .login .form-group { display: block; margin-bottom: 16px; }
 #content .login .form-control { padding: 0 10px 0 40px; width: 280px; height: 43px; font-size: 16px; border: none; border-radius: 3px; box-shadow: none; background: #fff url(../images/sprite.png) 10px 10px no-repeat; }
 #content .login .form-control.account { background-position: 10px 10px; }
 #content .login .form-control.password { background-position: 10px -50px; }
 #content .login .form-control.captcha { background-position: 10px -110px; }
 #content .login .button { height: 43px; text-align: center; font-size: 16px; background: #3babd0; border: none; border-radius: 3px; cursor: pointer; display: block; width: 280px; color: #fff; }
+#content .green { position: absolute; bottom: 15px; right: 15px; }
 #footer { text-align: center; margin-top: 10px; color: #999; }
 #footer .nav { margin-bottom: 5px; }
 #footer .nav li { display: inline-block; }
