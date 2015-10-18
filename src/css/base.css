@@ -47,8 +47,11 @@ input[readonly], input[readonly]:focus, input[readonly]:hover { background-color
 .form-inline .form-group { margin-bottom: 8px; }
 .form-group label { width: 90px; text-align: right; }
 .form-group select { background: #fff; min-width: 80px; height: 28px; font-size: 12px; margin-right: 5px; }
+
 /* icons */
 .icon { vertical-align: middle; display: inline-block; width: 20px; height: 20px; background: transparent url(../images/manager/sprite-opacity.png) 0 0 no-repeat; }
+.icon-exit { background: transparent url(../images/home/exit.png) 0 0 no-repeat; }
+.icon-down-corner { background: transparent url(../images/home/down.png) 2px 6px no-repeat; }
 .icon-meeting-list { background-position: -10px -361px; }
 .icon-concat { background-position: -10px -256px; }
 .icon-concat-group { background-position: -44px -254px; }
@@ -101,6 +104,7 @@ dd.active .icon-branch-office { background-position: -152px -78px; }
 dd.active .icon-update-pwd { background-position: -153px -220px; }
 dd.active .icon-personal { background-position: -153px  -468px; }
 dd.active .icon-myservice { background-position: -118px  -468px; }
+
 /* table */
 .common-table tr { border: 1px solid #CCCCCC; background: #FFFFFF; }
 .common-table tr:hover { background: #F9F9F9; }
@@ -114,6 +118,7 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .common-table th.sort.up a { background-position: right 4px; }
 .common-table th.sort.down a { background-position: right -15px; }
 .common-table.only-head tr, .common-table.only-head th { border-bottom: none !important; }
+
 /* pagebar */
 .pagebar { padding: 0; margin: 0 auto; }
 .pagebar .count { float: left; line-height: 24px; }
@@ -137,6 +142,7 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .pagebar .jumpto .go { display: inline-block; margin: 0 0 0 7px; background-color: #FFFFFF; border: 1px solid #CCCCCC; border-radius: 3px; color: #333333; cursor: pointer; width: 48px; text-align: center; height: 26px; }
 .pagebar .jumpto .go .jumptemp, .pagebar li a .jumptemp { float: right; }
 .pagebar .jumpto .icon-jump { width: 17px; height: 16px; margin-right: 2px; background: transparent url(../images/icons/jump.png) 0 0 no-repeat; }
+
 /* masklayer */
 #masklayer { position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.5; z-index: 1000; display: none; background-color: #000000; filter: alpha(opacity=50); }
 .common-dialog { width: 460px; position: absolute; z-index: 2000; top: -9999px; border: 1px solid #444; background-color: #FFFFFF !important; background-clip: padding-box; }
@@ -158,6 +164,7 @@ dd.active .icon-myservice { background-position: -118px  -468px; }
 .common-dialog .summary .search { float: right; }
 .common-dialog .summary .search .input-text { float: left; border-radius: 0; border-right: none; width: 210px; height: 16px; }
 .common-dialog .summary .search .submit-search { float: left; width: 35px; height: 28px; overflow: hidden; border: 1px solid #CCCCCC; background: transparent url(../images/sprite/icons.png) -36px -77px no-repeat; cursor: pointer; text-indent: -9999px; }
+
 /* ////////////// */
 .btn { padding: 0 15px; height: 28px; background: #fff; border: 1px solid #eee; vertical-align: middle; border-radius: 3px; cursor: pointer; }
 .btn-lg { height: 32px; min-width: 80px; }
@@ -183,24 +190,25 @@ a.btn-lg { line-height: 30px; }
 .form-horizontal .form-group .form-control { display: block; width: 100%; }
 .form-horizontal .form-group .message { display: block; margin-top: 6px; }
 .form-horizontal .form-group .required { color: #f00; position: absolute; right: -15px; top: 6px; font-size: 14px; }
+
 /* default style */
 body.home { padding-bottom: 45px; background: #fff url(../images/manager/body.png) 0 0 repeat-y; min-width: 1220px; overflow: auto; }
-#header { height: 75px; background: #131e30 url(../images/manager/line.jpg) 0 bottom repeat-x; }
-#footer { position: fixed; left: 0; bottom: 0; height: 45px; line-height: 45px; text-align: center; width: 100%; border-top: 1px solid #bfbfbf; background: #f2f2f2; }
+#navigation { height: 35px; background: #47b09c url(../images/home/nav.png) right 0 no-repeat }
+#navigation > img { float: left; margin: 8px 0 0 25px; }
+#navigation .infomation { float: right; padding: 0 20px 0 0; zoom: 1; line-height: 35px; color: #ffffff; }
+#navigation .infomation > * { color: #fff; margin-left: 15px; }
+#navigation .entry.active { background-color: #fff600; color: #89ca59; display: inline-block; height: 35px; padding: 0 8px; }
+#navigation .infomation select { color: #fff; margin-left: 0; background: transparent; font-size: 12px; }
+#header { height: 90px; background: #199eca url(../images/manager/line.jpg) right top no-repeat; border-bottom: 1px solid #2681b8; }
+#footer { position: fixed; left: 0; bottom: 0; height: 45px; line-height: 45px; text-align: center; width: 100%; background: #f2f2f2; border-top: 1px solid #bfbfbf; }
 #content .wrapper { position: relative; }
-#header .logo { float: left; margin: 12px 0 0 25px; color: #fff; font-size: 22px; letter-spacing: 2px; text-decoration: none; }
+#header .logo { float: left; margin: 20px 0 0 25px; color: #fff; font-size: 30px; letter-spacing: 2px; text-decoration: none; }
 #header .logo img { float: left; }
-#header .logo span { float: left; margin: 10px 0 0 25px; }
-#header .green-banner { position: absolute; right: 130px; top: 33px; }
-#header .infomation { float: right; padding: 8px 20px 0 0; zoom: 1; }
-#header .infomation .message { color: #fff; margin-right: 5px; padding-left: 20px; background: transparent url(../images/manager/user.png) 0 2px no-repeat; }
-#header .infomation a { color: #ffffff; }
-#header .infomation .divider { padding: 0 8px; }
-#header .infomation select { background: #FFFFFF; width: 90px; height: 24px; font-size: 12px; float: right; margin-top: 15px; }
-#lside { float: left; width: 215px; background: #f2f2f2; }
+#header .logo span { float: left; margin: 0 0 0 25px; line-height: 48px; font-family: initial; }
+#lside { float: left; width: 215px; background: #f2f2f2; border-top: 1px solid #74c4e0; }
 #lside dl { line-height: 43px; font-size: 14px; }
-#lside dt { background: transparent url(../images/manager/lside.png) 0 0 repeat-x; color: #fff; position: relative; cursor: pointer; }
-#lside dt span { display: block; height: 43px; padding-left: 40px; background: transparent url(../images/manager/icons-title.png) 0 0 no-repeat; }
+#lside dt { background: transparent url(../images/manager/lside.png) 0 0 no-repeat; color: #fff; position: relative; cursor: pointer; border-bottom: 1px solid #7dc8d7; }
+#lside dt span { display: block; height: 42px; padding-left: 40px; background: transparent url(../images/manager/icons-title.png) 0 0 no-repeat; border-bottom: 1px solid #2681b8; }
 #lside .portal dt span { background-position: 12px -115px; }
 #lside .account dt span { background-position: 12px -20px; }
 #lside .meeting dt span { background-position: 12px -52px; }
@@ -214,6 +222,7 @@ body.home { padding-bottom: 45px; background: #fff url(../images/manager/body.pn
 #lside dd.active { background: #fff; border-color: #919191; margin-right: -1px; }
 #lside dd.active a { color: #1274cc; }
 #mainbox { margin-left: 216px; zoom: 1; }
+
 /* embed pages */
 body.embed { background-color: #fff; }
 .embed .breadcrumb { color: #777; height: 31px; line-height: 31px; background: transparent url(../images/manager/crumb.png) 0 0 repeat-x; border-bottom: 1px solid #bfbfbf; }
@@ -239,12 +248,14 @@ body.embed { background-color: #fff; }
 .embed.welcome .panel { padding: 65px 90px; }
 .embed.welcome .title { font-size: 30px; color: #3388db; font-weight: normal; margin-bottom: 10px; }
 .embed.welcome .sub-title { font-size: 14px; }
+
 /* 404 page */
 body.notfound { background-color: #f2f2f2; }
 .notfound .box { position: absolute; left: 50%; top: 45%; padding-left: 180px; width: 260px; height: 220px; margin-top: -110px; margin-left: -220px; background: transparent url(../images/manager/404.png) 0 0 no-repeat; }
 .notfound h1 { font-weight: normal; color: #d83924; font-size: 26px; margin: 25px 0 0 0; }
 .notfound .info { margin-top: 35px; line-height: 24px; color: #666; }
 .notfound .back { display: block; padding-left: 18px; background: transparent url(../images/manager/back.png) 0 4px no-repeat; margin-top: 40px; line-height: 20px; }
+
 /* dialog */
 section.verify-identity { height: 275px; padding: 10px 30px 0; }
 section.verify-identity .steps { text-align: center; border-bottom: 1px solid #bfbfbf; padding: 0 0 10px; }
